@@ -1,30 +1,30 @@
-import re
-import wikipedia as wiki
-from datetime import date
 import random
-from mycroft.util import extract_datetime
+import re
+from datetime import date
 
-from mycroft import MycroftSkill, intent_file_handler, intent_handler
-from adapt.intent import IntentBuilder
+import wikipedia as wiki
+from lingua_franca.parse import extract_datetime
+from ovos_workshop.decorators import intent_handler
+from ovos_workshop.intents import IntentBuilder
+from ovos_workshop.skills import OVOSSkill
 
 
-class TodayInHistory(MycroftSkill):
-    def __init__(self):
-        MycroftSkill.__init__(self)
+class TodayInHistory(OVOSSkill):
 
-    @intent_handler(IntentBuilder('TodayInHistoryIntent').
-                    require("TodayInHistoryKeyword"))
+    @intent_handler(
+        IntentBuilder('TodayInHistoryIntent').require("TodayInHistoryKeyword"))
     def handle_today_in_history_intent(self, message):
-        day_query = extract_datetime(message.data.
-                                     get("utterance"))[0].strftime("%B %d")
+        day_query = extract_datetime(
+            message.data.get("utterance"))[0].strftime("%B %d")
 
         if day_query:
             self._search(day_query)
         else:
             self._search(date.today().strftime("%B %d"))
 
-    @intent_handler(IntentBuilder("TellMeMoreIntent").
-                    require("TellMeMoreKeyword").require("initial_response"))
+    @intent_handler(
+        IntentBuilder("TellMeMoreIntent").require("TellMeMoreKeyword").require(
+            "initial_response"))
     def handle_tell_me_more_intent(self, message):
         """ Handler for follow-up inquiries 'tell me more'
 
@@ -98,10 +98,3 @@ class TodayInHistory(MycroftSkill):
 
         except Exception as e:
             self.log.error("Error: {0}".format(e))
-
-    def stop(self):
-        pass
-
-
-def create_skill():
-    return TodayInHistory()
