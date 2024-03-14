@@ -6,7 +6,7 @@ from os import walk
 # Define package information
 SKILL_CLAZZ = "TodayInHistory"  # Make sure it matches __init__.py class name
 VERSION = "0.0.1"
-URL = "https://github.com/OVOSHatchery/days-in-history-skill"
+URL = "https://github.com/OVOSHatchery/ovos-skill-days-in-history"
 AUTHOR = "austin-carnahan"
 EMAIL = ""
 LICENSE = "Apache2.0"
