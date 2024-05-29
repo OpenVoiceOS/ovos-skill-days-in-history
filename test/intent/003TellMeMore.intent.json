@@ -1,9 +1,0 @@
-{
-  "utterance": "Tell me more about that",
-  "set_context": {"initial_response": "complete"},
-  "intent_type": "TellMeMoreIntent",
-  "intent": {
-    "TellMeMoreKeyword": "more"
-  },
-  "expected_response": ".*"
-}

@@ -1,9 +1,0 @@
-{
-  "utterance": "What happened today in history",
-  "intent_type": "TodayInHistoryIntent",
-  "intent": {
-    "TodayInHistoryKeyword": "today in history"
-  },
-  "expected_dialog": "searching"
-}
- 

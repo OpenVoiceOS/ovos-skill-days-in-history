@@ -1,9 +1,10 @@
 import random
 import re
-from datetime import date
 
 import wikipedia as wiki
 from lingua_franca.parse import extract_datetime
+from ovos_utils.log import LOG
+from ovos_utils.time import now_local
 from ovos_workshop.decorators import intent_handler
 from ovos_workshop.intents import IntentBuilder
 from ovos_workshop.skills import OVOSSkill
@@ -11,16 +12,14 @@ from ovos_workshop.skills import OVOSSkill
 
 class TodayInHistory(OVOSSkill):
 
-    @intent_handler(
-        IntentBuilder('TodayInHistoryIntent').require("TodayInHistoryKeyword"))
+    @intent_handler("today_in_history.intent")
     def handle_today_in_history_intent(self, message):
-        day_query = extract_datetime(
-            message.data.get("utterance"))[0].strftime("%B %d")
-
-        if day_query:
-            self._search(day_query)
+        utt = message.data.get("utterance")
+        if utt:
+            day_query = extract_datetime(utt, lang=self.lang)[0].strftime("%B %d")
         else:
-            self._search(date.today().strftime("%B %d"))
+            day_query = now_local().strftime("%B %d")
+        self._search(day_query)
 
     @intent_handler(
         IntentBuilder("TellMeMoreIntent").require("TellMeMoreKeyword").require(
@@ -33,6 +32,7 @@ class TodayInHistory(OVOSSkill):
 
         if not self.events_list:
             self.speak("That's all the information I can find.")
+            self.remove_context("initial_response")
         else:
             events_list = self.events_list
             day = self.day
@@ -73,6 +73,8 @@ class TodayInHistory(OVOSSkill):
             # parse results into a list.
             # Entries are seperated by newline characters
             events_list = re.split(r'\n', events)
+            events_list = [e for e in events_list
+                           if e.strip() and not e.startswith("=== ")]
 
             # choose a random entry from the list
             selection_index = random.randrange(len(events_list))
@@ -93,8 +95,14 @@ class TodayInHistory(OVOSSkill):
         except wiki.exceptions.PageError:
             self.speak_dialog("notfound")
 
-        except wiki.exceptions.WikipediaExeption:
+        except Exception as e:
+            LOG.error(f"Error: {e}")
             self.speak("I'm sorry, something went wrong")
 
-        except Exception as e:
-            self.log.error("Error: {0}".format(e))
+
+if __name__ == "__main__":
+    from ovos_utils.fakebus import FakeBus
+    from ovos_bus_client.message import Message
+
+    s = TodayInHistory(skill_id="fake.test", bus=FakeBus())
+    s.handle_today_in_history_intent(Message("", {"utterance": ""}))

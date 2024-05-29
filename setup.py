@@ -5,12 +5,12 @@ from os import walk
 
 # Define package information
 SKILL_CLAZZ = "TodayInHistory"  # Make sure it matches __init__.py class name
-VERSION = "0.0.1"
-URL = "https://github.com/OVOSHatchery/ovos-skill-days-in-history"
+VERSION = "0.1.0"
+URL = "https://github.com/OpenVoiceOS/ovos-skill-days-in-history"
 AUTHOR = "austin-carnahan"
 EMAIL = ""
 LICENSE = "Apache2.0"
-DESCRIPTION = SKILL_CLAZZ # TODO
+DESCRIPTION = "find out what happened in specific dates in history"
 
 PYPI_NAME = URL.split("/")[-1]  # pip install PYPI_NAME
 
@@ -36,7 +36,7 @@ def get_requirements(requirements_filename: str = "requirements.txt"):
 
 # Function to find resource files
 def find_resource_files():
-    resource_base_dirs = ("locale", "ui", "vocab", "dialog", "regex", "res", "frotz)
+    resource_base_dirs = ("locale", "ui", "vocab", "dialog", "regex", "res")
     base_dir = abspath(dirname(__file__))
     package_data = ["*.json"]
     for res in resource_base_dirs:
