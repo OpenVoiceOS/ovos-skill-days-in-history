@@ -1,0 +1,11 @@
+{
+    "searching.dialog": [
+        "Just a moment while I find historical events on {day}",
+        "I'm checking Wikipedia for events in history on {day}"
+    ],
+    "notfound.dialog": [
+        "I'm unable to find a wikipedia page with relevant dates",
+        "Sorry, I cant seem to locate a wikipedia article about it",
+        "I can't find a matching entry on wikipedia with relevant events"
+    ]
+}
