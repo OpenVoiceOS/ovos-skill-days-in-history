@@ -14,7 +14,7 @@ class TodayInHistory(OVOSSkill):
 
     @intent_handler("today_in_history.intent")
     def handle_today_in_history_intent(self, message):
-        utt = message.data.get("utterance")
+        utt = message.data.get("date") or message.data.get("utterance")
         if utt:
             day_query = extract_datetime(utt, lang=self.lang)[0].strftime("%B %d")
         else:
