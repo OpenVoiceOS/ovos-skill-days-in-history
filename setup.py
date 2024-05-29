@@ -5,7 +5,7 @@ from os import walk
 
 # Define package information
 SKILL_CLAZZ = "TodayInHistory"  # Make sure it matches __init__.py class name
-VERSION = "0.1.0"
+VERSION = "0.1.0a1"
 URL = "https://github.com/OpenVoiceOS/ovos-skill-days-in-history"
 AUTHOR = "austin-carnahan"
 EMAIL = ""
