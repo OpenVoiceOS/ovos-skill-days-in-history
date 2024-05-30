@@ -26,7 +26,11 @@ for lang in os.listdir(tx):
                 with open(f"{locale}/{lang.lower()}/{fid}", "w") as f:
                     f.write("\n".join(sorted(samples)))
 
-    if os.path.isfile(dialogs):
+    for f in os.listdir(f"{tx}/{lang}"):
+        if f.startswith("dialogs") and f.endswith(".json"):
+            dialogs = f"{tx}/{lang}/{f}"
+        else:
+            continue
         with open(dialogs) as f:
             data = json.load(f)
         for fid, samples in data.items():
