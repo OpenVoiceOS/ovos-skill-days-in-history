@@ -1,7 +1,9 @@
 import os.path
 
 from lingua_franca.parse import extract_datetime
+from ovos_utils import classproperty
 from ovos_utils.log import LOG
+from ovos_utils.process_utils import RuntimeRequirements
 from ovos_utils.time import now_local
 from ovos_workshop.decorators import intent_handler
 from ovos_workshop.intents import IntentBuilder
@@ -9,6 +11,19 @@ from ovos_workshop.skills.auto_translatable import UniversalSkill
 
 
 class TodayInHistory(UniversalSkill):
+    @classproperty
+    def runtime_requirements(self):
+        return RuntimeRequirements(
+            internet_before_load=False,
+            network_before_load=False,
+            gui_before_load=False,
+            requires_internet=False,
+            requires_network=False,
+            requires_gui=False,
+            no_internet_fallback=True,
+            no_network_fallback=True,
+            no_gui_fallback=True,
+        )
 
     def get_date(self, message):
         utt = message.data.get("date") or message.data["utterance"]
