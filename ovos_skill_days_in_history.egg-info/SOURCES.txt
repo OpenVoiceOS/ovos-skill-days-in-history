@@ -1,0 +1,11 @@
+LICENSE
+README.md
+__init__.py
+setup.py
+version.py
+ovos_skill_days_in_history.egg-info/PKG-INFO
+ovos_skill_days_in_history.egg-info/SOURCES.txt
+ovos_skill_days_in_history.egg-info/dependency_links.txt
+ovos_skill_days_in_history.egg-info/entry_points.txt
+ovos_skill_days_in_history.egg-info/requires.txt
+ovos_skill_days_in_history.egg-info/top_level.txt

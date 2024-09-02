@@ -1,0 +1,3 @@
+[ovos.plugin.skill]
+ovos-skill-days-in-history.openvoiceos=ovos_skill_days_in_history:TodayInHistory
+
