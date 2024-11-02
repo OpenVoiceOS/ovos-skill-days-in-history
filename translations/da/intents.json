@@ -6,8 +6,8 @@
     "hvem blev født i dag i historien"
   ],
   "today_in_history.intent": [
-    null,
-    null,
-    null
+    "(i dag|denne dato|denne dag) i historien",
+    "(fortæl mig om|hvad) (historiske begivenheder|) skete (i dag|denne dato|denne dag) (i historien|)",
+    "(fortæl mig om|hvad) (historiske begivenheder|) skete den {date} (i historien|)"
   ]
 }
