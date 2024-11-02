@@ -1,24 +1,12 @@
 # Changelog
 
-## [0.3.3a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.3a1) (2024-10-31)
+## [0.3.3a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.3a2) (2024-11-02)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.2a1...0.3.3a1)
-
-**Merged pull requests:**
-
-- fix:allow workshop 3.0.0 [\#5](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/5) ([JarbasAl](https://github.com/JarbasAl))
-
-## [0.3.2a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.2a1) (2024-10-23)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/V0.3.1...0.3.2a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.3...0.3.3a2)
 
 **Merged pull requests:**
 
-- ca-es / translate [\#3](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/3) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-
-## [V0.3.1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/V0.3.1) (2024-10-15)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.1...V0.3.1)
+- da-dk/translate [\#7](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/7) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 
 
 
