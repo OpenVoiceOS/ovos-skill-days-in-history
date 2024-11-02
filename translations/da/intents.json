@@ -1,0 +1,13 @@
+{
+  "deaths_in_history.intent": [
+    "hvem døde i dag i historien"
+  ],
+  "births_in_history.intent": [
+    "hvem blev født i dag i historien"
+  ],
+  "today_in_history.intent": [
+    "(i dag|denne dato|denne dag) i historien",
+    "(fortæl mig om|hvad) (historiske begivenheder|) skete (i dag|denne dato|denne dag) (i historien|)",
+    "(fortæl mig om|hvad) (historiske begivenheder|) skete den {date} (i historien|)"
+  ]
+}
