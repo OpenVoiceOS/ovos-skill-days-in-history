@@ -1,0 +1,3 @@
+(avui|hui|aquesta data|esta data|tal dia com avui|tal dia com hui) en la història
+(explica'm sobre|explica'm|què) (esdeveniments històrics|fets històrics|) (van passar|va passar|passà|passaren) (avui|hui|en aquesta data|en esta data|aquest dia|este dia) (a la història|en la història|)
+(explica'm sobre|explica'm|què) (esdeveniments històrics|fets històrics|) (van succeir|va succeir|succeí|succeiren) (en|el|amb data|en data) {date} (a la història|en la història|)
