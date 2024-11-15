@@ -7,10 +7,10 @@ from ovos_utils.process_utils import RuntimeRequirements
 from ovos_utils.time import now_local
 from ovos_workshop.decorators import intent_handler
 from ovos_workshop.intents import IntentBuilder
-from ovos_workshop.skills.auto_translatable import UniversalSkill
+from ovos_workshop.skills.ovos import OVOSSkill
 
 
-class TodayInHistory(UniversalSkill):
+class TodayInHistory(OVOSSkill):
     @classproperty
     def runtime_requirements(self):
         return RuntimeRequirements(
