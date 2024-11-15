@@ -1,0 +1,16 @@
+{
+    "skill_id": "ovos-skill-days-in-history.openvoiceos",
+    "source": "https://github.com/OpenVoiceOS/ovos-skill-days-in-history",
+    "author": "OpenVoiceOS",
+    "name": "Today In History",
+    "license": "apache-2.0",
+    "description": "Provides historical events for today or any other calendar day using information pulled from Wikipedia.",
+    "examples": [
+        "What happened today in history?",
+        "who was born today in history?",
+        "who died today in history?",
+        "What historical events happened on June 16th?",
+        "Tell me about events in history on December 12th"
+    ],
+    "tags": ["Information", "History", "Trivia"]
+}
