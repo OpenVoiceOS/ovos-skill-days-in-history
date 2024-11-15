@@ -1,6 +1,6 @@
 import os.path
 
-from lingua_franca.parse import extract_datetime
+from ovos_date_parser import extract_datetime
 from ovos_utils import classproperty
 from ovos_utils.log import LOG
 from ovos_utils.process_utils import RuntimeRequirements
