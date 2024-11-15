@@ -1,6 +1,7 @@
+import datetime
 import os.path
 
-from ovos_date_parser import extract_datetime
+from ovos_date_parser import extract_datetime, nice_year
 from ovos_utils import classproperty
 from ovos_utils.log import LOG
 from ovos_utils.process_utils import RuntimeRequirements
@@ -49,18 +50,32 @@ class TodayInHistory(OVOSSkill):
             self.speak_dialog(dialog)
             self.set_context("prev_dialog", dialog)
 
+    @staticmethod
+    def pronounce_year(dialog: str, lang: str) -> str:
+        try:
+            bc = False
+            year, utt = dialog.split(" - ")  # this is how .dialog files are formatted
+            if len(year.split() == 2):
+                year, bc = year.split()
+            if year.isdigit():
+                dt = datetime.datetime(year=int(year), day=1, month=1)
+                return f"{nice_year(dt, lang=lang, bc=bool(bc))} - {utt}"
+        except:
+            pass
+        return dialog
+
     @intent_handler("births_in_history.intent")
     def handle_births_intent(self, message):
         date = self.get_date(message)
         dialog = f"day_{date.day}_month_{date.month}_births"
-        self.speak_dialog(dialog)
+        self.speak_dialog(dialog, render_callback=self.pronounce_year)
         self.set_context("prev_dialog", dialog)
 
     @intent_handler("today_in_history.intent")
     def handle_today_in_history_intent(self, message):
         date = self.get_date(message)
         dialog = f"day_{date.day}_month_{date.month}_events"
-        self.speak_dialog(dialog)
+        self.speak_dialog(dialog, render_callback=self.pronounce_year)
         self.set_context("prev_dialog", dialog)
 
     @intent_handler(IntentBuilder("TellMeMoreIntent").
@@ -77,4 +92,4 @@ class TodayInHistory(OVOSSkill):
             self.remove_context("prev_dialog")
         else:
             dialog = message.data["prev_dialog"]
-            self.speak_dialog(dialog)
+            self.speak_dialog(dialog, render_callback=self.pronounce_year)
