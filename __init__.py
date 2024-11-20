@@ -55,7 +55,7 @@ class TodayInHistory(OVOSSkill):
         try:
             bc = False
             year, utt = dialog.split(" - ")  # this is how .dialog files are formatted
-            if len(year.split() == 2):
+            if len(year.split()) == 2:
                 year, bc = year.split()
             if year.isdigit():
                 dt = datetime.datetime(year=int(year), day=1, month=1)
@@ -63,7 +63,6 @@ class TodayInHistory(OVOSSkill):
         except:
             pass
         return dialog
-
     @intent_handler("births_in_history.intent")
     def handle_births_intent(self, message):
         date = self.get_date(message)
