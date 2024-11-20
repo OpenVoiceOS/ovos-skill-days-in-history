@@ -70,10 +70,10 @@ class TodayInHistory(OVOSSkill):
             if year.isdigit():
                 dt = datetime.datetime(year=int(year), day=1, month=1)
                 return f"{nice_year(dt, lang=lang, bc=bc)}"
-        except (ValueError, AttributeError) as e:
-            LOG.debug(f"Failed to parse year from dialog: {dialog} - {str(e)}")
-            pass
+        except Exception as e:
+            LOG.error(f"Failed to parse year from dialog: {dialog} - {str(e)}")
         return dialog
+        
     @intent_handler("births_in_history.intent")
     def handle_births_intent(self, message):
         date = self.get_date(message)
