@@ -52,15 +52,26 @@ class TodayInHistory(OVOSSkill):
 
     @staticmethod
     def pronounce_year(dialog: str, lang: str) -> str:
+        """Format year pronunciation in dialog text.
+        
+        Args:
+            dialog: Dialog text containing year in format "YEAR - text" or "YEAR BC - text"
+            lang: Language code for pronunciation
+            
+        Returns:
+            str: Formatted dialog text with properly pronounced year
+        """
         try:
-            bc = False
+            bc: bool = False
             year, utt = dialog.split(" - ")  # this is how .dialog files are formatted
             if len(year.split()) == 2:
-                year, bc = year.split()
+                year, bc_text = year.split()
+                bc = bc_text.upper() == "BC"
             if year.isdigit():
                 dt = datetime.datetime(year=int(year), day=1, month=1)
-                return f"{nice_year(dt, lang=lang, bc=bool(bc))} - {utt}"
-        except:
+                return f"{nice_year(dt, lang=lang, bc=bc)}"
+        except (ValueError, AttributeError) as e:
+            LOG.debug(f"Failed to parse year from dialog: {dialog} - {str(e)}")
             pass
         return dialog
     @intent_handler("births_in_history.intent")
