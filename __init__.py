@@ -69,7 +69,7 @@ class TodayInHistory(OVOSSkill):
                 bc = bc_text.upper() == "BC"
             if year.isdigit():
                 dt = datetime.datetime(year=int(year), day=1, month=1)
-                return f"{nice_year(dt, lang=lang, bc=bc)}"
+                return f"{nice_year(dt, lang=lang, bc=bc)} - {utt}"
         except Exception as e:
             LOG.error(f"Failed to parse year from dialog: {dialog} - {str(e)}")
         return dialog
