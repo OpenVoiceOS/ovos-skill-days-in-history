@@ -1,16 +1,24 @@
 # Changelog
 
-## [0.3.6a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.6a1) (2024-11-15)
+## [0.3.7a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.7a2) (2024-11-19)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/V0.3.5...0.3.6a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.7a1...0.3.7a2)
 
 **Merged pull requests:**
 
-- fix: skill class [\#16](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/16) ([JarbasAl](https://github.com/JarbasAl))
+- workshop300 [\#21](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/21) ([JarbasAl](https://github.com/JarbasAl))
 
-## [V0.3.5](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/V0.3.5) (2024-11-15)
+## [0.3.7a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.7a1) (2024-11-17)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.5...V0.3.5)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/V0.3.6...0.3.7a1)
+
+**Merged pull requests:**
+
+- pt-pt/translate [\#19](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/19) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+
+## [V0.3.6](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/V0.3.6) (2024-11-15)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.6...V0.3.6)
 
 
 
