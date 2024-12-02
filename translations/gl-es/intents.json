@@ -1,0 +1,13 @@
+{
+    "deaths_in_history.intent": [
+        "quen morreu hoxe na historia"
+    ],
+    "births_in_history.intent": [
+        "quen naceu hoxe na historia"
+    ],
+    "today_in_history.intent": [
+        "(cóntame que|dime que) (acontecementos históricos|) aconteceron (hoxe|nesta data|este día) (na historia|)",
+        "(cóntame que|dime que) (acontecementos históricos|) aconteceron o {date} (na historia|)",
+        "(hoxe|nesta data|este día) na historia"
+    ]
+}
