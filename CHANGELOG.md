@@ -1,16 +1,25 @@
 # Changelog
 
-## [0.3.8a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.8a1) (2024-11-20)
+## [0.3.9a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.9a2) (2024-12-02)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/V0.3.7...0.3.8a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.9a1...0.3.9a2)
 
 **Merged pull requests:**
 
-- fix: pronounce year [\#18](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/18) ([JarbasAl](https://github.com/JarbasAl))
+- import galician and basque translations [\#26](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/26) ([JarbasAl](https://github.com/JarbasAl))
+- import gl [\#25](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/25) ([JarbasAl](https://github.com/JarbasAl))
 
-## [V0.3.7](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/V0.3.7) (2024-11-19)
+## [0.3.9a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.9a1) (2024-11-25)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.7...V0.3.7)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/V0.3.8...0.3.9a1)
+
+**Merged pull requests:**
+
+- da-dk/translate [\#24](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/24) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+
+## [V0.3.8](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/V0.3.8) (2024-11-20)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.8...V0.3.8)
 
 
 
