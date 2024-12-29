@@ -1,0 +1,20 @@
+{
+  "skill_id": "ovos-skill-days-in-history.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-days-in-history",
+  "author": "OpenVoiceOS",
+  "name": "Avui a la Història",
+  "license": "apache-2.0",
+  "description": "Proporciona esdeveniments històrics d'avui o de qualsevol altre dia natural mitjançant la informació extreta de la Viquipèdia.",
+  "examples": [
+    "Què va passar avui a la història?",
+    "Qui va néixer avui a la història?",
+    "Qui va morir tal dia com avui a la història?",
+    "Quins fets històrics van passar el 16 de juny?",
+    "Explica'm els fets històrics del 12 de desembre"
+  ],
+  "tags": [
+    "Informació",
+    "Història",
+    "Preguntes"
+  ]
+}
