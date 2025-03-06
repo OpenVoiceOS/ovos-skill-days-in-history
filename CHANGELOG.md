@@ -1,8 +1,8 @@
 # Changelog
 
-## [0.3.10a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.10a2) (2025-03-06)
+## [0.3.10a3](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.10a3) (2025-03-06)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.10a2...0.3.10a2)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.10a2...0.3.10a3)
 
 **Merged pull requests:**
 
