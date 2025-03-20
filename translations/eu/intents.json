@@ -1,13 +1,13 @@
 {
+    "today_in_history.intent": [
+        "(gaurko egunez|egun honetan|gaur bezalako egun batean) iraganean",
+        "(kontadazu zer|zer) (gertakari historiko|) gertatu zen (gaurko egunez|egun honetan|gaur bezalako egun batean) (iraganean|)",
+        "(kontadazu zer|zer) (gertakari historiko|) gertatu zen {date} egunean (iraganean|)"
+    ],
     "deaths_in_history.intent": [
         "nor hil zen gaur bezalako egun batean iraganean?"
     ],
     "births_in_history.intent": [
         "nor jaio zen gaur bezalako egun batean iraganean?"
-    ],
-    "today_in_history.intent": [
-        "(kontadazu zer|zer) (gertakari historiko|) gertatu zen (gaurko egunez|egun honetan|gaur bezalako egun batean) (iraganean|)",
-        "(kontadazu zer|zer) (gertakari historiko|) gertatu zen {date} egunean (iraganean|)",
-        "(gaurko egunez|egun honetan|gaur bezalako egun batean) iraganean"
     ]
 }

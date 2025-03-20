@@ -1,9 +1,9 @@
 {
     "TellMeMore.voc": [
-        "tell me more",
-        "say more",
         "another event",
+        "continue",
         "more events",
-        "continue"
+        "say more",
+        "tell me more"
     ]
 }
