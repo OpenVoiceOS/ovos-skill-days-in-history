@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.10a5](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.10a5) (2025-03-20)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.10a4...0.3.10a5)
+
+**Merged pull requests:**
+
+- Add Catalan strings [\#37](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/37) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+
 ## [0.3.10a4](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.10a4) (2025-03-13)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.10a3...0.3.10a4)
