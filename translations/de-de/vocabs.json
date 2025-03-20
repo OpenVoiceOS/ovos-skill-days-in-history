@@ -1,9 +1,9 @@
 {
-  "TellMeMore.voc": [
-    "sag mir mehr",
-    "sag mehr",
-    "ein anderes|weiteres Ereignis",
-    "weitere Ereignisse",
-    "weiter"
-  ]
+    "TellMeMore.voc": [
+        "ein anderes|weiteres Ereignis",
+        "sag mehr",
+        "sag mir mehr",
+        "weiter",
+        "weitere Ereignisse"
+    ]
 }

@@ -1,9 +1,9 @@
 {
     "TellMeMore.voc": [
-        "outro evento",
         "continuar",
-        "máis eventos",
+        "cóntame máis",
         "dicir máis",
-        "cóntame máis"
+        "máis eventos",
+        "outro evento"
     ]
 }

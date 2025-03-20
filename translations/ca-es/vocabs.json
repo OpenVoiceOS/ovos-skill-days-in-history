@@ -1,9 +1,11 @@
 {
-  "TellMeMore.voc": [
-    "digues-me més\ndigue'm més",
-    "explica'm més\nexplica-me'n més",
-    "un altre esdeveniment",
-    "més esdeveniments",
-    "continua"
-  ]
+    "TellMeMore.voc": [
+        "continua",
+        "digue'm més",
+        "digues-me més",
+        "explica'm més",
+        "explica-me'n més",
+        "més esdeveniments",
+        "un altre esdeveniment"
+    ]
 }

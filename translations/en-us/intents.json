@@ -1,13 +1,13 @@
 {
+    "today_in_history.intent": [
+        "(tell me about|what) (historical events|) happened (today|this date|this day) (in history|)",
+        "(tell me about|what) (historical events|) happened on {date} (in history|)",
+        "(today|this date|this day) in history"
+    ],
     "deaths_in_history.intent": [
         "who died today in history"
     ],
     "births_in_history.intent": [
         "who was born today in history"
-    ],
-    "today_in_history.intent": [
-        "(today|this date|this day) in history",
-        "(tell me about|what) (historical events|) happened (today|this date|this day) (in history|)",
-        "(tell me about|what) (historical events|) happened on {date} (in history|)"
     ]
 }

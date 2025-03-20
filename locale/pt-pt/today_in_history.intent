@@ -1,4 +1,183 @@
-(diz-me|conte-me|conta-me) (sobre|) (eventos históricos|o que aconteceu) (esta|nesta|em esta) data (na história|da história|)
-(diz-me|conte-me|conta-me) (sobre|) (eventos históricos|o que aconteceu) hoje (na história|da história|)
-(diz-me|conte-me|conta-me) (sobre|) (eventos históricos|o que aconteceu) em {date} (na história|da história|)
-(hoje|esta data|este dia) na história
+conta-me  eventos históricos em esta data
+conta-me  eventos históricos em esta data da história
+conta-me  eventos históricos em esta data na história
+conta-me  eventos históricos em {date}
+conta-me  eventos históricos em {date} da história
+conta-me  eventos históricos em {date} na história
+conta-me  eventos históricos esta data
+conta-me  eventos históricos esta data da história
+conta-me  eventos históricos esta data na história
+conta-me  eventos históricos hoje
+conta-me  eventos históricos hoje da história
+conta-me  eventos históricos hoje na história
+conta-me  eventos históricos nesta data
+conta-me  eventos históricos nesta data da história
+conta-me  eventos históricos nesta data na história
+conta-me  o que aconteceu em esta data
+conta-me  o que aconteceu em esta data da história
+conta-me  o que aconteceu em esta data na história
+conta-me  o que aconteceu em {date}
+conta-me  o que aconteceu em {date} da história
+conta-me  o que aconteceu em {date} na história
+conta-me  o que aconteceu esta data
+conta-me  o que aconteceu esta data da história
+conta-me  o que aconteceu esta data na história
+conta-me  o que aconteceu hoje
+conta-me  o que aconteceu hoje da história
+conta-me  o que aconteceu hoje na história
+conta-me  o que aconteceu nesta data
+conta-me  o que aconteceu nesta data da história
+conta-me  o que aconteceu nesta data na história
+conta-me sobre eventos históricos em esta data
+conta-me sobre eventos históricos em esta data da história
+conta-me sobre eventos históricos em esta data na história
+conta-me sobre eventos históricos em {date}
+conta-me sobre eventos históricos em {date} da história
+conta-me sobre eventos históricos em {date} na história
+conta-me sobre eventos históricos esta data
+conta-me sobre eventos históricos esta data da história
+conta-me sobre eventos históricos esta data na história
+conta-me sobre eventos históricos hoje
+conta-me sobre eventos históricos hoje da história
+conta-me sobre eventos históricos hoje na história
+conta-me sobre eventos históricos nesta data
+conta-me sobre eventos históricos nesta data da história
+conta-me sobre eventos históricos nesta data na história
+conta-me sobre o que aconteceu em esta data
+conta-me sobre o que aconteceu em esta data da história
+conta-me sobre o que aconteceu em esta data na história
+conta-me sobre o que aconteceu em {date}
+conta-me sobre o que aconteceu em {date} da história
+conta-me sobre o que aconteceu em {date} na história
+conta-me sobre o que aconteceu esta data
+conta-me sobre o que aconteceu esta data da história
+conta-me sobre o que aconteceu esta data na história
+conta-me sobre o que aconteceu hoje
+conta-me sobre o que aconteceu hoje da história
+conta-me sobre o que aconteceu hoje na história
+conta-me sobre o que aconteceu nesta data
+conta-me sobre o que aconteceu nesta data da história
+conta-me sobre o que aconteceu nesta data na história
+conte-me  eventos históricos em esta data
+conte-me  eventos históricos em esta data da história
+conte-me  eventos históricos em esta data na história
+conte-me  eventos históricos em {date}
+conte-me  eventos históricos em {date} da história
+conte-me  eventos históricos em {date} na história
+conte-me  eventos históricos esta data
+conte-me  eventos históricos esta data da história
+conte-me  eventos históricos esta data na história
+conte-me  eventos históricos hoje
+conte-me  eventos históricos hoje da história
+conte-me  eventos históricos hoje na história
+conte-me  eventos históricos nesta data
+conte-me  eventos históricos nesta data da história
+conte-me  eventos históricos nesta data na história
+conte-me  o que aconteceu em esta data
+conte-me  o que aconteceu em esta data da história
+conte-me  o que aconteceu em esta data na história
+conte-me  o que aconteceu em {date}
+conte-me  o que aconteceu em {date} da história
+conte-me  o que aconteceu em {date} na história
+conte-me  o que aconteceu esta data
+conte-me  o que aconteceu esta data da história
+conte-me  o que aconteceu esta data na história
+conte-me  o que aconteceu hoje
+conte-me  o que aconteceu hoje da história
+conte-me  o que aconteceu hoje na história
+conte-me  o que aconteceu nesta data
+conte-me  o que aconteceu nesta data da história
+conte-me  o que aconteceu nesta data na história
+conte-me sobre eventos históricos em esta data
+conte-me sobre eventos históricos em esta data da história
+conte-me sobre eventos históricos em esta data na história
+conte-me sobre eventos históricos em {date}
+conte-me sobre eventos históricos em {date} da história
+conte-me sobre eventos históricos em {date} na história
+conte-me sobre eventos históricos esta data
+conte-me sobre eventos históricos esta data da história
+conte-me sobre eventos históricos esta data na história
+conte-me sobre eventos históricos hoje
+conte-me sobre eventos históricos hoje da história
+conte-me sobre eventos históricos hoje na história
+conte-me sobre eventos históricos nesta data
+conte-me sobre eventos históricos nesta data da história
+conte-me sobre eventos históricos nesta data na história
+conte-me sobre o que aconteceu em esta data
+conte-me sobre o que aconteceu em esta data da história
+conte-me sobre o que aconteceu em esta data na história
+conte-me sobre o que aconteceu em {date}
+conte-me sobre o que aconteceu em {date} da história
+conte-me sobre o que aconteceu em {date} na história
+conte-me sobre o que aconteceu esta data
+conte-me sobre o que aconteceu esta data da história
+conte-me sobre o que aconteceu esta data na história
+conte-me sobre o que aconteceu hoje
+conte-me sobre o que aconteceu hoje da história
+conte-me sobre o que aconteceu hoje na história
+conte-me sobre o que aconteceu nesta data
+conte-me sobre o que aconteceu nesta data da história
+conte-me sobre o que aconteceu nesta data na história
+diz-me  eventos históricos em esta data
+diz-me  eventos históricos em esta data da história
+diz-me  eventos históricos em esta data na história
+diz-me  eventos históricos em {date}
+diz-me  eventos históricos em {date} da história
+diz-me  eventos históricos em {date} na história
+diz-me  eventos históricos esta data
+diz-me  eventos históricos esta data da história
+diz-me  eventos históricos esta data na história
+diz-me  eventos históricos hoje
+diz-me  eventos históricos hoje da história
+diz-me  eventos históricos hoje na história
+diz-me  eventos históricos nesta data
+diz-me  eventos históricos nesta data da história
+diz-me  eventos históricos nesta data na história
+diz-me  o que aconteceu em esta data
+diz-me  o que aconteceu em esta data da história
+diz-me  o que aconteceu em esta data na história
+diz-me  o que aconteceu em {date}
+diz-me  o que aconteceu em {date} da história
+diz-me  o que aconteceu em {date} na história
+diz-me  o que aconteceu esta data
+diz-me  o que aconteceu esta data da história
+diz-me  o que aconteceu esta data na história
+diz-me  o que aconteceu hoje
+diz-me  o que aconteceu hoje da história
+diz-me  o que aconteceu hoje na história
+diz-me  o que aconteceu nesta data
+diz-me  o que aconteceu nesta data da história
+diz-me  o que aconteceu nesta data na história
+diz-me sobre eventos históricos em esta data
+diz-me sobre eventos históricos em esta data da história
+diz-me sobre eventos históricos em esta data na história
+diz-me sobre eventos históricos em {date}
+diz-me sobre eventos históricos em {date} da história
+diz-me sobre eventos históricos em {date} na história
+diz-me sobre eventos históricos esta data
+diz-me sobre eventos históricos esta data da história
+diz-me sobre eventos históricos esta data na história
+diz-me sobre eventos históricos hoje
+diz-me sobre eventos históricos hoje da história
+diz-me sobre eventos históricos hoje na história
+diz-me sobre eventos históricos nesta data
+diz-me sobre eventos históricos nesta data da história
+diz-me sobre eventos históricos nesta data na história
+diz-me sobre o que aconteceu em esta data
+diz-me sobre o que aconteceu em esta data da história
+diz-me sobre o que aconteceu em esta data na história
+diz-me sobre o que aconteceu em {date}
+diz-me sobre o que aconteceu em {date} da história
+diz-me sobre o que aconteceu em {date} na história
+diz-me sobre o que aconteceu esta data
+diz-me sobre o que aconteceu esta data da história
+diz-me sobre o que aconteceu esta data na história
+diz-me sobre o que aconteceu hoje
+diz-me sobre o que aconteceu hoje da história
+diz-me sobre o que aconteceu hoje na história
+diz-me sobre o que aconteceu nesta data
+diz-me sobre o que aconteceu nesta data da história
+diz-me sobre o que aconteceu nesta data na história
+esta data na história
+este dia na história
+hoje na história

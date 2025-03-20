@@ -41,23 +41,15 @@ for lang in os.listdir(locale):
     os.makedirs(f"{tx}/{lang.lower()}", exist_ok=True)
     if intents:
         with open(f"{tx}/{lang.lower()}/intents.json", "w") as f:
-            json.dump(intents, f, indent=4)
+            json.dump(intents, f, indent=4, ensure_ascii=False)
     if vocs:
         with open(f"{tx}/{lang.lower()}/vocabs.json", "w") as f:
-            json.dump(vocs, f, indent=4)
+            json.dump(vocs, f, indent=4, ensure_ascii=False)
     if regexes:
         with open(f"{tx}/{lang.lower()}/regexes.json", "w") as f:
-            json.dump(regexes, f, indent=2)
+            json.dump(regexes, f, indent=2, ensure_ascii=False)
     if dialogs:
         dialogs = {k: sorted(v) for k, v in dialogs.items()}
-        if len(dialogs) > 50:
-            files = list(dialogs.items())
-            i = 0
-            while len(files):
-                i += 1
-                chunk, files = files[:50], files[50:]
-                with open(f"{tx}/{lang.lower()}/dialogs_{i}.json", "w") as f:
-                    json.dump({k:v for k, v in chunk}, f, indent=2)
-        else:
-            with open(f"{tx}/{lang.lower()}/dialogs.json", "w") as f:
-                json.dump(dialogs, f, indent=2)
+        for d in dialogs.keys():
+            with open(f"{tx}/{lang.lower()}/dialogs_{d.split('.')[0]}.json", "w") as f:
+                json.dump(dialogs, f, indent=2, ensure_ascii=False)

@@ -1,9 +1,9 @@
 {
-  "TellMeMore.voc": [
-    "(conta|conta-me) mais",
-    "(diz|diz-me) mais",
-    "outro evento",
-    "mais eventos",
-    "(continua|continue)"
-  ]
+    "TellMeMore.voc": [
+        "(conta|conta-me) mais",
+        "(continua|continue)",
+        "(diz|diz-me) mais",
+        "mais eventos",
+        "outro evento"
+    ]
 }
