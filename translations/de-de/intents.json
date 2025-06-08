@@ -1,0 +1,13 @@
+{
+  "deaths_in_history.intent": [
+    "wer ist heute in der Geschichte gestorben"
+  ],
+  "births_in_history.intent": [
+    "wer wurde heute in der Geschichte geboren"
+  ],
+  "today_in_history.intent": [
+    "(heute|dieses Datum|dieser Tag) in der Geschichte",
+    "(nenne mir|welche) (historischen Ereignissen|) (heute|an diesem Datum|an diesem Tag) (in der Geschichte|) passiert sind",
+    "(nenne mir von|welche) (historischen Ereignissen|) am {date} (in der Geschichte|) passiert sind"
+  ]
+}
