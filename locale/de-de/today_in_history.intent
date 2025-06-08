@@ -1,3 +1,35 @@
-(heute|dieses Datum|dieser Tag) in der Geschichte
-(nenne mir von|welche) (historischen Ereignissen|) am {date} (in der Geschichte|) passiert sind
-(nenne mir|welche) (historischen Ereignissen|) (heute|an diesem Datum|an diesem Tag) (in der Geschichte|) passiert sind
+dieser Tag in der Geschichte
+dieses Datum in der Geschichte
+heute in der Geschichte
+nenne mir  an diesem Datum  passiert sind
+nenne mir  an diesem Datum in der Geschichte passiert sind
+nenne mir  an diesem Tag  passiert sind
+nenne mir  an diesem Tag in der Geschichte passiert sind
+nenne mir  heute  passiert sind
+nenne mir  heute in der Geschichte passiert sind
+nenne mir historischen Ereignissen an diesem Datum  passiert sind
+nenne mir historischen Ereignissen an diesem Datum in der Geschichte passiert sind
+nenne mir historischen Ereignissen an diesem Tag  passiert sind
+nenne mir historischen Ereignissen an diesem Tag in der Geschichte passiert sind
+nenne mir historischen Ereignissen heute  passiert sind
+nenne mir historischen Ereignissen heute in der Geschichte passiert sind
+nenne mir von  am {date}  passiert sind
+nenne mir von  am {date} in der Geschichte passiert sind
+nenne mir von historischen Ereignissen am {date}  passiert sind
+nenne mir von historischen Ereignissen am {date} in der Geschichte passiert sind
+welche  am {date}  passiert sind
+welche  am {date} in der Geschichte passiert sind
+welche  an diesem Datum  passiert sind
+welche  an diesem Datum in der Geschichte passiert sind
+welche  an diesem Tag  passiert sind
+welche  an diesem Tag in der Geschichte passiert sind
+welche  heute  passiert sind
+welche  heute in der Geschichte passiert sind
+welche historischen Ereignissen am {date}  passiert sind
+welche historischen Ereignissen am {date} in der Geschichte passiert sind
+welche historischen Ereignissen an diesem Datum  passiert sind
+welche historischen Ereignissen an diesem Datum in der Geschichte passiert sind
+welche historischen Ereignissen an diesem Tag  passiert sind
+welche historischen Ereignissen an diesem Tag in der Geschichte passiert sind
+welche historischen Ereignissen heute  passiert sind
+welche historischen Ereignissen heute in der Geschichte passiert sind
