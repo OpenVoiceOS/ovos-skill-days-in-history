@@ -1,12 +1,17 @@
 # Changelog
 
-## [0.3.11a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.11a2) (2025-06-08)
+## [0.3.12a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.12a1) (2026-03-24)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.10...0.3.11a2)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/V0.3.11...0.3.12a1)
 
 **Merged pull requests:**
 
-- workshop 7.X:X [\#41](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/41) ([JarbasAl](https://github.com/JarbasAl))
+- fix: rename bare lang code locale directories [\#46](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/46) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+- feat: add fr-fr locale [\#45](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/45) ([goldyfruit](https://github.com/goldyfruit))
+
+## [V0.3.11](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/V0.3.11) (2025-06-08)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.11...V0.3.11)
 
 
 
