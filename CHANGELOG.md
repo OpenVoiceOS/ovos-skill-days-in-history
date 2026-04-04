@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.12a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.12a2) (2026-04-04)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.12a1...0.3.12a2)
+
+**Merged pull requests:**
+
+- ci: modernize GitHub workflows [\#49](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/49) ([JarbasAl](https://github.com/JarbasAl))
+- fix\(i18n\): normalize locale folders to canonical BCP-47 [\#48](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/48) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.3.12a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.12a1) (2026-03-24)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/V0.3.11...0.3.12a1)
