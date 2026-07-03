@@ -1,1 +1,6 @@
-who was born today in history
+who was born (today|this day|this date|on this day|on this date) [in history]
+who was born [on] {date} [in history]
+(what|which) [famous|notable|historical] (people|figures) were born (today|this day|this date|on this day|on this date) [in history]
+(what|which) [famous|notable|historical] (people|figures) were born [on] {date} [in history]
+[famous|notable] births (today|this day|this date|on this day|on this date) in history
+[famous|notable] births [on] {date} in history

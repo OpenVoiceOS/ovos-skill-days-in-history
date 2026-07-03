@@ -1,35 +1,8 @@
-tell me about  happened on {date}
-tell me about  happened on {date} in history
-tell me about  happened this date
-tell me about  happened this date in history
-tell me about  happened this day
-tell me about  happened this day in history
-tell me about  happened today
-tell me about  happened today in history
-tell me about historical events happened on {date}
-tell me about historical events happened on {date} in history
-tell me about historical events happened this date
-tell me about historical events happened this date in history
-tell me about historical events happened this day
-tell me about historical events happened this day in history
-tell me about historical events happened today
-tell me about historical events happened today in history
-this date in history
-this day in history
-today in history
-what  happened on {date}
-what  happened on {date} in history
-what  happened this date
-what  happened this date in history
-what  happened this day
-what  happened this day in history
-what  happened today
-what  happened today in history
-what historical events happened on {date}
-what historical events happened on {date} in history
-what historical events happened this date
-what historical events happened this date in history
-what historical events happened this day
-what historical events happened this day in history
-what historical events happened today
-what historical events happened today in history
+(today|this day|this date) in history
+on this (day|date) in history
+(what|which) happened (today|this day|this date|on this day|on this date) in history
+(what|which) happened [on] {date} in history
+(what|which) [notable|important|major] historical events happened (today|this day|this date|on this day|on this date)
+(what|which) [notable|important|major] historical events happened [on] {date}
+tell me about [notable|important|major] historical events (today|this day|this date|on this day|on this date)
+tell me about [notable|important|major] historical events [on] {date}
