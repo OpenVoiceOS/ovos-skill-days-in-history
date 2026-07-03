@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.12a4](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.12a4) (2026-07-03)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.12a3...0.3.12a4)
+
+**Merged pull requests:**
+
+- Improve en-US intent definitions \(coverage + INTENT-1/2 conformance\) [\#54](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/54) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.3.12a3](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.12a3) (2026-04-09)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.12a2...0.3.12a3)
