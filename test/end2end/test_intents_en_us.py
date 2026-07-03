@@ -1,9 +1,9 @@
 """End-to-end intent-routing tests for ovos-skill-days-in-history (en-US).
 
 Each case feeds an utterance through a MiniCroft stack and asserts it routes
-to the expected ``.intent`` handler. Coverage spans the deictic phrasings
-(``today``/``this day``/``on this date``), the explicit ``{date}`` slot, and
-the history-anchored event/birth/death variants.
+to the expected ``.intent`` handler via the padatious pipeline. Coverage spans
+the deictic phrasings (``today``/``this day``/``on this date``), the explicit
+``{date}`` slot, and the history-anchored event/birth/death variants.
 
 Run: pytest test/end2end/ -v
 """
@@ -17,17 +17,17 @@ from ovoscope import get_minicroft
 SKILL_ID = "ovos-skill-days-in-history.openvoiceos"
 LANG = "en-US"
 
-# Exact expansions score conf 1.0 (the -high band); the {date} slot variants
-# land lower, so register all three padacioso bands.
+# Exact phrasings score in the -high band; the {date} slot variants land
+# lower, so drive all three padatious confidence bands.
 PIPELINE = [
-    "ovos-padacioso-pipeline-plugin-high",
-    "ovos-padacioso-pipeline-plugin-medium",
-    "ovos-padacioso-pipeline-plugin-low",
+    "ovos-padatious-pipeline-plugin-high",
+    "ovos-padatious-pipeline-plugin-medium",
+    "ovos-padatious-pipeline-plugin-low",
 ]
 
 
 class _IntentRoutingMixin:
-    """Shared MiniCroft setup for padacioso intent routing."""
+    """Shared MiniCroft setup for padatious intent routing."""
 
     @classmethod
     def setUpClass(cls):

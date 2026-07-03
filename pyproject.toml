@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ovos-skill-days-in-history"
+dynamic = ["version"]
+description = "find out what happened in specific dates in history"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+authors = [
+    {name = "OpenVoiceOS", email = "jarbasai@mailfence.com"}
+]
+keywords = ["ovos", "skill", "plugin"]
+dependencies = [
+    "wikipedia>=1.4.0",
+    "ovos-workshop>=3.1.0,<9.0.0",
+    "ovos-date-parser>=0.0.3"
+]
+
+[project.optional-dependencies]
+test = [
+    "ovoscope>=1.5.0,<2.0.0",
+    "pytest>=7.0.0,<9",
+    "pytest-timeout>=2.0.0",
+    "ovos-padatious>=1.0.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/OpenVoiceOS/ovos-skill-days-in-history"
+
+[project.entry-points."ovos.plugin.skill"]
+"ovos-skill-days-in-history.openvoiceos" = "ovos_skill_days_in_history:TodayInHistory"
+
+[tool.setuptools]
+packages = ["ovos_skill_days_in_history"]
+
+[tool.setuptools.package-dir]
+ovos_skill_days_in_history = ""
+
+[tool.setuptools.dynamic]
+version = {attr = "ovos_skill_days_in_history.version.__version__"}
+
+[tool.setuptools.package-data]
+ovos_skill_days_in_history = [
+    "*.json",
+    "locale/**/*",
+    "locale/*/*.voc",
+    "locale/*/*.intent",
+    "locale/*/*.dialog",
+]
