@@ -89,7 +89,7 @@ class TodayInHistory(OVOSSkill):
         self.set_context("prev_dialog", dialog)
 
     @intent_handler(IntentBuilder("TellMeMoreIntent").
-                    require("TellMeMore").
+                    require("tell_me_more").
                     require("prev_dialog"))
     def handle_tell_me_more_intent(self, message):
         """ Handler for follow-up inquiries 'tell me more'
