@@ -14,5 +14,5 @@ jobs:
       coverage_source: 'ovos_skill_days_in_history'
       test_path: 'test/'
       test_extras: 'test'
-      system_deps: 'swig'
+      system_deps: 'swig libfann-dev'
       min_coverage: 0
