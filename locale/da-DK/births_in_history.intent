@@ -1,1 +1,6 @@
-hvem blev født i dag i historien
+hvem blev født (i dag|denne dag|denne dato|på denne dag|på denne dato) [i historien]
+hvem blev født [den] {date} [i historien]
+(hvilke|hvem) [berømte|kendte|historiske] (personer|skikkelser) blev født (i dag|denne dag|denne dato|på denne dag|på denne dato) [i historien]
+(hvilke|hvem) [berømte|kendte|historiske] (personer|skikkelser) blev født [den] {date} [i historien]
+[berømte|kendte] fødsler (i dag|denne dag|denne dato|på denne dag|på denne dato) i historien
+[berømte|kendte] fødsler [den] {date} i historien
