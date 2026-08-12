@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.13a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.13a1) (2026-08-12)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.12a7...0.3.13a1)
+
+**Merged pull requests:**
+
+- fix: TellMeMoreIntent KeyError\('prev\_dialog'\) crash [\#63](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/63) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.3.12a7](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.12a7) (2026-08-12)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.12a6...0.3.12a7)
