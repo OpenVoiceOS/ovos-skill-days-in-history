@@ -1,6 +1,7 @@
 import datetime
 import os.path
 
+from ovos_bus_client.session import SessionManager
 from ovos_date_parser import extract_datetime, nice_year
 from ovos_utils import classproperty
 from ovos_utils.log import LOG
@@ -45,10 +46,10 @@ class TodayInHistory(OVOSSkill):
         event = f"{os.path.dirname(__file__)}/locale/{self.lang}/{dialog}.dialog"
         if not os.path.isfile(event):
             self.speak_dialog("unknown_date")
-            self.remove_context("prev_dialog")
+            SessionManager.get(message).remove_intent_context("prev_dialog", scope="shared")
         else:
             self.speak_dialog(dialog)
-            self.set_context("prev_dialog", dialog)
+            SessionManager.get(message).set_intent_context("prev_dialog", dialog, scope="shared")
 
     @staticmethod
     def pronounce_year(dialog: str, lang: str) -> str:
@@ -79,14 +80,14 @@ class TodayInHistory(OVOSSkill):
         date = self.get_date(message)
         dialog = f"day_{date.day}_month_{date.month}_births"
         self.speak_dialog(dialog, render_callback=self.pronounce_year)
-        self.set_context("prev_dialog", dialog)
+        SessionManager.get(message).set_intent_context("prev_dialog", dialog, scope="shared")
 
     @intent_handler("today_in_history.intent")
     def handle_today_in_history_intent(self, message):
         date = self.get_date(message)
         dialog = f"day_{date.day}_month_{date.month}_events"
         self.speak_dialog(dialog, render_callback=self.pronounce_year)
-        self.set_context("prev_dialog", dialog)
+        SessionManager.get(message).set_intent_context("prev_dialog", dialog, scope="shared")
 
     @intent_handler(IntentBuilder("TellMeMoreIntent").
                     require("tell_me_more").
@@ -94,12 +95,25 @@ class TodayInHistory(OVOSSkill):
     def handle_tell_me_more_intent(self, message):
         """ Handler for follow-up inquiries 'tell me more'
         enabled after initial response is complete
+
+        NOTE: `require("prev_dialog")` has no backing vocab/keyword file --
+        it is only ever satisfied through context (self.set_context /
+        SessionManager.set_intent_context), never from the utterance itself.
+        Verified against the currently-installed ovos-adapt: the intent
+        still matches correctly on a live "prev_dialog" context entry, but
+        `message.data` does not reliably carry the stored value back (see
+        the bug this fixes -- `message.data["prev_dialog"]` raised
+        `KeyError` even on a successful match). Read the value back from
+        the session's `intent_context` map directly instead of trusting
+        `message.data`.
         """
         # TODO - add mechanism to avoid repeated responses
         all_spoken = False
+        session = SessionManager.get(message)
         if all_spoken:
             self.speak_dialog("thats_all")
-            self.remove_context("prev_dialog")
+            session.remove_intent_context("prev_dialog", scope="shared")
         else:
-            dialog = message.data["prev_dialog"]
+            entry = (session.intent_context or {}).get("prev_dialog") or {}
+            dialog = entry["value"]
             self.speak_dialog(dialog, render_callback=self.pronounce_year)

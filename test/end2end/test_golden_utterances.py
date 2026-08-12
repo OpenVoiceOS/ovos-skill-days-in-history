@@ -17,7 +17,7 @@ from pathlib import Path
 
 import pytest
 from ovos_bus_client.message import Message
-from ovos_bus_client.session import Session
+from ovos_bus_client.session import Session, SessionManager
 from ovoscope import CaptureSession, get_minicroft
 
 SKILL_ID = "ovos-skill-days-in-history.openvoiceos"
@@ -79,7 +79,16 @@ def minicroft():
 
 
 def _types(mc, text, session_id, pipeline):
-    session = Session(session_id)
+    # Reuse the live SessionManager singleton for this session_id when one
+    # already exists (i.e. a prior turn in the same conversation ran through
+    # this same in-process bus). A brand-new Session object here would carry
+    # OVOS-CONTEXT-1's session.intent_context as empty/omitted, and
+    # SessionManager.get() folds the incoming wire snapshot onto the
+    # singleton with whole-field last-writer-wins semantics -- so sending a
+    # context-less snapshot on turn 2 would silently wipe whatever a skill's
+    # turn-1 handler wrote via set_intent_context, exactly like a real
+    # client that fails to carry the session forward between turns.
+    session = SessionManager.sessions.get(session_id) or Session(session_id)
     session.lang = LANG
     session.pipeline = list(pipeline)
     utterance = Message(
@@ -90,8 +99,13 @@ def _types(mc, text, session_id, pipeline):
     capture = CaptureSession(
         mc,
         eof_msgs=["ovos.utterance.handled"],
-        ignore_messages=["speak", "ovos.utterance.speak",
-                          "recognizer_loop:audio_output_start",
+        # NOTE: "speak" / "ovos.utterance.speak" are deliberately NOT
+        # ignored -- test_golden_utterance_adapt_followup asserts on their
+        # presence to confirm the follow-up intent actually produced spoken
+        # output, not just a bus match. Ignoring purely-cosmetic audio
+        # plumbing keeps that assertion's noise down without hiding the
+        # signal it checks for.
+        ignore_messages=["recognizer_loop:audio_output_start",
                           "recognizer_loop:audio_output_end",
                           "mycroft.audio.play_sound"],
     )
@@ -111,26 +125,6 @@ def test_golden_utterance(minicroft, row):
 
 
 @pytest.mark.timeout(60)
-@pytest.mark.xfail(
-    strict=True,
-    reason=(
-        "handle_tell_me_more_intent crashes with KeyError('prev_dialog') "
-        "when TellMeMoreIntent is reached through the real bus. "
-        "set_context('prev_dialog', dialog) writes through the deprecated "
-        "IntentServiceInterface.set_context path (see 'IntentServiceInterface"
-        ".set_context is deprecated; adapt-engine context is engine-specific' "
-        "at __init__.py's handle_today_in_history_intent), but the current "
-        "adapt pipeline's OVOS-CONTEXT-1 match_data never surfaces the "
-        "context's stored value under 'prev_dialog' -- only the raw "
-        "'another event' entity tag comes through, so "
-        "message.data['prev_dialog'] always raises. Confirmed: the intent "
-        "still matches correctly (TellMeMoreIntent fires after a prior "
-        "today_in_history turn sets the context), it is the handler body "
-        "that crashes. Filed as a real skill-code bug, not a corpus or "
-        "template defect -- fixing the context write path is out of scope "
-        "for this golden-utterance suite."
-    ),
-)
 @pytest.mark.parametrize("row", [pytest.param(r, id=r["utterance"]) for r in ADAPT_ROWS])
 def test_golden_utterance_adapt_followup(minicroft, row):
     intent_name = _label_to_bus_name(row["intent_label"])
