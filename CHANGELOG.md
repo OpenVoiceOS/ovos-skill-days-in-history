@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.12a7](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.12a7) (2026-08-12)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.12a6...0.3.12a7)
+
+**Merged pull requests:**
+
+- test: add golden-utterance e2e suite \(en-US\); fix stale .intent assertion [\#61](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/61) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.3.12a6](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.12a6) (2026-08-01)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.12a5...0.3.12a6)
