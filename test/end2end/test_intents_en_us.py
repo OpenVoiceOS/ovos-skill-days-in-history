@@ -39,7 +39,11 @@ class _IntentRoutingMixin:
             cls.minicroft.stop()
 
     def _assert_intent(self, utterance: str, intent_file: str):
-        intent_msg_type = f"{SKILL_ID}:{intent_file}"
+        # dispatched ovos.intent.matched intent names carry no ".intent"
+        # suffix (OVOS-INTENT-2 naming) -- strip it so this assertion tracks
+        # the real bus event instead of the on-disk container filename.
+        intent_name = intent_file[:-len(".intent")] if intent_file.endswith(".intent") else intent_file
+        intent_msg_type = f"{SKILL_ID}:{intent_name}"
         matched = []
         handler = lambda msg: matched.append(msg)
         self.minicroft.bus.on(intent_msg_type, handler)
