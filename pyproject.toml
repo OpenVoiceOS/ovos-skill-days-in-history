@@ -15,7 +15,8 @@ keywords = ["ovos", "skill", "plugin"]
 dependencies = [
     "wikipedia>=1.4.0",
     "ovos-workshop>=3.1.0,<10.0.0",
-    "ovos-date-parser>=0.0.3"
+    "ovos-date-parser>=0.0.3",
+    "ovos-spec-tools>=1.6.0"
 ]
 
 [project.optional-dependencies]
