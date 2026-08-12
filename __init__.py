@@ -106,14 +106,27 @@ class TodayInHistory(OVOSSkill):
         `KeyError` even on a successful match). Read the value back from
         the session's `intent_context` map directly instead of trusting
         `message.data`.
+
+        NOTE 2: until ovos-workshop#525 ships, this intent can (and on live
+        ser9 deployments, does) fire with NO "prev_dialog" entry at all --
+        the require("prev_dialog") gate is currently inert upstream (the
+        skill's adapt intent gets registered twice; the OVOS-INTENT-4 spec
+        path silently drops context-only requirements and produces an
+        ungated duplicate that matches on "tell_me_more" alone). Even after
+        that upstream fix ships, a conformant client may legitimately replay
+        a stale/expired session that no longer carries the entry. Either
+        way "no prev_dialog" is a real, expected state here -- there is
+        simply nothing to elaborate on yet -- not a bug to mask with a
+        defensive `.get()`: branch on it explicitly and say so, the same
+        dialog already used for "no more to add".
         """
         # TODO - add mechanism to avoid repeated responses
         all_spoken = False
         session = SessionManager.get(message)
-        if all_spoken:
+        entry = (session.intent_context or {}).get("prev_dialog")
+        if all_spoken or not isinstance(entry, dict) or "value" not in entry:
             self.speak_dialog("thats_all")
             session.remove_intent_context("prev_dialog", scope="shared")
         else:
-            entry = (session.intent_context or {}).get("prev_dialog") or {}
             dialog = entry["value"]
             self.speak_dialog(dialog, render_callback=self.pronounce_year)
