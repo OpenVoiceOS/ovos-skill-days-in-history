@@ -124,8 +124,27 @@ def test_golden_utterance(minicroft, row):
     )
 
 
+def _adapt_row_param(r):
+    marks = []
+    if r["utterance"] == "another event":
+        # xfail: ovos-adapt-pipeline-plugin#66 -- the legacy Adapt
+        # registration path munges the "prev_dialog" context-gate keyword
+        # name, so the plain "prev_dialog" intent_context entry set by turn 1
+        # never satisfies the gate the legacy parser actually validates
+        # against, and TellMeMoreIntent never fires for this follow-up. Flip
+        # back to a plain (non-xfail) param once adapt#66 is fixed upstream
+        # and released.
+        marks.append(pytest.mark.xfail(
+            strict=True,
+            reason="ovos-adapt-pipeline-plugin#66: legacy-path context "
+                   "keyword names are munged, so session context under the "
+                   "plain 'prev_dialog' key never satisfies the gate",
+        ))
+    return pytest.param(r, id=r["utterance"], marks=marks)
+
+
 @pytest.mark.timeout(60)
-@pytest.mark.parametrize("row", [pytest.param(r, id=r["utterance"]) for r in ADAPT_ROWS])
+@pytest.mark.parametrize("row", [_adapt_row_param(r) for r in ADAPT_ROWS])
 def test_golden_utterance_adapt_followup(minicroft, row):
     intent_name = _label_to_bus_name(row["intent_label"])
     # turn 1: fire a today_in_history phrasing to set the prev_dialog context
