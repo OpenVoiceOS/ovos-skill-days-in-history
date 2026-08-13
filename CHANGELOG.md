@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.16a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.16a1) (2026-08-13)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.15a2...0.3.16a1)
+
+**Merged pull requests:**
+
+- fix: strip residual CSS selector debris from dialog lines \(follow-up to \#67\) [\#69](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/69) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.3.15a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.15a2) (2026-08-13)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.15a1...0.3.15a2)
