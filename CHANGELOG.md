@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.16a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.16a2) (2026-08-13)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.16a1...0.3.16a2)
+
+**Merged pull requests:**
+
+- test: drop parked xfails now that adapt\#66/core\#857 landed [\#73](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/73) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.3.16a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.16a1) (2026-08-13)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.15a2...0.3.16a1)
