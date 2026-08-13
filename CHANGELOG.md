@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.15a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.15a1) (2026-08-13)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.14a1...0.3.15a1)
+
+**Merged pull requests:**
+
+- fix: tolerate and repair malformed OVOS-INTENT-1 dialog templates [\#67](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/67) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.3.14a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.14a1) (2026-08-12)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.13a1...0.3.14a1)
