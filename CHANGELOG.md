@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.15a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.15a2) (2026-08-13)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.15a1...0.3.15a2)
+
+**Merged pull requests:**
+
+- test: xfail context-gated follow-up pending adapt\#66 [\#70](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/70) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.3.15a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.15a1) (2026-08-13)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.14a1...0.3.15a1)
