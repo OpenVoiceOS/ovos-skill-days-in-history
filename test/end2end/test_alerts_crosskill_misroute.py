@@ -156,6 +156,14 @@ class TestAlertsCrossSkillMisroute(TestCase):
         if getattr(cls, "minicroft", None):
             cls.minicroft.stop()
 
+    # xfail: ovos-adapt-pipeline-plugin#66 -- the legacy Adapt registration
+    # path munges the "prev_dialog" context-gate keyword name, so a session's
+    # plain "prev_dialog" intent_context entry never satisfies the gate the
+    # legacy parser actually validates against. That gate is what this test
+    # depends on to make TellMeMoreIntent win over alerts' ListAlerts on
+    # "tell me another event". Flip back to a plain (non-xfail) test once
+    # adapt#66 is fixed upstream and released.
+    @unittest.expectedFailure
     def test_tell_me_another_event_stays_with_days_in_history(self):
         session_id = "e2e-crosskill-tell-me-another-event"
         session = Session(session_id)
@@ -321,10 +329,6 @@ class TestPrevDialogContextGate(TestCase):
     blind patch, given the blast radius (every context-gated Adapt intent)
     and the risk of a hasty fix to core intent-matching plumbing.
 
-    This test is intentionally marked ``expectedFailure``: it documents the
-    correct, desired behavior (no context -> no match) and will start
-    reporting an unexpected pass -- which pytest treats as a failure, the
-    signal to remove the decorator -- the day the upstream fix lands.
     """
 
     @classmethod
@@ -336,7 +340,6 @@ class TestPrevDialogContextGate(TestCase):
         if getattr(cls, "minicroft", None):
             cls.minicroft.stop()
 
-    @unittest.expectedFailure
     def test_no_context_means_no_match(self):
         session_id = "e2e-no-context-should-not-match"
         messages = _run_turn(self.minicroft, "tell me another event", session_id)
