@@ -65,7 +65,6 @@ reported against.
 
 Run: pytest test/end2end/test_alerts_crosskill_misroute.py -v
 """
-import unittest
 from unittest import TestCase
 
 from ovos_bus_client.message import Message
@@ -156,14 +155,6 @@ class TestAlertsCrossSkillMisroute(TestCase):
         if getattr(cls, "minicroft", None):
             cls.minicroft.stop()
 
-    # xfail: ovos-adapt-pipeline-plugin#66 -- the legacy Adapt registration
-    # path munges the "prev_dialog" context-gate keyword name, so a session's
-    # plain "prev_dialog" intent_context entry never satisfies the gate the
-    # legacy parser actually validates against. That gate is what this test
-    # depends on to make TellMeMoreIntent win over alerts' ListAlerts on
-    # "tell me another event". Flip back to a plain (non-xfail) test once
-    # adapt#66 is fixed upstream and released.
-    @unittest.expectedFailure
     def test_tell_me_another_event_stays_with_days_in_history(self):
         session_id = "e2e-crosskill-tell-me-another-event"
         session = Session(session_id)

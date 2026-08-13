@@ -25,7 +25,9 @@ test = [
     "pytest>=7.0.0,<9",
     "pytest-timeout>=2.0.0",
     "ovos-padatious>=1.0.0",
-    "ovos-adapt-parser"
+    "ovos-adapt-parser>=1.6.3a1",
+    "ovos-core>=2.6.4a1",
+    "ovos-workshop>=9.3.12a1"
 ]
 
 [project.urls]
