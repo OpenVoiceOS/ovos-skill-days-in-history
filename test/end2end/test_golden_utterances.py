@@ -148,3 +148,57 @@ def test_negative_confusable_not_claimed(minicroft, negative):
     types = _types(minicroft, text, f"negative-{text}", PADATIOUS_PIPELINE)
     claimed = any(t.startswith(f"{SKILL_ID}:") for t in types)
     assert not claimed, f"{text!r} (from {source_skill}) was incorrectly claimed by {SKILL_ID}"
+
+
+@pytest.mark.timeout(60)
+def test_tell_me_more_requires_prev_dialog_context(minicroft):
+    """TellMeMoreIntent.intent declares
+    requires_context=[{"key": "prev_dialog", "scope": "shared"}] -- bare
+    "continue" is common English and must NOT resolve to this skill in a
+    fresh session that never got a today/births/deaths_in_history answer.
+    Run against the plain padatious pipeline (no adapt plugin at all) to
+    prove the gate is enforced by the file-intent engine itself."""
+    intent_name = "TellMeMoreIntent"
+
+    fresh_types = _types(minicroft, "tell me more", "gate-fresh-tell-me-more",
+                          PADATIOUS_PIPELINE)
+    claimed_fresh = f"{SKILL_ID}:{intent_name}" in fresh_types
+    assert not claimed_fresh, (
+        f"'tell me more' in a fresh session must NOT match {intent_name}, "
+        f"got {fresh_types!r}"
+    )
+
+    session_id = "gate-history-then-tell-me-more"
+    _types(minicroft, "today in history", session_id, PADATIOUS_PIPELINE)
+    followup_types = _types(minicroft, "tell me more", session_id,
+                             PADATIOUS_PIPELINE)
+    assert f"{SKILL_ID}:{intent_name}" in followup_types, (
+        f"'tell me more' after 'today in history' must match {intent_name}, "
+        f"got {followup_types!r}"
+    )
+
+
+@pytest.mark.timeout(60)
+def test_tell_me_more_context_decays_after_three_turns(minicroft):
+    """The "prev_dialog" context is written with turns_remaining=3, so it
+    must not survive indefinitely: three unrelated utterances after the
+    gate opens, "tell me more" must NOT match TellMeMoreIntent anymore.
+    Adapt's own context frames decayed the same way; the OVOS-CONTEXT-1
+    file-intent gate needs the same behavior or the skill would keep
+    claiming bare "continue"/"say more" phrasing for the rest of the
+    session after a single history reading."""
+    intent_name = "TellMeMoreIntent"
+    session_id = "gate-history-then-decay"
+
+    _types(minicroft, "today in history", session_id, PADATIOUS_PIPELINE)
+    for text, source_skill in NEGATIVE_UTTERANCES[:3]:
+        _types(minicroft, text, session_id, PADATIOUS_PIPELINE)
+
+    decayed_types = _types(minicroft, "tell me more", session_id,
+                            PADATIOUS_PIPELINE)
+    claimed_decayed = f"{SKILL_ID}:{intent_name}" in decayed_types
+    assert not claimed_decayed, (
+        f"'tell me more' three unrelated turns after 'today in history' "
+        f"must NOT match {intent_name} (context should have decayed), "
+        f"got {decayed_types!r}"
+    )

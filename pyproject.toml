@@ -14,7 +14,7 @@ authors = [
 keywords = ["ovos", "skill", "plugin"]
 dependencies = [
     "wikipedia>=1.4.0",
-    "ovos-workshop>=3.1.0,<10.0.0",
+    "ovos-workshop>=9.6.0a1,<10.0.0",
     "ovos-date-parser>=0.0.3",
     "ovos-spec-tools>=1.6.0"
 ]
@@ -24,10 +24,10 @@ test = [
     "ovoscope>=1.5.0,<2.0.0",
     "pytest>=7.0.0,<9",
     "pytest-timeout>=2.0.0",
-    "ovos-padatious>=1.0.0",
+    "ovos-padatious>=2.0.10a1",
     "ovos-adapt-parser>=1.6.3a1",
     "ovos-core>=2.6.4a1",
-    "ovos-workshop>=9.3.12a1"
+    "ovos-workshop>=9.6.0a1"
 ]
 
 [project.urls]
