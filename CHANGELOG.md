@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.16a3](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.16a3) (2026-09-02)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.16a2...0.3.16a3)
+
+**Merged pull requests:**
+
+- refactor: migrate context-gated adapt intent to intent file [\#75](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/75) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.3.16a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.16a2) (2026-08-13)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.16a1...0.3.16a2)
