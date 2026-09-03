@@ -86,6 +86,18 @@ class TodayInHistory(OVOSSkill):
                     LOG.warning(f"render_callback failed on raw fallback line: {cb_err}")
             self.speak(raw)
 
+    def _dialog_lines(self, dialog: str) -> list:
+        """Return the candidate lines of a `.dialog` resource, or `[]` if
+        it can't be found -- used by the tell-me-more follow-up to pick an
+        as-yet-unspoken line instead of the random-per-call choice
+        `speak_dialog` makes internally."""
+        path = self.find_resource(f"{dialog}.dialog", "dialog")
+        if not path or not os.path.isfile(path):
+            return []
+        with open(path, encoding="utf-8") as f:
+            return [line.strip() for line in f
+                    if line.strip() and not line.strip().startswith("#")]
+
     @intent_handler("deaths_in_history.intent")
     def handle_deaths_intent(self, message):
         date = self.get_date(message)
@@ -97,7 +109,8 @@ class TodayInHistory(OVOSSkill):
         else:
             self._speak_dialog_safe(dialog)
             SessionManager.get(message).set_intent_context(
-                "prev_dialog", dialog, scope="shared", turns_remaining=3)
+                "prev_dialog", {"value": dialog, "seen": []},
+                scope="shared", turns_remaining=3)
 
     @staticmethod
     def pronounce_year(dialog: str, lang: str) -> str:
@@ -129,7 +142,8 @@ class TodayInHistory(OVOSSkill):
         dialog = f"day_{date.day}_month_{date.month}_births"
         self._speak_dialog_safe(dialog, render_callback=self.pronounce_year)
         SessionManager.get(message).set_intent_context(
-            "prev_dialog", dialog, scope="shared", turns_remaining=3)
+            "prev_dialog", {"value": dialog, "seen": []},
+            scope="shared", turns_remaining=3)
 
     @intent_handler("today_in_history.intent")
     def handle_today_in_history_intent(self, message):
@@ -137,7 +151,8 @@ class TodayInHistory(OVOSSkill):
         dialog = f"day_{date.day}_month_{date.month}_events"
         self._speak_dialog_safe(dialog, render_callback=self.pronounce_year)
         SessionManager.get(message).set_intent_context(
-            "prev_dialog", dialog, scope="shared", turns_remaining=3)
+            "prev_dialog", {"value": dialog, "seen": []},
+            scope="shared", turns_remaining=3)
 
     @intent_handler("TellMeMoreIntent.intent",
                     requires_context=[{"key": "prev_dialog", "scope": "shared"}])
@@ -163,13 +178,20 @@ class TodayInHistory(OVOSSkill):
         as-is here; whether it should become "private" (owner-scoped) is
         a separate design call left to the maintainer.
         """
-        # TODO - add mechanism to avoid repeated responses
-        all_spoken = False
         session = SessionManager.get(message)
         entry = (session.intent_context or {}).get("prev_dialog")
-        if all_spoken or not isinstance(entry, dict) or "value" not in entry:
+        state = entry["value"] if isinstance(entry, dict) else None
+        dialog = state.get("value") if isinstance(state, dict) else None
+        seen = state.get("seen", []) if isinstance(state, dict) else []
+        unspoken = [line for line in self._dialog_lines(dialog) if line not in seen] \
+            if dialog else []
+        if not unspoken:
             self.speak_dialog("thats_all")
             session.remove_intent_context("prev_dialog", scope="shared")
         else:
-            dialog = entry["value"]
-            self._speak_dialog_safe(dialog, render_callback=self.pronounce_year)
+            line = random.choice(unspoken)
+            rendered = self.pronounce_year(line, self.lang)
+            self.speak(rendered)
+            session.set_intent_context(
+                "prev_dialog", {"value": dialog, "seen": seen + [line]},
+                scope="shared", turns_remaining=entry.get("turns_remaining"))
