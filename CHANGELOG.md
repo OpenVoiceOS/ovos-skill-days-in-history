@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.16a4](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.16a4) (2026-09-03)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.16a3...0.3.16a4)
+
+**Merged pull requests:**
+
+- Add missing tell-me-more phrasings and dedupe repeated dialogs [\#78](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/78) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.3.16a3](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.16a3) (2026-09-02)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.16a2...0.3.16a3)
