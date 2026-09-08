@@ -17,7 +17,7 @@ from pathlib import Path
 
 import pytest
 from ovos_bus_client.message import Message
-from ovos_bus_client.session import Session, SessionManager
+from ovos_bus_client.session import Session
 from ovoscope import CaptureSession, get_minicroft
 
 SKILL_ID = "ovos-skill-days-in-history.openvoiceos"
@@ -76,19 +76,20 @@ def minicroft():
     mc = get_minicroft([SKILL_ID])
     yield mc
     mc.stop()
+    _LAST_SESSION.clear()
+
+
+# The session state a skill writes on turn 1 (OVOS-CONTEXT-1 intent context)
+# travels back on the wire in every reply's ``context["session"]``; a named
+# session never enters the in-process registry (OVOS-SESSION-2 §2.2), so the
+# client is the one that carries it forward. This is that client's memory:
+# the latest session snapshot seen per session_id.
+_LAST_SESSION: dict = {}
 
 
 def _types(mc, text, session_id, pipeline):
-    # Reuse the live SessionManager singleton for this session_id when one
-    # already exists (i.e. a prior turn in the same conversation ran through
-    # this same in-process bus). A brand-new Session object here would carry
-    # OVOS-CONTEXT-1's session.intent_context as empty/omitted, and
-    # SessionManager.get() folds the incoming wire snapshot onto the
-    # singleton with whole-field last-writer-wins semantics -- so sending a
-    # context-less snapshot on turn 2 would silently wipe whatever a skill's
-    # turn-1 handler wrote via set_intent_context, exactly like a real
-    # client that fails to carry the session forward between turns.
-    session = SessionManager.sessions.get(session_id) or Session(session_id)
+    snapshot = _LAST_SESSION.get(session_id)
+    session = Session.deserialize(snapshot) if snapshot else Session(session_id)
     session.lang = LANG
     session.pipeline = list(pipeline)
     utterance = Message(
@@ -110,7 +111,12 @@ def _types(mc, text, session_id, pipeline):
                           "mycroft.audio.play_sound"],
     )
     capture.capture(utterance, timeout=30)
-    return [m.msg_type for m in capture.finish()]
+    messages = capture.finish()
+    for m in messages:
+        snapshot = m.context.get("session")
+        if snapshot and snapshot.get("session_id") == session_id:
+            _LAST_SESSION[session_id] = snapshot
+    return [m.msg_type for m in messages]
 
 
 @pytest.mark.timeout(60)
