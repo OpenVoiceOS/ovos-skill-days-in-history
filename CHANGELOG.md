@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.16a5](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.16a5) (2026-09-08)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.16a4...0.3.16a5)
+
+**Merged pull requests:**
+
+- test: carry the session forward between turns from the reply context [\#82](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/82) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.3.16a4](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.16a4) (2026-09-03)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.16a3...0.3.16a4)
