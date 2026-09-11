@@ -1,0 +1,6 @@
+hvem døde (i dag|denne dag|denne dato|på denne dag|på denne dato) [i historien]
+hvem døde [den] {date} [i historien]
+(hvilke|hvem) [berømte|kendte|historiske] (personer|skikkelser) døde (i dag|denne dag|denne dato|på denne dag|på denne dato) [i historien]
+(hvilke|hvem) [berømte|kendte|historiske] (personer|skikkelser) døde [den] {date} [i historien]
+[berømte|kendte] dødsfald (i dag|denne dag|denne dato|på denne dag|på denne dato) i historien
+[berømte|kendte] dødsfald [den] {date} i historien

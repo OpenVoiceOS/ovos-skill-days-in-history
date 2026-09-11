@@ -1,31 +1,36 @@
-# <img src="https://raw.githack.com/FortAwesome/Font-Awesome/master/svgs/solid/calendar-day.svg" card_color="#40DBB0" width="50" height="50" style="vertical-align:bottom"/> Today In History
-Informs you of historical tidbits about a given calendar day
+# ![icon](https://raw.githack.com/FortAwesome/Font-Awesome/master/svgs/solid/calendar-day.svg) Today In History
+
+An [OpenVoiceOS](https://www.openvoiceos.org) skill that reports historical events for today or for any other calendar day. The data comes from [Wikipedia](https://www.wikipedia.org).
 
 ## About
-Provides historical events for today or any other calendar day using information pulled from [Wikipedia](https://www.wikipedia.org).
+
+The skill does not query Wikipedia or the muffinlabs API at runtime. Dialog files in the native OVOS format were generated for English and added to the translation platform. This lets the skill work offline and in multiple languages.
 
 ## Examples
+
 * "What happened today in history?"
-* "who was born today in history?"
-* "who died today in history?"
+* "Who was born today in history?"
+* "Who died today in history?"
 * "Tell me about events in history on December 12th"
 * "What historical events happened on June 16th?"
 * "Tell me more"
 * "What's another event?"
 
+## Related projects
+
+* [OpenVoiceOS/ovos-date-parser](https://github.com/OpenVoiceOS/ovos-date-parser) parses the calendar date from the request.
 
 ## License
 
-Historical data has been gathered via https://github.com/muffinista/really-simple-history-api and can also be accessed via https://history.muffinlabs.com/
+The historical data was gathered from [muffinista/really-simple-history-api](https://github.com/muffinista/really-simple-history-api). It is also available from [history.muffinlabs.com](https://history.muffinlabs.com/).
 
-The historical data is licensed using CC BY-SA 3.0, the same license used for Wikipedia data. 
-
-wikipedia and the muffinlabs api are not used directly in order to allow offline usage and language support, Dialog files in the native OVOS format were generated for english and integrated into our translation platform
+The historical data is licensed under CC BY-SA 3.0, the license Wikipedia uses for its data.
 
 ## Category
+
 **Information**
 
 ## Tags
+
 #History
 #Trivia
-
