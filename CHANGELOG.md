@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.17a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.17a2) (2026-09-11)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.17a1...0.3.17a2)
+
+**Merged pull requests:**
+
+- translate\(es-ES\): restore forgotten days-in-history locale [\#80](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/80) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.3.17a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.17a1) (2026-09-11)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.16a5...0.3.17a1)
