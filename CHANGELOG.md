@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.18a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.18a1) (2026-09-13)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.17a2...0.3.18a1)
+
+**Merged pull requests:**
+
+- fix: rename TellMeMoreIntent.intent to an OVOS-INTENT-2 base name [\#86](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/86) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.3.17a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.17a2) (2026-09-11)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.17a1...0.3.17a2)
