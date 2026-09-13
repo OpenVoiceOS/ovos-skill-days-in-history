@@ -4,7 +4,7 @@ Live bug: in a days-in-history session ("what happened today in history" ->
 answer), the follow-up "tell me another event" was stolen by
 ovos-skill-alerts' ListAlerts adapt intent (adapt_medium tier, confidence
 ~0.57 -- "tell me" satisfies its ``query`` vocab, bare "event" satisfies its
-``event`` vocab). days-in-history's own TellMeMoreIntent (adapt, gated by the
+``event`` vocab). days-in-history's own tell_me_more_intent (adapt, gated by the
 OVOS-CONTEXT-1 ``prev_dialog`` session context set after every answer) never
 got a chance: its ``tell_me_more.voc`` only tagged "another event" (2 of the
 4 words), so it scored too low to clear even the adapt-high tier, and the
@@ -12,7 +12,7 @@ pipeline fell through to adapt-medium where alerts' broader vocab explained
 more of the utterance and won.
 
 Fix (this repo only): add the single literal phrase "tell me another event"
-to ``locale/en-US/tell_me_more.voc`` so TellMeMoreIntent's own vocab explains
+to ``locale/en-US/tell_me_more.voc`` so tell_me_more_intent's own vocab explains
 the *entire* utterance and clears the adapt-high tier -- which the pipeline
 always tries before adapt-medium, so alerts' ListAlerts (which only ever
 reaches adapt-medium for this utterance) is never even evaluated.
@@ -23,7 +23,7 @@ one" to the same vocab file. Adversarial review caught that this created a
 mirror-image theft: since those entries have no trailing noun, they matched
 the *prefix* of any "tell me another <X>" utterance, so "tell me another
 joke" / "tell me another quote" (unrelated skills' follow-ups) were wrongly
-claimed by this skill's TellMeMoreIntent. Those two broader entries were
+claimed by this skill's tell_me_more_intent. Those two broader entries were
 dropped; only the single, exact "tell me another event" phrase remains, and
 this file's negative tests below guard against that regression coming back.
 
@@ -46,11 +46,11 @@ set by turn 1 would appear lost on turn 2.
 
 UPSTREAM FINDING (documented, not fixed here -- see the class docstring on
 ``TestPrevDialogContextGate`` below): ``require("prev_dialog")`` -- the
-OVOS-CONTEXT-1 gate that is supposed to make TellMeMoreIntent fire only
+OVOS-CONTEXT-1 gate that is supposed to make tell_me_more_intent fire only
 after an active days-in-history turn -- is currently INERT in ovos-core /
 ovos-adapt-parser / ovos-workshop at the pinned prerelease versions. A
 context-free "tell me another event" on a brand new session still matches
-TellMeMoreIntent. Root cause: the skill's adapt intent gets registered
+tell_me_more_intent. Root cause: the skill's adapt intent gets registered
 *twice* (a legacy dual-emit path and the OVOS-INTENT-4 spec path), and the
 spec path silently drops any ``require()`` entry with no backing vocab
 samples (``prev_dialog`` has none by design -- it's context-only) while also
@@ -86,7 +86,7 @@ LANG = "en-US"
 #
 # Two things about that list matter for these tests:
 #   1. adapt-high runs before adapt-medium -- this is what lets
-#      TellMeMoreIntent's narrowed vocab win outright over alerts'
+#      tell_me_more_intent's narrowed vocab win outright over alerts'
 #      ListAlerts before alerts is even tried (the fix this PR verifies).
 #   2. there is NO padatious-medium, NO padatious-low, NO adapt-low, and NO
 #      padacioso tier at all in the real default. Earlier revisions of this
@@ -189,7 +189,7 @@ class TestAlertsCrossSkillMisroute(TestCase):
         )
         self.assertFalse(
             errored,
-            f"days-in-history's TellMeMoreIntent handler raised: {errored}",
+            f"days-in-history's tell_me_more_intent handler raised: {errored}",
         )
         spoken = [m.data.get("utterance") for m in turn2_messages
                   if m.msg_type == "ovos.utterance.speak"]
@@ -250,11 +250,11 @@ class TestAlertsCrossSkillMisroute(TestCase):
 class TestPrevDialogContextGate(TestCase):
     """UPSTREAM BUG, documented here, NOT fixable in this skill repo.
 
-    ``require("prev_dialog")`` is supposed to make TellMeMoreIntent
+    ``require("prev_dialog")`` is supposed to make tell_me_more_intent
     unmatchable outside an active days-in-history session (the whole point
     of the OVOS-CONTEXT-1 gate added in #63). It doesn't gate anything: on a
     completely fresh session with zero prior turns, "tell me another event"
-    still matches TellMeMoreIntent.
+    still matches tell_me_more_intent.
 
     Root cause (traced against ovos-core 2.6.3a1 / ovos-adapt-parser
     1.6.1a1 / ovos-workshop at the same prerelease train, in-process):
@@ -285,7 +285,7 @@ class TestPrevDialogContextGate(TestCase):
 
     3. ``ovos_adapt/opm.py``'s ``handle_spec_register_intent`` receives
        that payload and registers a SECOND ``Intent`` parser under the
-       identical name (``skill_id:TellMeMoreIntent``) that requires ONLY
+       identical name (``skill_id:tell_me_more_intent``) that requires ONLY
        "tell_me_more" -- no context gate at all. This duplicate also gets a
        corrupted entity-type namespace from the module-level helper
        ``_entity_skill_id`` (ovos_adapt/opm.py, ~line 39-50):
@@ -305,7 +305,7 @@ class TestPrevDialogContextGate(TestCase):
        this corrupted namespace and never find the entry the skill wrote
        under the real, un-corrupted key).
 
-    Net effect: BOTH registered ``Intent`` objects for TellMeMoreIntent
+    Net effect: BOTH registered ``Intent`` objects for tell_me_more_intent
     coexist in ``AdaptPipeline.engines[lang].intent_parsers`` under the
     same name; Adapt validates every parser with that name and accepts a
     match from ANY of them, so the ungated duplicate (needs only the vocab
@@ -338,14 +338,14 @@ class TestPrevDialogContextGate(TestCase):
         claimed_by_dih = [m for m in matched if m.data.get("skill_id") == DIH_SKILL_ID]
         self.assertFalse(
             claimed_by_dih,
-            "TellMeMoreIntent matched on a fresh session with no "
+            "tell_me_more_intent matched on a fresh session with no "
             "prev_dialog context -- the require('prev_dialog') gate is "
             "inert (see class docstring for the upstream root cause)",
         )
 
     def test_handler_survives_firing_without_context(self):
         """Live ser9 finding: because of the upstream bug documented above,
-        TellMeMoreIntent DOES fire on a context-free session today (this is
+        tell_me_more_intent DOES fire on a context-free session today (this is
         exactly what ``test_no_context_means_no_match`` above documents as
         an xfail). When it does, the handler used to assume
         ``session.intent_context["prev_dialog"]`` existed and was a dict
@@ -361,7 +361,7 @@ class TestPrevDialogContextGate(TestCase):
 
         This does not (and should not) assert WHICH intent fires -- that is
         covered by ``test_no_context_means_no_match`` above and is an
-        upstream concern. It asserts that IF TellMeMoreIntent fires with no
+        upstream concern. It asserts that IF tell_me_more_intent fires with no
         context, it completes cleanly: no ``ovos.intent.handler.error``, no
         literal "skill.error" utterance spoken.
         """
@@ -371,13 +371,13 @@ class TestPrevDialogContextGate(TestCase):
         dih_matched = [m for m in matched if m.data.get("skill_id") == DIH_SKILL_ID]
         if not dih_matched:
             self.skipTest(
-                "TellMeMoreIntent did not fire on this run (the upstream "
+                "tell_me_more_intent did not fire on this run (the upstream "
                 "ungated-duplicate bug is nondeterministic-adjacent); "
                 "nothing to assert about the handler"
             )
         self.assertFalse(
             errored,
-            f"days-in-history's TellMeMoreIntent handler crashed when fired "
+            f"days-in-history's tell_me_more_intent handler crashed when fired "
             f"without prev_dialog context: {errored}",
         )
         spoken = [m.data.get("utterance") for m in messages
