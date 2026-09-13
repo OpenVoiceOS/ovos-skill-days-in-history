@@ -154,7 +154,7 @@ class TodayInHistory(OVOSSkill):
             "prev_dialog", {"value": dialog, "seen": []},
             scope="shared", turns_remaining=3)
 
-    @intent_handler("TellMeMoreIntent.intent",
+    @intent_handler("tell_me_more_intent.intent",
                     requires_context=[{"key": "prev_dialog", "scope": "shared"}])
     def handle_tell_me_more_intent(self, message):
         """ Handler for follow-up inquiries 'tell me more'

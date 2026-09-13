@@ -6,7 +6,7 @@ shared ovoscope golden-utterance dataset, keyed by
 ``MiniCroft`` (module-scoped fixture) is booted for the whole suite. Seven
 rows are the padatious ``today/births/deaths_in_history.intent`` phrasings,
 routed and asserted directly. The eighth row, "another event", is the adapt
-``TellMeMoreIntent`` -- a stateful follow-up that only fires after a prior
+``tell_me_more_intent`` -- a stateful follow-up that only fires after a prior
 ``today_in_history``/``births_in_history``/``deaths_in_history`` intent has
 set the ``prev_dialog`` context, so it is driven as a two-turn conversation
 (first turn sets the context, second turn fires the follow-up) rather than
@@ -158,13 +158,13 @@ def test_negative_confusable_not_claimed(minicroft, negative):
 
 @pytest.mark.timeout(60)
 def test_tell_me_more_requires_prev_dialog_context(minicroft):
-    """TellMeMoreIntent.intent declares
+    """tell_me_more_intent.intent declares
     requires_context=[{"key": "prev_dialog", "scope": "shared"}] -- bare
     "continue" is common English and must NOT resolve to this skill in a
     fresh session that never got a today/births/deaths_in_history answer.
     Run against the plain padatious pipeline (no adapt plugin at all) to
     prove the gate is enforced by the file-intent engine itself."""
-    intent_name = "TellMeMoreIntent"
+    intent_name = "tell_me_more_intent"
 
     fresh_types = _types(minicroft, "tell me more", "gate-fresh-tell-me-more",
                           PADATIOUS_PIPELINE)
@@ -188,12 +188,12 @@ def test_tell_me_more_requires_prev_dialog_context(minicroft):
 def test_tell_me_more_context_decays_after_three_turns(minicroft):
     """The "prev_dialog" context is written with turns_remaining=3, so it
     must not survive indefinitely: three unrelated utterances after the
-    gate opens, "tell me more" must NOT match TellMeMoreIntent anymore.
+    gate opens, "tell me more" must NOT match tell_me_more_intent anymore.
     Adapt's own context frames decayed the same way; the OVOS-CONTEXT-1
     file-intent gate needs the same behavior or the skill would keep
     claiming bare "continue"/"say more" phrasing for the rest of the
     session after a single history reading."""
-    intent_name = "TellMeMoreIntent"
+    intent_name = "tell_me_more_intent"
     session_id = "gate-history-then-decay"
 
     _types(minicroft, "today in history", session_id, PADATIOUS_PIPELINE)
