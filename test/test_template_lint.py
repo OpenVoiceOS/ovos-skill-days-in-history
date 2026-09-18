@@ -51,7 +51,6 @@ RESOURCE_EXTS = (".dialog", ".intent", ".voc")
 KNOWN_UNFIXABLE = {
     "ca-ES/day_19_month_9_events.dialog": {29},
     "da-DK/day_19_month_9_events.dialog": {29},
-    "en-US/day_19_month_9_events.dialog": {29},
     "fr-FR/day_19_month_9_events.dialog": {32},
     "pt-PT/day_19_month_9_events.dialog": {29},
 }
