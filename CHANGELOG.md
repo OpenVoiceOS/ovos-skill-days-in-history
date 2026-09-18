@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.19a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.19a1) (2026-09-18)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.18a2...0.3.19a1)
+
+**Merged pull requests:**
+
+- fix\(en-US\): clean the per-day dialogs before the bulk translation [\#90](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/90) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.3.18a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.18a2) (2026-09-18)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.18a1...0.3.18a2)
