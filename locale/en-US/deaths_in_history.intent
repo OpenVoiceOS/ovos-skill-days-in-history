@@ -1,0 +1,6 @@
+who died (today|this day|this date|on this day|on this date) [in history]
+who died [on] {date} [in history]
+(what|which) [famous|notable|historical] (people|figures) died (today|this day|this date|on this day|on this date) [in history]
+(what|which) [famous|notable|historical] (people|figures) died [on] {date} [in history]
+[famous|notable] deaths (today|this day|this date|on this day|on this date) in history
+[famous|notable] deaths [on] {date} in history
