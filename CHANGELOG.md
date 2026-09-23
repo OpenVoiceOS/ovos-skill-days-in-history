@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.6.0a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.6.0a1) (2026-09-23)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.5.0a1...0.6.0a1)
+
+**Merged pull requests:**
+
+- feat\(i18n\): machine-translate days-in-history to eu-ES [\#94](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/94) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.5.0a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.5.0a1) (2026-09-23)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.4.0a1...0.5.0a1)
