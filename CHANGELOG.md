@@ -1,18 +1,5 @@
 # Changelog
 
-## [0.8.0a5](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.8.0a5) (2026-09-23)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.8.0a1...0.8.0a5)
-
-**Merged pull requests:**
-
-- translate\(kab\): update births\_in\_history.intent [\#101](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/101) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
-- translate\(kab\): update deaths\_in\_history.intent [\#100](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/100) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
-- translate\(kab\): update notfound.dialog [\#99](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/99) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
-- translate\(kab\): update searching.dialog [\#98](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/98) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
-- translate\(kab\): update today\_in\_history.intent [\#97](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/97) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
-- translate\(kab\): update unknown\_date.dialog [\#96](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/96) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
-
 ## [0.8.0a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.8.0a1) (2026-09-23)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.7.0a1...0.8.0a1)
