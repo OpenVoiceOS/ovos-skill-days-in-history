@@ -32,6 +32,7 @@ negligible memory, at the cost of pytest reporting one pass/fail instead of
 syntax lint (nobody needs to `pytest -k` a single bad line; the failure
 message below already gives file:line for every offender).
 """
+import re
 from pathlib import Path
 
 from ovos_spec_tools import expand, MalformedTemplate
@@ -110,3 +111,53 @@ def test_known_unfixable_allowlist_is_still_accurate():
                 f"{relpath}:{lineno} is allowlisted as unfixable but now "
                 f"expands cleanly -- remove it from KNOWN_UNFIXABLE: {body!r}"
             )
+
+
+# A malformed template is not the only way a data file can raise out of the
+# handler. `MustacheDialogRenderer.render` calls `str.format(**context)`, so
+# a placeholder the caller does not pass is a `KeyError`, and
+# `_speak_dialog_safe` catches `MalformedTemplate` only. `{dia}` in the
+# pt-PT `searching.dialog` was exactly that: it expands cleanly, so the lint
+# above passed it, and it would have raised the day a caller was added.
+
+def _placeholders(path):
+    names = set()
+    with open(path, encoding="utf-8") as f:
+        for line in f:
+            body = line.rstrip("\n")
+            if not body.strip() or body.strip().startswith("#"):
+                continue
+            names |= set(re.findall(r"\{(\w+)\}", body))
+    return names
+
+
+def test_no_locale_invents_a_placeholder_en_us_does_not_pass():
+    """A placeholder name is an argument name, not words to translate.
+
+    The caller passes the names `en-US` uses. A locale that renames one
+    renders a `KeyError` through the handler, which the runtime fallback
+    does not catch, so this is a CI flag and not a runtime tolerance.
+    """
+    reference = {path.name: _placeholders(path)
+                 for path in (LOCALE_ROOT / "en-US").rglob("*")
+                 if path.is_file() and path.suffix in RESOURCE_EXTS}
+    assert reference, "no en-US resources were read -- locale layout changed?"
+
+    failures, checked = [], 0
+    for path in sorted(LOCALE_ROOT.rglob("*")):
+        if not path.is_file() or path.suffix not in RESOURCE_EXTS:
+            continue
+        rel = path.relative_to(LOCALE_ROOT).as_posix()
+        if rel.startswith("en-US/") or path.name not in reference:
+            continue
+        checked += 1
+        invented = sorted(_placeholders(path) - reference[path.name])
+        if invented:
+            failures.append(
+                f"{rel}: {invented}, where en-US "
+                f"{path.name} uses {sorted(reference[path.name])}")
+
+    assert checked > 0, "no non-reference resources were compared"
+    assert not failures, (
+        f"{len(failures)} file(s) of {checked} rename a placeholder:\n\n"
+        + "\n".join(failures))
