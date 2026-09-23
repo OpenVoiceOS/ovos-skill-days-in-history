@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.8.0a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.8.0a1) (2026-09-23)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.7.0a1...0.8.0a1)
+
+**Merged pull requests:**
+
+- feat\(i18n\): fill 295 empty days-in-history dialogs in ca-ES [\#102](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/102) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.7.0a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.7.0a1) (2026-09-23)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.6.0a1...0.7.0a1)
