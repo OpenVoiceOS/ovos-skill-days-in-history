@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.8.2a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.8.2a1) (2026-09-24)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.8.1a1...0.8.2a1)
+
+**Merged pull requests:**
+
+- fix: deaths handler pronounces the year like births [\#117](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/117) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.8.1a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.8.1a1) (2026-09-24)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.8.0a7...0.8.1a1)
@@ -429,8 +437,6 @@
 **Merged pull requests:**
 
 - fix: automations and skill.json [\#15](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/15) ([JarbasAl](https://github.com/JarbasAl))
-- da-dk/translate [\#14](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/14) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-- da-dk/translate [\#13](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/13) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 
 ## [0.3.5a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.5a1) (2024-11-04)
 
