@@ -107,7 +107,7 @@ class TodayInHistory(OVOSSkill):
             self.speak_dialog("unknown_date")
             SessionManager.get(message).remove_intent_context("prev_dialog", scope="shared")
         else:
-            self._speak_dialog_safe(dialog)
+            self._speak_dialog_safe(dialog, render_callback=self.pronounce_year)
             SessionManager.get(message).set_intent_context(
                 "prev_dialog", {"value": dialog, "seen": []},
                 scope="shared", turns_remaining=3)
