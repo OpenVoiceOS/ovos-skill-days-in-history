@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.8.3a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.8.3a1) (2026-09-25)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.8.2a1...0.8.3a1)
+
+**Merged pull requests:**
+
+- fix\(ca-ES\): Mort, not Morte, at the head of a death entry [\#108](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/108) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.8.2a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.8.2a1) (2026-09-24)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.8.1a1...0.8.2a1)
@@ -422,10 +430,6 @@
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.5...0.3.6a1)
 
-**Merged pull requests:**
-
-- fix: skill class [\#16](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/16) ([JarbasAl](https://github.com/JarbasAl))
-
 ## [0.3.5](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.5) (2024-11-15)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/V0.3.5...0.3.5)
@@ -433,10 +437,6 @@
 ## [V0.3.5](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/V0.3.5) (2024-11-15)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.5a1...V0.3.5)
-
-**Merged pull requests:**
-
-- fix: automations and skill.json [\#15](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/15) ([JarbasAl](https://github.com/JarbasAl))
 
 ## [0.3.5a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.5a1) (2024-11-04)
 
