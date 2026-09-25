@@ -1,0 +1,7 @@
+# machine translation from en-US, unvouched
+vem föddes (idag|denna dag|detta datum|på denna dag|på detta datum) [i historien]
+vem föddes [den] {date} [i historien]
+(vilka|vad för) [berömda|kända|historiska] (personer|gestalter) föddes (idag|denna dag|detta datum|på denna dag|på detta datum) [i historien]
+(vilka|vad för) [berömda|kända|historiska] (personer|gestalter) föddes [den] {date} [i historien]
+[berömda|kända] födslar (idag|denna dag|detta datum|på denna dag|på detta datum) i historien
+[berömda|kända] födslar [den] {date} i historien

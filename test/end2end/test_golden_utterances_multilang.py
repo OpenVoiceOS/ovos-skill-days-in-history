@@ -33,7 +33,8 @@ ADAPT_PIPELINE = PADATIOUS_PIPELINE + ["ovos-adapt-pipeline-plugin-high"]
 
 END2END_DIR = Path(__file__).parent
 
-LANGS = ["en-US", "ca-ES", "da-DK", "de-DE", "es-ES", "eu-ES", "fr-FR", "gl-ES", "pt-PT"]
+LANGS = ["en-US", "ca-ES", "da-DK", "de-DE", "es-ES", "eu-ES", "fr-FR", "gl-ES",
+         "it-IT", "nl-NL", "pt-BR", "pt-PT", "sv-SE"]
 
 # The utterance that opens the "prev_dialog" context gate in each locale,
 # taken from that locale's own today_in_history.intent (first usable line).
@@ -46,7 +47,11 @@ TRIGGER_UTTERANCE = {
     "eu-ES": "egun honetan iraganean",
     "fr-FR": "aujourd'hui dans l'histoire",
     "gl-ES": "hoxe na historia",
+    "it-IT": "oggi nella storia",
+    "nl-NL": "vandaag in de geschiedenis",
+    "pt-BR": "hoje na história",
     "pt-PT": "hoje na história",
+    "sv-SE": "idag i historien",
 }
 
 

@@ -1,0 +1,7 @@
+# machine translation from en-US, unvouched
+vem dog (idag|denna dag|detta datum|på denna dag|på detta datum) [i historien]
+vem dog [den] {date} [i historien]
+(vilka|vad för) [berömda|kända|historiska] (personer|gestalter) dog (idag|denna dag|detta datum|på denna dag|på detta datum) [i historien]
+(vilka|vad för) [berömda|kända|historiska] (personer|gestalter) dog [den] {date} [i historien]
+[berömda|kända] dödsfall (idag|denna dag|detta datum|på denna dag|på detta datum) i historien
+[berömda|kända] dödsfall [den] {date} i historien

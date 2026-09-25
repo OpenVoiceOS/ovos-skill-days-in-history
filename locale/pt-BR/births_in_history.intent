@@ -1,0 +1,7 @@
+# machine translation from en-US, unvouched
+quem nasceu (hoje|este dia|esta data|neste dia|nesta data) [na história]
+quem nasceu [em] {date} [na história]
+(quais|que) (pessoas|figuras) [famosas|notáveis|históricas] nasceram (hoje|este dia|esta data|neste dia|nesta data) [na história]
+(quais|que) (pessoas|figuras) [famosas|notáveis|históricas] nasceram [em] {date} [na história]
+nascimentos [famosos|notáveis] (hoje|este dia|esta data|neste dia|nesta data) na história
+nascimentos [famosos|notáveis] [em] {date} na história

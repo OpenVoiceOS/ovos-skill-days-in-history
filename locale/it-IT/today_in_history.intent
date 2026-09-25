@@ -1,0 +1,9 @@
+# machine translation from en-US, unvouched
+(oggi|questo giorno|questa data) nella storia
+in questo (giorno|data) nella storia
+(cosa|che cosa) è successo (oggi|questo giorno|questa data|in questo giorno|in questa data) nella storia
+(cosa|che cosa) è successo [il] {date} nella storia
+(quali|che) eventi storici [notevoli|importanti|principali] sono accaduti (oggi|questo giorno|questa data|in questo giorno|in questa data)
+(quali|che) eventi storici [notevoli|importanti|principali] sono accaduti [il] {date}
+parlami di eventi storici [notevoli|importanti|principali] (oggi|questo giorno|questa data|in questo giorno|in questa data)
+parlami di eventi storici [notevoli|importanti|principali] [il] {date}

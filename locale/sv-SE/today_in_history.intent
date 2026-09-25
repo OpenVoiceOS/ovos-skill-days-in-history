@@ -1,0 +1,9 @@
+# machine translation from en-US, unvouched
+(idag|denna dag|detta datum) i historien
+denna (dag|datum) i historien
+(vad|vilket) hände (idag|denna dag|detta datum|på denna dag|på detta datum) i historien
+(vad|vilket) hände [den] {date} i historien
+(vilka|vad för) [anmärkningsvärda|viktiga|stora] historiska händelser hände (idag|denna dag|detta datum|på denna dag|på detta datum)
+(vilka|vad för) [anmärkningsvärda|viktiga|stora] historiska händelser hände [den] {date}
+berätta om [anmärkningsvärda|viktiga|stora] historiska händelser (idag|denna dag|detta datum|på denna dag|på detta datum)
+berätta om [anmärkningsvärda|viktiga|stora] historiska händelser [den] {date}
