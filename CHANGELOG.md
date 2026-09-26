@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.8.5a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.8.5a1) (2026-09-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.8.4a3...0.8.5a1)
+
+**Merged pull requests:**
+
+- fix\(locale\): one en-US store example the skill cannot hear [\#125](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/125) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.8.4a3](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.8.4a3) (2026-09-26)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.8.4a2...0.8.4a3)
@@ -375,11 +383,6 @@
 ## [0.3.9a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.9a2) (2024-12-02)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.9a1...0.3.9a2)
-
-**Merged pull requests:**
-
-- import galician and basque translations [\#26](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/26) ([JarbasAl](https://github.com/JarbasAl))
-- import gl [\#25](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/25) ([JarbasAl](https://github.com/JarbasAl))
 
 ## [0.3.9a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.9a1) (2024-11-25)
 
