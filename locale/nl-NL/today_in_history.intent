@@ -1,0 +1,9 @@
+# unvouched: machine translation from en-US by the localize lane, awaiting a speaker
+(vandaag|deze dag|deze datum) in de geschiedenis
+op deze (dag|datum) in de geschiedenis
+wat gebeurde er (vandaag|op deze dag|op deze datum) in de geschiedenis
+wat gebeurde er [op] {date} in de geschiedenis
+(welke|wat voor) [belangrijke|grote] historische gebeurtenissen waren er (vandaag|op deze dag|op deze datum)
+(welke|wat voor) [belangrijke|grote] historische gebeurtenissen waren er [op] {date}
+vertel me over [belangrijke|grote] historische gebeurtenissen (van vandaag|van deze dag|van deze datum)
+vertel me over [belangrijke|grote] historische gebeurtenissen (van|op) {date}

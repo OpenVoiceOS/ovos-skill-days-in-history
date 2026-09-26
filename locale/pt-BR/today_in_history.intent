@@ -1,0 +1,9 @@
+# unvouched: machine translation from en-US by the localize lane, awaiting a speaker
+(hoje|neste dia|nesta data) na história
+neste (dia|data) na história
+o que aconteceu (hoje|neste dia|nesta data) na história
+o que aconteceu (em|no dia) {date} na história
+(quais|que) eventos históricos [importantes|notáveis] aconteceram (hoje|neste dia|nesta data)
+(quais|que) eventos históricos [importantes|notáveis] aconteceram (em|no dia) {date}
+me conte sobre eventos históricos [importantes|notáveis] (de hoje|deste dia|desta data)
+me conte sobre eventos históricos [importantes|notáveis] (de|em) {date}
