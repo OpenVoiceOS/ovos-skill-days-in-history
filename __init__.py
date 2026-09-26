@@ -11,6 +11,7 @@ from ovos_utils.log import LOG
 from ovos_utils.process_utils import RuntimeRequirements
 from ovos_utils.time import now_local
 from ovos_workshop.decorators import intent_handler
+from ovos_workshop.resource_files import locate_lang_directories
 from ovos_workshop.skills.ovos import OVOSSkill
 
 
@@ -86,6 +87,44 @@ class TodayInHistory(OVOSSkill):
                     LOG.warning(f"render_callback failed on raw fallback line: {cb_err}")
             self.speak(raw)
 
+    def _day_dialog_exists(self, dialog: str) -> bool:
+        """Whether this locale ships the per-day `.dialog` this request needs.
+
+        A locale can ship the `.intent` files and none of the 1098 `day_*`
+        files: `kab` does today, and `ca-ES` ships 550 of the 1098. For such a
+        request `dialog_renderer.render(key)` returns the KEY, so
+        `speak_dialog` speaks "day_25_month_9_births" aloud. Every handler that
+        builds a per-day dialog name therefore checks first and falls back to
+        `unknown_date`, which is one string per locale instead of 1098.
+
+        The locale directory is resolved the way the resource loader resolves
+        it, with `locate_lang_directories`. A hand-built `locale/{self.lang}`
+        path is wrong for any lang that is not itself a directory name:
+        `self.lang` is `standardize_lang(get_message_lang(message))`, which
+        normalises case and separator and does NOT add a region, so a session
+        lang of `pt`, `ca` or `en` (a bare primary subtag is valid BCP-47, and
+        `lang: "en"` in mycroft.conf is ordinary) misses `locale/pt-PT`,
+        `locale/ca-ES` and `locale/en-US`. The guard would then report absent
+        for a date the skill has a full sentence for and answer "I do not know
+        that date" instead of speaking it.
+
+        `find_resource` is NOT usable here: it falls through to another
+        language's directory, and for `kab` it returns the `ca-ES` file, so a
+        guard built on it would report present and speak Catalan at a Kabyle
+        user.
+
+        The FIRST matched directory is the answer, not any of them. The
+        loader binds one directory and reads from it, so a lang that matches
+        two must be asked about the one the loader picked: once `pt-BR` ships
+        the intents with no day files beside `pt-PT` which has 1098, `any()`
+        over both reports present while the renderer, bound to `pt-BR`,
+        returns the key and the skill reads it aloud.
+        """
+        directories = locate_lang_directories(self.lang, os.path.dirname(__file__))
+        if not directories:
+            return False
+        return (directories[0] / f"{dialog}.dialog").is_file()
+
     def _dialog_lines(self, dialog: str) -> list:
         """Return the candidate lines of a `.dialog` resource, or `[]` if
         it can't be found -- used by the tell-me-more follow-up to pick an
@@ -102,8 +141,7 @@ class TodayInHistory(OVOSSkill):
     def handle_deaths_intent(self, message):
         date = self.get_date(message)
         dialog = f"day_{date.day}_month_{date.month}_deaths"
-        event = f"{os.path.dirname(__file__)}/locale/{self.lang}/{dialog}.dialog"
-        if not os.path.isfile(event):
+        if not self._day_dialog_exists(dialog):
             self.speak_dialog("unknown_date")
             SessionManager.get(message).remove_intent_context("prev_dialog", scope="shared")
         else:
@@ -140,6 +178,10 @@ class TodayInHistory(OVOSSkill):
     def handle_births_intent(self, message):
         date = self.get_date(message)
         dialog = f"day_{date.day}_month_{date.month}_births"
+        if not self._day_dialog_exists(dialog):
+            self.speak_dialog("unknown_date")
+            SessionManager.get(message).remove_intent_context("prev_dialog", scope="shared")
+            return
         self._speak_dialog_safe(dialog, render_callback=self.pronounce_year)
         SessionManager.get(message).set_intent_context(
             "prev_dialog", {"value": dialog, "seen": []},
@@ -149,6 +191,10 @@ class TodayInHistory(OVOSSkill):
     def handle_today_in_history_intent(self, message):
         date = self.get_date(message)
         dialog = f"day_{date.day}_month_{date.month}_events"
+        if not self._day_dialog_exists(dialog):
+            self.speak_dialog("unknown_date")
+            SessionManager.get(message).remove_intent_context("prev_dialog", scope="shared")
+            return
         self._speak_dialog_safe(dialog, render_callback=self.pronounce_year)
         SessionManager.get(message).set_intent_context(
             "prev_dialog", {"value": dialog, "seen": []},
