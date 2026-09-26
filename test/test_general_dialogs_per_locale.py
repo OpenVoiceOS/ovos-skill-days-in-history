@@ -12,8 +12,16 @@ recognise. That is worse than the silent fallback it replaced, and it happens on
 exactly the paths a user hits when something has already gone wrong.
 
 Measured before this guard existed: en-US, da-DK, fr-FR and pt-PT shipped all
-four; kab shipped three; and ca-ES, de-DE, es-ES, eu-ES, gl-ES, it-IT, nl-NL,
-pt-BR and sv-SE shipped none, while five of those nine shipped the intents.
+four; kab shipped three, lacking only `thats_all`; and ca-ES, de-DE, es-ES,
+eu-ES, gl-ES, it-IT, nl-NL, pt-BR and sv-SE shipped none, while five of those
+nine shipped the intents.
+
+kab is the sharpest case and its shape is worth stating in full: it ships three
+intents (`births_in_history`, `deaths_in_history`, `today_in_history`) and ZERO
+per-day dialog files. So kab can be asked and has no day content to answer
+with, which means it reaches `notfound` and `thats_all` on every question
+rather than occasionally. A missing general dialog is not a cosmetic gap there;
+it is the only thing the locale can ever say.
 """
 import os
 import unittest
