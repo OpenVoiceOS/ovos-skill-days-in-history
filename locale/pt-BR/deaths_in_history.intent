@@ -1,0 +1,7 @@
+# machine translation from en-US, unvouched
+quem morreu (hoje|este dia|esta data|neste dia|nesta data) [na história]
+quem morreu [em] {date} [na história]
+(quais|que) (pessoas|figuras) [famosas|notáveis|históricas] morreram (hoje|este dia|esta data|neste dia|nesta data) [na história]
+(quais|que) (pessoas|figuras) [famosas|notáveis|históricas] morreram [em] {date} [na história]
+mortes [famosas|notáveis] (hoje|este dia|esta data|neste dia|nesta data) na história
+mortes [famosas|notáveis] [em] {date} na história

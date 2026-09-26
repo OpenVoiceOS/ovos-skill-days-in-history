@@ -1,0 +1,7 @@
+# machine translation from en-US, unvouched
+wie stierf (vandaag|deze dag|deze datum|op deze dag|op deze datum) [in de geschiedenis]
+wie stierf [op] {date} [in de geschiedenis]
+(welke|wat voor) [beroemde|bekende|historische] (mensen|figuren) stierven (vandaag|deze dag|deze datum|op deze dag|op deze datum) [in de geschiedenis]
+(welke|wat voor) [beroemde|bekende|historische] (mensen|figuren) stierven [op] {date} [in de geschiedenis]
+[beroemde|bekende] sterfgevallen (vandaag|deze dag|deze datum|op deze dag|op deze datum) in de geschiedenis
+[beroemde|bekende] sterfgevallen [op] {date} in de geschiedenis

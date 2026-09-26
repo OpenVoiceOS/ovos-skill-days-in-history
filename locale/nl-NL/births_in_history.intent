@@ -1,0 +1,7 @@
+# machine translation from en-US, unvouched
+wie werd geboren (vandaag|deze dag|deze datum|op deze dag|op deze datum) [in de geschiedenis]
+wie werd geboren [op] {date} [in de geschiedenis]
+(welke|wat voor) [beroemde|bekende|historische] (mensen|figuren) werden geboren (vandaag|deze dag|deze datum|op deze dag|op deze datum) [in de geschiedenis]
+(welke|wat voor) [beroemde|bekende|historische] (mensen|figuren) werden geboren [op] {date} [in de geschiedenis]
+[beroemde|bekende] geboortes (vandaag|deze dag|deze datum|op deze dag|op deze datum) in de geschiedenis
+[beroemde|bekende] geboortes [op] {date} in de geschiedenis
