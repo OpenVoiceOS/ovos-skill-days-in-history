@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.8.4a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.8.4a1) (2026-09-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.8.3a1...0.8.4a1)
+
+**Merged pull requests:**
+
+- fix\(ca-ES\): Aniversari, one n, at the head of a birth entry [\#120](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/120) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.8.3a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.8.3a1) (2026-09-25)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.8.2a1...0.8.3a1)
@@ -381,10 +389,6 @@
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/V0.3.7...0.3.8a1)
 
-**Merged pull requests:**
-
-- fix: pronounce year [\#18](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/18) ([JarbasAl](https://github.com/JarbasAl))
-
 ## [V0.3.7](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/V0.3.7) (2024-11-19)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.7...V0.3.7)
@@ -412,7 +416,6 @@
 **Merged pull requests:**
 
 - Release 0.3.7a1 [\#20](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/20) ([github-actions[bot]](https://github.com/apps/github-actions))
-- pt-pt/translate [\#19](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/19) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 
 ## [0.3.6](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.6) (2024-11-15)
 
@@ -421,10 +424,6 @@
 ## [V0.3.6](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/V0.3.6) (2024-11-15)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.6a1...V0.3.6)
-
-**Merged pull requests:**
-
-- Release 0.3.6a1 [\#17](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/17) ([github-actions[bot]](https://github.com/apps/github-actions))
 
 ## [0.3.6a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.6a1) (2024-11-15)
 
