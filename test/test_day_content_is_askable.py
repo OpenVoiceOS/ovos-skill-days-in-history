@@ -37,13 +37,7 @@ FULL_LOCALE_DAY_FILES = 100
 #: line they ship carries no {date} slot, so "who was born on 5 May" cannot be
 #: asked in them. Measured 2026-09-26 and filed; named here rather than skipped
 #: so that the gap is visible and a locale that gains the slot trips the list.
-NO_DATE_SLOT = {
-    "ca-ES": ("births_in_history", "deaths_in_history"),
-    "de-DE": ("births_in_history", "deaths_in_history"),
-    "eu-ES": ("births_in_history", "deaths_in_history"),
-    "gl-ES": ("births_in_history", "deaths_in_history"),
-    "pt-PT": ("births_in_history", "deaths_in_history"),
-}
+NO_DATE_SLOT = {}
 
 
 def locales():

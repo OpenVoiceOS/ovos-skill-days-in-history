@@ -10,3 +10,6 @@ qui va néixer tal dia com avui en la història
 qui va néixer tal dia com hui
 qui va néixer tal dia com hui a la història
 qui va néixer tal dia com hui en la història
+# unvouched: the dated line added by the localize lane, awaiting a speaker
+qui (nasqué|va néixer) el {date}
+qui (nasqué|va néixer) el {date} (a|en) la història

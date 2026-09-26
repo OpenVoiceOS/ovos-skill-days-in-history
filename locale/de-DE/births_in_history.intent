@@ -1,1 +1,4 @@
 wer wurde heute in der Geschichte geboren
+# unvouched: the dated line added by the localize lane, awaiting a speaker
+wer wurde am {date} geboren
+wer wurde am {date} in der Geschichte geboren

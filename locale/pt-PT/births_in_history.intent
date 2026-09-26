@@ -1,1 +1,4 @@
 quem nasceu hoje na história
+# unvouched: the dated line added by the localize lane, awaiting a speaker
+quem nasceu (em|no dia) {date}
+quem nasceu (em|no dia) {date} na história
