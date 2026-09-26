@@ -1,0 +1,9 @@
+# unvouched: machine translation from en-US by the localize lane, awaiting a speaker
+(idag|denna dag|detta datum) i historien
+denna (dag|datum) i historien
+vad hände (idag|denna dag|detta datum) i historien
+vad hände (den|) {date} i historien
+(vilka|vilka sorts) [viktiga|stora] historiska händelser hände (idag|denna dag|detta datum)
+(vilka|vilka sorts) [viktiga|stora] historiska händelser hände (den|) {date}
+berätta om [viktiga|stora] historiska händelser (idag|denna dag|detta datum)
+berätta om [viktiga|stora] historiska händelser (den|) {date}
