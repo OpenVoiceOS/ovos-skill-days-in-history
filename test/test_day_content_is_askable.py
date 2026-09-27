@@ -7,9 +7,10 @@ none of that content can ever be spoken.
 
 Measured at `origin/dev` before this guard: it-IT, nl-NL, pt-BR and sv-SE each
 held 1098 day dialogs and zero intent files, which is 4392 unreachable files.
-`kab` is the deliberate exception -- it ships 3 intents and 3 day files, a stub
-locale rather than a full one, and is named below rather than skipped by a
-count, so filling it in fails this test and someone removes it from the list.
+`kab` is the deliberate exception -- it ships 3 intents and no day files at
+all, a stub locale rather than a full one, and is named below rather than
+skipped by a count, so filling it in fails this test and someone removes it
+from the list.
 """
 import os
 import re
@@ -95,8 +96,8 @@ class TestEveryLocaleWithDayContentIsAskable(unittest.TestCase):
         for lang in locales():
             for name in sorted(intents_of(lang)):
                 path = os.path.join(LOCALE_ROOT, lang, f"{name}.intent")
-                lines = [l.strip() for l in _read(path).splitlines()
-                         if l.strip() and not l.startswith("#")]
+                lines = [line.strip() for line in _read(path).splitlines()
+                         if line.strip() and not line.startswith("#")]
                 if not lines:
                     empty.append(f"{lang}/{name}.intent")
         self.assertEqual(sorted(empty), [])

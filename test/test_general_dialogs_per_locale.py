@@ -91,8 +91,8 @@ class TestGeneralDialogsPerLocale(unittest.TestCase):
                 path = os.path.join(LOCALE_ROOT, lang, f"{name}.dialog")
                 if not os.path.isfile(path):
                     continue
-                lines = [l.strip() for l in _read(path).splitlines()
-                         if l.strip() and not l.startswith("#")]
+                lines = [line.strip() for line in _read(path).splitlines()
+                         if line.strip() and not line.startswith("#")]
                 if not lines:
                     empty.append(f"{lang}/{name}.dialog")
         self.assertEqual(sorted(empty), [])
@@ -106,9 +106,9 @@ class TestGeneralDialogsPerLocale(unittest.TestCase):
             if not os.path.isfile(path):
                 continue
             body = _read(path)
-            lines = [l for l in body.splitlines()
-                     if l.strip() and not l.strip().startswith("#")]
-            if not all("{day}" in l for l in lines):
+            lines = [line for line in body.splitlines()
+                     if line.strip() and not line.strip().startswith("#")]
+            if not all("{day}" in line for line in lines):
                 without.append(f"{lang}/searching.dialog")
         self.assertEqual(sorted(without), [])
 
