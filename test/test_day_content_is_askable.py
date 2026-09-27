@@ -56,6 +56,12 @@ def intents_of(lang):
             if name.endswith(".intent")}
 
 
+
+def _read(path):
+    """Read a whole file. A helper so no test leaves a handle open."""
+    with open(path, encoding="utf-8") as f:
+        return f.read()
+
 class TestEveryLocaleWithDayContentIsAskable(unittest.TestCase):
     def test_a_locale_with_day_files_ships_the_intents(self):
         unreachable = []
@@ -89,7 +95,7 @@ class TestEveryLocaleWithDayContentIsAskable(unittest.TestCase):
         for lang in locales():
             for name in sorted(intents_of(lang)):
                 path = os.path.join(LOCALE_ROOT, lang, f"{name}.intent")
-                lines = [l.strip() for l in open(path, encoding="utf-8")
+                lines = [l.strip() for l in _read(path).splitlines()
                          if l.strip() and not l.startswith("#")]
                 if not lines:
                     empty.append(f"{lang}/{name}.intent")
@@ -99,17 +105,15 @@ class TestEveryLocaleWithDayContentIsAskable(unittest.TestCase):
         """The dated question is half the skill; a translation that drops
         {date} leaves only "today"."""
         reference = {name for name in INTENTS
-                     if "{date}" in open(os.path.join(
-                         LOCALE_ROOT, "en-US", f"{name}.intent"),
-                         encoding="utf-8").read()}
+                     if "{date}" in _read(os.path.join(
+                         LOCALE_ROOT, "en-US", f"{name}.intent"))}
         without = []
         for lang in locales():
             if lang in STUB_LOCALES:
                 continue
             allowed = set(NO_DATE_SLOT.get(lang, ()))
             for name in sorted(reference & intents_of(lang)):
-                body = open(os.path.join(LOCALE_ROOT, lang, f"{name}.intent"),
-                            encoding="utf-8").read()
+                body = _read(os.path.join(LOCALE_ROOT, lang, f"{name}.intent"))
                 if "{date}" not in body and name not in allowed:
                     without.append(f"{lang}/{name}.intent")
         self.assertEqual(sorted(without), [])
@@ -117,17 +121,16 @@ class TestEveryLocaleWithDayContentIsAskable(unittest.TestCase):
     def test_the_no_date_slot_list_is_still_accurate(self):
         """Fails when a listed locale gains the slot, or another loses it."""
         reference = {name for name in INTENTS
-                     if "{date}" in open(os.path.join(
-                         LOCALE_ROOT, "en-US", f"{name}.intent"),
-                         encoding="utf-8").read()}
+                     if "{date}" in _read(os.path.join(
+                         LOCALE_ROOT, "en-US", f"{name}.intent"))}
         found = {}
         for lang in locales():
             if lang in STUB_LOCALES:
                 continue
             missing = tuple(
                 name for name in sorted(reference & intents_of(lang))
-                if "{date}" not in open(os.path.join(
-                    LOCALE_ROOT, lang, f"{name}.intent"), encoding="utf-8").read())
+                if "{date}" not in _read(os.path.join(
+                    LOCALE_ROOT, lang, f"{name}.intent")))
             if missing:
                 found[lang] = missing
         self.assertEqual(

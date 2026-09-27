@@ -45,6 +45,12 @@ def has_intents(lang):
     return any(name.endswith(".intent") for name in os.listdir(d))
 
 
+
+def _read(path):
+    """Read a whole file. A helper so no test leaves a handle open."""
+    with open(path, encoding="utf-8") as f:
+        return f.read()
+
 class TestGeneralDialogsPerLocale(unittest.TestCase):
     def test_a_locale_with_intents_ships_every_general_dialog(self):
         """The live case: the skill can match in this locale, so it will speak."""
@@ -85,7 +91,7 @@ class TestGeneralDialogsPerLocale(unittest.TestCase):
                 path = os.path.join(LOCALE_ROOT, lang, f"{name}.dialog")
                 if not os.path.isfile(path):
                     continue
-                lines = [l.strip() for l in open(path, encoding="utf-8")
+                lines = [l.strip() for l in _read(path).splitlines()
                          if l.strip() and not l.startswith("#")]
                 if not lines:
                     empty.append(f"{lang}/{name}.dialog")
@@ -99,7 +105,7 @@ class TestGeneralDialogsPerLocale(unittest.TestCase):
             path = os.path.join(LOCALE_ROOT, lang, "searching.dialog")
             if not os.path.isfile(path):
                 continue
-            body = open(path, encoding="utf-8").read()
+            body = _read(path)
             lines = [l for l in body.splitlines()
                      if l.strip() and not l.strip().startswith("#")]
             if not all("{day}" in l for l in lines):

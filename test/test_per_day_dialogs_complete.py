@@ -46,22 +46,31 @@ KNOWN_GAPS = {
     # unprefixed count rose with them. 15255 of these 15552 lines DO carry
     # their year and lose only the separator: "1344: Aniversari ..." uses a
     # colon where the pattern wants a dash. See SEPARATOR_GAPS below.
-    "ca-ES": dict(missing=0, empty=0, unprefixed=15552, invisible=209),
-    "da-DK": dict(missing=0, empty=0, unprefixed=395, invisible=2183),
-    "en-US": dict(missing=0, empty=0, unprefixed=178, invisible=0),
-    "fr-FR": dict(missing=0, empty=0, unprefixed=28, invisible=1263),
+    "ca-ES": {"missing": 0, "empty": 0,
+            "unprefixed": 15552, "invisible": 209},
+    "da-DK": {"missing": 0, "empty": 0,
+            "unprefixed": 395, "invisible": 2183},
+    "en-US": {"missing": 0, "empty": 0,
+            "unprefixed": 178, "invisible": 0},
+    "fr-FR": {"missing": 0, "empty": 0,
+            "unprefixed": 28, "invisible": 1263},
     # it-IT and nl-NL sit just above the source's 178, and almost all of the
     # excess is the same undated-entry shape en-US has (163 of it-IT's 182 and
     # 192 of nl-NL's 210 carry no year at all, like "Anna Walentynowicz, ...,
     # nato nel 1929."), not a lost year.
-    "it-IT": dict(missing=0, empty=0, unprefixed=182, invisible=0),
-    "nl-NL": dict(missing=0, empty=0, unprefixed=210, invisible=0),
+    "it-IT": {"missing": 0, "empty": 0,
+            "unprefixed": 182, "invisible": 0},
+    "nl-NL": {"missing": 0, "empty": 0,
+            "unprefixed": 210, "invisible": 0},
     # pt-BR is the largest: 73063 of 76262 carry the year and no separator at
     # all, "1486 Aniversário ...".
-    "pt-BR": dict(missing=0, empty=0, unprefixed=76262, invisible=0),
-    "pt-PT": dict(missing=0, empty=0, unprefixed=407, invisible=594),
+    "pt-BR": {"missing": 0, "empty": 0,
+            "unprefixed": 76262, "invisible": 0},
+    "pt-PT": {"missing": 0, "empty": 0,
+            "unprefixed": 407, "invisible": 594},
     # sv-SE: 164 of 421 are the colon form, "1906: Ezra Butler Eddys död, ...".
-    "sv-SE": dict(missing=0, empty=0, unprefixed=421, invisible=0),
+    "sv-SE": {"missing": 0, "empty": 0,
+            "unprefixed": 421, "invisible": 0},
 }
 
 #: Of each locale's unprefixed lines, how many DO begin with a year and fail
@@ -101,8 +110,8 @@ def _measure(lang: str) -> dict:
                 unprefixed += 1
             if INVISIBLE.search(line):
                 invisible += 1
-    return dict(missing=len(EXPECTED - names), empty=empty,
-                unprefixed=unprefixed, invisible=invisible)
+    return {"missing": len(EXPECTED - names), "empty": empty,
+            "unprefixed": unprefixed, "invisible": invisible}
 
 
 LOCALES = sorted(p.name for p in LOCALE.iterdir() if p.is_dir())
