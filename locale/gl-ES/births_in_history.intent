@@ -1,1 +1,4 @@
 quen naceu hoxe na historia
+# unvouched: the dated line added by the localize lane, awaiting a speaker
+quen naceu (o|en) {date}
+quen naceu (o|en) {date} na historia

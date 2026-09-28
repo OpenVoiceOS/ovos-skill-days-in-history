@@ -1,0 +1,11 @@
+# unvouched: machine translation from en-US by the localize lane, awaiting a speaker
+(oggi|questo giorno|questa data) nella storia
+in questo (giorno|data) nella storia
+(cosa|che cosa) è successo (oggi|in questo giorno|in questa data) nella storia
+(cosa|che cosa) è successo [il] {date} nella storia
+(quali|che) eventi storici [importanti|notevoli] sono (successi|accaduti) (oggi|in questo giorno|in questa data)
+(quali|che) eventi storici [importanti|notevoli] sono (successi|accaduti) [il] {date}
+parlami degli eventi storici [importanti|notevoli] (di oggi|di questo giorno|di questa data)
+parlami degli eventi storici [importanti|notevoli] (del|di) {date}
+parlami di eventi storici [importanti|notevoli] (oggi|in questo giorno|in questa data)
+parlami di eventi storici [importanti|notevoli] (del|di) {date}

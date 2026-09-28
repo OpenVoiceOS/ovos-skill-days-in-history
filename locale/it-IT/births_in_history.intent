@@ -1,0 +1,9 @@
+# unvouched: machine translation from en-US by the localize lane, awaiting a speaker
+chi è nato (oggi|in questo giorno|in questa data) [nella storia]
+chi è nato [il] {date} [nella storia]
+(quali|che) [famosi|famose|celebri|storici|storiche] (persone|personaggi) sono (nati|nate) (oggi|in questo giorno|in questa data) [nella storia]
+(quali|che) [famosi|famose|celebri|storici|storiche] (persone|personaggi) sono (nati|nate) [il] {date} [nella storia]
+nascite [famose|celebri] (oggi|in questo giorno|in questa data) nella storia
+nascite [famose|celebri] [il] {date} nella storia
+(quali|che) (persone|personaggi) [famosi|famose|celebri|storici|storiche] sono (nati|nate) (oggi|in questo giorno|in questa data) [nella storia]
+(quali|che) (persone|personaggi) [famosi|famose|celebri|storici|storiche] sono (nati|nate) [il] {date} [nella storia]

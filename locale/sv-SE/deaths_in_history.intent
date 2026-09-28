@@ -1,0 +1,7 @@
+# unvouched: machine translation from en-US by the localize lane, awaiting a speaker
+vem dog (idag|denna dag|detta datum) [i historien]
+vem dog (den|) {date} [i historien]
+(vilka|vilka sorts) [kända|berömda|historiska] (personer|figurer) dog (idag|denna dag|detta datum) [i historien]
+(vilka|vilka sorts) [kända|berömda|historiska] (personer|figurer) dog (den|) {date} [i historien]
+[kända|berömda] dödsfall (idag|denna dag|detta datum) i historien
+[kända|berömda] dödsfall (den|) {date} i historien
