@@ -149,12 +149,14 @@ def test_no_locale_can_speak_a_bare_resource_name(lang):
         "render: " + "; ".join(disagreements))
 
 
-# The five locales below ship the three `.intent` files and no
-# `unknown_date.dialog`, so the fallback this guard speaks renders as its own
-# key there. That is a locale resource gap, not a handler defect, and it is not
-# this lane's to translate. The check is kept and marked expected-to-fail so it
-# stays visible: it turns into XPASS the day the files land.
-MISSING_UNKNOWN_DATE = ("ca-ES", "de-DE", "es-ES", "eu-ES", "gl-ES")
+# Locales that ship the three `.intent` files and no `unknown_date.dialog`.
+# In those the fallback this guard speaks renders as its own key. That is a
+# locale resource gap, not a handler defect, and it is not this lane's to
+# translate, so the row is marked expected-to-fail and stays visible. The tuple
+# is empty because every locale now ships the file. Add a locale here only with
+# the commit that removes its file, and the row below turns red if the tuple
+# and the tree disagree in either direction.
+MISSING_UNKNOWN_DATE = ()
 
 
 def test_the_missing_unknown_date_list_is_still_accurate():
