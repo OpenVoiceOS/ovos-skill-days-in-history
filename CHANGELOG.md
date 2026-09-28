@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.9.1a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.9.1a1) (2026-09-28)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.9.0a1...0.9.1a1)
+
+**Merged pull requests:**
+
+- fix\(locale\): es-ES gains the two dialogs the skill speaks [\#135](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/135) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.9.0a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.9.0a1) (2026-09-28)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.8.5a1...0.9.0a1)
@@ -365,7 +373,6 @@
 **Merged pull requests:**
 
 - adding German translations [\#33](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/33) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-- adding German translations [\#31](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/31) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 
 ## [0.3.10a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.10a1) (2025-01-25)
 
