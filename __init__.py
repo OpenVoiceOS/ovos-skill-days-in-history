@@ -4,7 +4,7 @@ import random
 from typing import Callable, Optional
 
 from ovos_bus_client.session import SessionManager
-from ovos_date_parser import extract_datetime, nice_year
+from ovos_date_parser import extract_datetime, nice_date, nice_year
 from ovos_spec_tools import MalformedTemplate
 from ovos_utils import classproperty
 from ovos_utils.log import LOG
@@ -86,6 +86,29 @@ class TodayInHistory(OVOSSkill):
                     LOG.warning(f"render_callback failed on raw fallback line: {cb_err}")
             self.speak(raw)
 
+    def _announce_date(self, date) -> None:
+        """Speak the date the answer is about, before the first event.
+
+        A native de-DE speaker reported the answer as unverifiable: the
+        `.dialog` lines carry the YEAR only ("1066 - William der Eroberer
+        ..."), so a listener who asked for "gestern" is never told which day
+        was actually read. The day and the month are known -- `get_date`
+        already has them -- they were simply never spoken.
+
+        `date_intro.dialog` is the carrier, and `nice_date` localises the
+        date inside it. It ships for en-US and de-DE only. A locale that has
+        not shipped the file stays exactly as it was -- silent, not speaking
+        a bare resource name -- so the other thirteen locales are untouched
+        until a native speaker writes their line. A slot-only `{date}` file
+        was tried first and is not allowed: `ovos-spec-lint` refuses a
+        template with no literal word.
+        """
+        path = self.find_resource("date_intro.dialog", "dialog")
+        if not path or not os.path.isfile(path):
+            return
+        self.speak_dialog("date_intro",
+                          {"date": nice_date(date, lang=self.lang)})
+
     def _dialog_lines(self, dialog: str) -> list:
         """Return the candidate lines of a `.dialog` resource, or `[]` if
         it can't be found -- used by the tell-me-more follow-up to pick an
@@ -107,6 +130,7 @@ class TodayInHistory(OVOSSkill):
             self.speak_dialog("unknown_date")
             SessionManager.get(message).remove_intent_context("prev_dialog", scope="shared")
         else:
+            self._announce_date(date)
             self._speak_dialog_safe(dialog, render_callback=self.pronounce_year)
             SessionManager.get(message).set_intent_context(
                 "prev_dialog", {"value": dialog, "seen": []},
@@ -140,6 +164,7 @@ class TodayInHistory(OVOSSkill):
     def handle_births_intent(self, message):
         date = self.get_date(message)
         dialog = f"day_{date.day}_month_{date.month}_births"
+        self._announce_date(date)
         self._speak_dialog_safe(dialog, render_callback=self.pronounce_year)
         SessionManager.get(message).set_intent_context(
             "prev_dialog", {"value": dialog, "seen": []},
@@ -149,6 +174,7 @@ class TodayInHistory(OVOSSkill):
     def handle_today_in_history_intent(self, message):
         date = self.get_date(message)
         dialog = f"day_{date.day}_month_{date.month}_events"
+        self._announce_date(date)
         self._speak_dialog_safe(dialog, render_callback=self.pronounce_year)
         SessionManager.get(message).set_intent_context(
             "prev_dialog", {"value": dialog, "seen": []},
