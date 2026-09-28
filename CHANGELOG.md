@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.9.0a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.9.0a1) (2026-09-28)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.8.5a1...0.9.0a1)
+
+**Merged pull requests:**
+
+- feat\(locale\): every locale answers the error paths, and nine locales become askable [\#134](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/134) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.8.5a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.8.5a1) (2026-09-26)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.8.4a3...0.8.5a1)
@@ -358,15 +366,10 @@
 
 - adding German translations [\#33](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/33) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 - adding German translations [\#31](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/31) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-- Add Catalan translation [\#28](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/28) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 
 ## [0.3.10a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.10a1) (2025-01-25)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.9...0.3.10a1)
-
-**Merged pull requests:**
-
-- fix automations [\#29](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/29) ([JarbasAl](https://github.com/JarbasAl))
 
 ## [0.3.9](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.9) (2024-12-09)
 
@@ -375,10 +378,6 @@
 ## [V0.3.9](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/V0.3.9) (2024-12-09)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.9a2...V0.3.9)
-
-**Merged pull requests:**
-
-- Release 0.3.9a2 [\#27](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/27) ([github-actions[bot]](https://github.com/apps/github-actions))
 
 ## [0.3.9a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.9a2) (2024-12-02)
 
