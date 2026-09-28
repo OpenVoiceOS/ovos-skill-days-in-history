@@ -95,6 +95,7 @@ SEPARATOR_GAPS = {
     "da-DK": 234,
     "de-DE": 16,
     "en-US": 15,      # the source has them too: a year and no dash
+    "es-CO": 16,      # the per-day files are byte-identical to es-ES
     "es-ES": 16,
     "eu-ES": 13,
     "fr-FR": 19,
