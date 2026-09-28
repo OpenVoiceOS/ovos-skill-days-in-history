@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.9.2a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.9.2a1) (2026-09-28)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.9.1a2...0.9.2a1)
+
+**Merged pull requests:**
+
+- fix\(locale\): nl-NL births misses a word order deaths has, and three rows say a date [\#144](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/144) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.9.1a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.9.1a2) (2026-09-28)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.9.1a1...0.9.1a2)
@@ -363,15 +371,10 @@
 **Merged pull requests:**
 
 - Release 0.3.10a4 [\#36](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/36) ([github-actions[bot]](https://github.com/apps/github-actions))
-- ca-es / translate [\#35](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/35) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 
 ## [0.3.10a3](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.10a3) (2025-03-06)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.10a2...0.3.10a3)
-
-**Merged pull requests:**
-
-- Release 0.3.10a3 [\#34](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/34) ([github-actions[bot]](https://github.com/apps/github-actions))
 
 ## [0.3.10a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.10a2) (2025-03-06)
 
