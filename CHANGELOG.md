@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.9.3a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.9.3a1) (2026-09-29)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.9.2a1...0.9.3a1)
+
+**Merged pull requests:**
+
+- fix\(locale\): es-CO ships the separator row the per-day dialogs need [\#148](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/148) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.9.2a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.9.2a1) (2026-09-28)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.9.1a2...0.9.2a1)
@@ -360,17 +368,9 @@
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.10a4...0.3.10a5)
 
-**Merged pull requests:**
-
-- Add Catalan strings [\#37](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/37) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-
 ## [0.3.10a4](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.10a4) (2025-03-13)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.10a3...0.3.10a4)
-
-**Merged pull requests:**
-
-- Release 0.3.10a4 [\#36](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/36) ([github-actions[bot]](https://github.com/apps/github-actions))
 
 ## [0.3.10a3](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.10a3) (2025-03-06)
 
