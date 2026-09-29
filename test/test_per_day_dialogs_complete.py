@@ -48,31 +48,31 @@ KNOWN_GAPS = {
     # "1344: Aniversari ...", where the pattern wants a dash. See
     # SEPARATOR_GAPS below.
     "ca-ES": {"missing": 0, "empty": 0,
-            "unprefixed": 15552, "invisible": 209},
+            "unprefixed": 2985, "invisible": 209},
     "da-DK": {"missing": 0, "empty": 0,
             "unprefixed": 395, "invisible": 2183},
     "en-US": {"missing": 0, "empty": 0,
             "unprefixed": 178, "invisible": 0},
     "fr-FR": {"missing": 0, "empty": 0,
-            "unprefixed": 28, "invisible": 1263},
+            "unprefixed": 25, "invisible": 1263},
     # it-IT and nl-NL sit just above the source's 178, and almost all of the
     # excess is the same undated-entry shape en-US has (163 of it-IT's 182 and
     # 192 of nl-NL's 210 carry no year at all, like "Anna Walentynowicz, ...,
     # nato nel 1929."), not a lost year.
     "it-IT": {"missing": 0, "empty": 0,
-            "unprefixed": 182, "invisible": 0},
+            "unprefixed": 181, "invisible": 0},
     "nl-NL": {"missing": 0, "empty": 0,
             "unprefixed": 210, "invisible": 0},
     # pt-BR is the largest: 73063 of 76262 carry the year and lose the
     # separator, 73050 of them to a bare space, "1486 Aniversário ...".
     "pt-BR": {"missing": 0, "empty": 0,
-            "unprefixed": 76262, "invisible": 0},
+            "unprefixed": 16117, "invisible": 0},
     "pt-PT": {"missing": 0, "empty": 0,
             "unprefixed": 407, "invisible": 594},
     # sv-SE: 164 of 421 keep the year and lose the separator, 99 to a bare
     # space and 43 to a colon, "1906: Ezra Butler Eddys död, ...".
     "sv-SE": {"missing": 0, "empty": 0,
-            "unprefixed": 421, "invisible": 0},
+            "unprefixed": 296, "invisible": 0},
 }
 
 #: A line that opens with a year and then anything but the dash the prefix
@@ -91,19 +91,27 @@ YEAR_ONLY = re.compile(r"^\d{1,4}\b")
 #: Every shipping locale has a row, so the table cannot stay short by
 #: omission the way a five-row table could.
 SEPARATOR_GAPS = {
-    "ca-ES": 15255,   # 15157 colon, 86 space, 12 other
+    # What is LEFT after T-6071 normalised the separator on 72842 lines.
+    # These residual rows are NOT missing separators: every one of them
+    # already carries a dash, and fails YEAR_PREFIX only because the
+    # qualifier between the year and the dash is longer than the regex
+    # allows, as in '1689, baptized, - Birthday of ...' and
+    # '99 BC, probable,[15] - Birthday of ...'. en-US has 15 of them, so
+    # the shape is in the source and is not a translation fault.
+    "ca-ES": 2688,
     "da-DK": 234,
     "de-DE": 16,
-    "en-US": 15,      # the source has them too: a year and no dash
+    "en-US": 15,
+    "es-CO": 16,
     "es-ES": 16,
     "eu-ES": 13,
-    "fr-FR": 19,
-    "gl-ES": 15,
-    "it-IT": 19,      # 13 comma, 5 space, 1 slash
-    "nl-NL": 18,      # 12 comma, 5 space, 1 slash
-    "pt-BR": 73063,   # 73050 space, 13 other
+    "fr-FR": 16,
+    "gl-ES": 14,
+    "it-IT": 18,
+    "nl-NL": 18,
+    "pt-BR": 12918,
     "pt-PT": 235,
-    "sv-SE": 164,     # 99 space, 43 colon, 22 other
+    "sv-SE": 39,
 }
 #: A locale with no row: the full set, nothing empty, nothing invisible,
 #: and no more unprefixed lines than the source. The source's 178 are
