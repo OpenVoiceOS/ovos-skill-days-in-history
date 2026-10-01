@@ -33,8 +33,8 @@ ADAPT_PIPELINE = PADATIOUS_PIPELINE + ["ovos-adapt-pipeline-plugin-high"]
 
 END2END_DIR = Path(__file__).parent
 
-LANGS = ["en-US", "ca-ES", "da-DK", "de-DE", "es-ES", "eu-ES", "fr-FR", "gl-ES",
-         "it-IT", "nl-NL", "pt-BR", "pt-PT", "sv-SE"]
+LANGS = sorted(p.stem.removeprefix("golden_utterances_")
+               for p in END2END_DIR.glob("golden_utterances_*.jsonl"))
 
 # The utterance that opens the "prev_dialog" context gate in each locale,
 # taken from that locale's own today_in_history.intent (first usable line).
@@ -43,6 +43,7 @@ TRIGGER_UTTERANCE = {
     "ca-ES": "aquesta data",
     "da-DK": "i dag i historien",
     "de-DE": "heute in der geschichte",
+    "es-CO": "hoy en la historia",
     "es-ES": "hoy en la historia",
     "eu-ES": "egun honetan iraganean",
     "fr-FR": "aujourd'hui dans l'histoire",
@@ -63,10 +64,7 @@ def _load_rows(lang):
             line = line.strip()
             if not line:
                 continue
-            row = json.loads(line)
-            if row.get("needs_manual"):
-                continue
-            rows.append(row)
+            rows.append(json.loads(line))
     return rows
 
 
@@ -81,10 +79,6 @@ def _golden_id(row):
 
 
 GOLDEN_ROWS = [pytest.param(r, id=_golden_id(r)) for r in ALL_ROWS]
-
-# Real locale-content defects found and fixed in-place during this pass
-# (red-before/green-after verified), keyed by (lang, utterance):
-KNOWN_BUGS = {}
 
 
 @pytest.fixture(scope="module")
@@ -147,8 +141,4 @@ def test_golden_utterance_multilang(minicroft_factory, row):
         pipeline = PADATIOUS_PIPELINE
         types, _ = _dispatch(mc, row["utterance"], row["lang"], session_id, pipeline)
 
-    matched = expected in types
-    bug_key = (row["lang"], row["utterance"])
-    if bug_key in KNOWN_BUGS and not matched:
-        pytest.xfail(reason=f"known-bug: {KNOWN_BUGS[bug_key]}")
-    assert matched, f"[{row['lang']}] {row['utterance']!r}: expected {expected!r}, got {types!r}"
+    assert expected in types, f"[{row['lang']}] {row['utterance']!r}: expected {expected!r}, got {types!r}"
