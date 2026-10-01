@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.9.3a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.9.3a2) (2026-10-01)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.9.3a1...0.9.3a2)
+
+**Merged pull requests:**
+
+- test: golden utterances for every intent in every shipped locale [\#150](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/150) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.9.3a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.9.3a1) (2026-09-29)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.9.2a1...0.9.3a1)
