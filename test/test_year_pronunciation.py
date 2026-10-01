@@ -38,6 +38,12 @@ def _make_fake(monkeypatch, dialog_line, isfile=True):
 
     fake._speak_dialog_safe = fake_speak_dialog_safe
 
+    # The reading handlers announce the date before the first event. This
+    # module is about the YEAR the event line carries, so the announcement is
+    # recorded and stepped over rather than asserted here; the date itself is
+    # covered by `test_date_announcement.py`.
+    fake._announce_date = MagicMock()
+
     monkeypatch.setattr(skill_module.os.path, "isfile", lambda *_a, **_k: isfile)
 
     session = MagicMock()
