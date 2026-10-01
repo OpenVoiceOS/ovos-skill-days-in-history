@@ -1,0 +1,201 @@
+"""Every locale that ships per-day dialogs ships the whole set, clean.
+
+The handlers build ``day_<d>_month_<m>_<kind>`` and read
+``locale/<lang>/<name>.dialog`` at the locale root. A missing file makes the
+skill speak ``unknown_date``; an EMPTY file passes ``os.path.isfile`` and the
+skill speaks nothing at all, which is worse. ca-ES shipped 295 such files.
+
+The set is 366 days times three kinds (births, deaths, events), 1,098 files.
+Four figures are measured per locale: files missing from the set, files
+that are empty, lines with no ``YEAR - `` prefix, and lines that carry an
+invisible character (a no-break space or a zero-width space, which
+machine translation leaves in the year prefix and which are spoken as
+nothing while breaking every exact match).
+
+``KNOWN_GAPS`` is what each locale ships today. The figures must match
+exactly: a new defect fails, and a repair fails too until its row is
+lowered, so the table stays true and can only shrink. A locale absent from
+the table must ship the full set with nothing empty, nothing invisible,
+and no more unprefixed lines than the source. The source, en-US, is clean of invisible
+characters and its 178 unprefixed lines are undated entries
+(``Name, description, b. 1929.``), not lost years.
+
+The prefix is the year, an optional era word in the locale's own spelling
+(``BC``, ``f.Kr.``, ``aC``, ``BCE``), and a dash. A translated era and an en
+dash are the locale's, and pass; the year must be there.
+"""
+import re
+from pathlib import Path
+
+import pytest
+
+LOCALE = Path(__file__).resolve().parents[1] / "locale"
+KINDS = ("births", "deaths", "events")
+DAYS_IN_MONTH = (31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)
+EXPECTED = {f"day_{d}_month_{m}_{k}.dialog"
+            for m, n in enumerate(DAYS_IN_MONTH, start=1)
+            for d in range(1, n + 1) for k in KINDS}
+YEAR_PREFIX = re.compile(r"^\d{1,4}(,? or \d{1,4},)?( ?[A-Za-z.]{2,6})? ?[-–—] ?\S")
+INVISIBLE = re.compile(r"[​‌‍﻿ ]")
+PER_DAY = re.compile(r"^day_\d{1,2}_month_\d{1,2}_(births|deaths|events)\.dialog$")
+
+#: What each locale ships today. Lower a figure when you repair it; never
+#: raise one.
+KNOWN_GAPS = {
+    # ca-ES: missing fell 548 -> 0 when the per-day files landed, and the
+    # unprefixed count rose with them. 15255 of these 15552 lines DO carry
+    # their year and lose only the separator: 15157 use a colon,
+    # "1344: Aniversari ...", where the pattern wants a dash. See
+    # SEPARATOR_GAPS below.
+    "ca-ES": {"missing": 0, "empty": 0,
+            "unprefixed": 15552, "invisible": 209},
+    "da-DK": {"missing": 0, "empty": 0,
+            "unprefixed": 395, "invisible": 2183},
+    "en-US": {"missing": 0, "empty": 0,
+            "unprefixed": 178, "invisible": 0},
+    "fr-FR": {"missing": 0, "empty": 0,
+            "unprefixed": 28, "invisible": 1263},
+    # it-IT and nl-NL sit just above the source's 178, and almost all of the
+    # excess is the same undated-entry shape en-US has (163 of it-IT's 182 and
+    # 192 of nl-NL's 210 carry no year at all, like "Anna Walentynowicz, ...,
+    # nato nel 1929."), not a lost year.
+    "it-IT": {"missing": 0, "empty": 0,
+            "unprefixed": 182, "invisible": 0},
+    "nl-NL": {"missing": 0, "empty": 0,
+            "unprefixed": 210, "invisible": 0},
+    # pt-BR is the largest: 73063 of 76262 carry the year and lose the
+    # separator, 73050 of them to a bare space, "1486 Aniversário ...".
+    "pt-BR": {"missing": 0, "empty": 0,
+            "unprefixed": 76262, "invisible": 0},
+    "pt-PT": {"missing": 0, "empty": 0,
+            "unprefixed": 407, "invisible": 594},
+    # sv-SE: 164 of 421 keep the year and lose the separator, 99 to a bare
+    # space and 43 to a colon, "1906: Ezra Butler Eddys död, ...".
+    "sv-SE": {"missing": 0, "empty": 0,
+            "unprefixed": 421, "invisible": 0},
+}
+
+#: A line that opens with a year and then anything but the dash the prefix
+#: pattern wants. The word boundary is load-bearing: without it "1486a" and
+#: a five-digit opener count as years, which is where the figures below were
+#: first mis-measured.
+YEAR_ONLY = re.compile(r"^\d{1,4}\b")
+
+#: Of each locale's unprefixed lines, how many DO begin with a year and fail
+#: only on the separator. This is recorded because the assertion message below
+#: says "years were lost in translation", and for these locales that reading is
+#: wrong: the year survived and the dash did not. Normalising the separator
+#: would drop the unprefixed figures to roughly the difference.
+#: `test_the_separator_gap_table_is_still_accurate` asserts every figure, so
+#: the table cannot drift the way it did while nothing read it.
+#: Every shipping locale has a row, so the table cannot stay short by
+#: omission the way a five-row table could.
+SEPARATOR_GAPS = {
+    "ca-ES": 15255,   # 15157 colon, 86 space, 12 other
+    "da-DK": 234,
+    "de-DE": 16,
+    "en-US": 15,      # the source has them too: a year and no dash
+    "es-CO": 16,      # the per-day files are byte-identical to es-ES
+    "es-ES": 16,
+    "eu-ES": 13,
+    "fr-FR": 19,
+    "gl-ES": 15,
+    "it-IT": 19,      # 13 comma, 5 space, 1 slash
+    "nl-NL": 18,      # 12 comma, 5 space, 1 slash
+    "pt-BR": 73063,   # 73050 space, 13 other
+    "pt-PT": 235,
+    "sv-SE": 164,     # 99 space, 43 colon, 22 other
+}
+#: A locale with no row: the full set, nothing empty, nothing invisible,
+#: and no more unprefixed lines than the source. The source's 178 are
+#: undated entries a faithful translation carries one to one, so zero is
+#: not the bar there; inventing a year for them would be.
+SOURCE_UNPREFIXED = 178
+
+
+def _per_day(lang: str) -> set:
+    return {p.name for p in (LOCALE / lang).iterdir() if PER_DAY.match(p.name)}
+
+
+def _measure(lang: str) -> dict:
+    names = _per_day(lang)
+    empty = unprefixed = invisible = 0
+    for name in names:
+        text = (LOCALE / lang / name).read_text(encoding="utf-8")
+        if not text.strip():
+            empty += 1
+        for line in text.splitlines():
+            if not line.strip() or line.startswith("#"):
+                continue
+            if not YEAR_PREFIX.match(line):
+                unprefixed += 1
+            if INVISIBLE.search(line):
+                invisible += 1
+    return {"missing": len(EXPECTED - names), "empty": empty,
+            "unprefixed": unprefixed, "invisible": invisible}
+
+
+LOCALES = sorted(p.name for p in LOCALE.iterdir() if p.is_dir())
+SHIPPING = [lang for lang in LOCALES if _per_day(lang)]
+
+
+def test_the_expected_set_is_1098():
+    """The control on the test itself: 366 days, three kinds, and en-US
+    ships exactly those names."""
+    assert len(EXPECTED) == 1098
+    assert _per_day("en-US") == EXPECTED
+
+
+def test_the_source_carries_no_invisible_character():
+    """The source is what every translation is measured against."""
+    assert _measure("en-US")["invisible"] == 0
+
+
+@pytest.mark.parametrize("lang", SHIPPING)
+def test_the_locale_ships_what_the_table_says_and_no_worse(lang):
+    measured = _measure(lang)
+    if lang in KNOWN_GAPS:
+        expected = KNOWN_GAPS[lang]
+        assert measured == expected, (
+            f"{lang}: measured {measured}, table says {expected}. A higher figure "
+            f"is a new defect; a lower one is a repair, lower the table with it.")
+    else:
+        assert measured["missing"] == 0, f"{lang}: {measured['missing']} files missing"
+        assert measured["empty"] == 0, f"{lang}: {measured['empty']} empty files"
+        assert measured["invisible"] == 0, f"{lang}: {measured['invisible']} lines with an invisible character"
+        assert measured["unprefixed"] <= SOURCE_UNPREFIXED, (
+            f"{lang}: {measured['unprefixed']} unprefixed lines, more than the "
+            f"source's {SOURCE_UNPREFIXED}: years were lost in translation")
+
+
+def test_every_table_row_names_a_shipping_locale():
+    """A row for a locale that ships nothing, or no longer exists, is stale."""
+    assert set(KNOWN_GAPS) <= set(SHIPPING), set(KNOWN_GAPS) - set(SHIPPING)
+
+
+def _separator_gap(lang: str) -> int:
+    """Unprefixed lines of `lang` that still open with a year."""
+    found = 0
+    for name in _per_day(lang):
+        for line in (LOCALE / lang / name).read_text(encoding="utf-8").splitlines():
+            if not line.strip() or line.startswith("#"):
+                continue
+            if not YEAR_PREFIX.match(line) and YEAR_ONLY.match(line):
+                found += 1
+    return found
+
+
+def test_the_separator_gap_table_is_still_accurate():
+    """SEPARATOR_GAPS carried five figures nothing read for three commits.
+    Assert them, so a separator repair has to lower the row it repairs and
+    the table cannot drift again."""
+    measured = {lang: _separator_gap(lang) for lang in SEPARATOR_GAPS}
+    assert measured == SEPARATOR_GAPS, (
+        f"measured {measured}, table says {SEPARATOR_GAPS}; a separator "
+        "repair lowers its row in the same commit")
+
+
+def test_every_shipping_locale_has_a_separator_row():
+    """The table is exhaustive: a locale that starts or stops shipping day
+    dialogs has to be added to it or removed from it in the same commit."""
+    assert sorted(SEPARATOR_GAPS) == sorted(SHIPPING)
