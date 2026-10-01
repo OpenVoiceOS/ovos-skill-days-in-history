@@ -1,0 +1,19 @@
+# Follow-up "tell me more" for the last reading. The gate only opens when the
+# "prev_dialog" session context is active, never on a bare utterance.
+#
+# unvouched: no Kabyle speaker has read this file.
+# Lines 1 to 6 are the Kabyle this role already ships in
+# ovos-skill-wikipedia locale/kab/wiki_more.intent, which is the same
+# "tell me more" follow-up. Lines 7 to 11 are a machine draft
+# (nllb-600M-int8) for the event and fact phrasings that en-US adds here.
+kemmel
+ini-yi ugar
+ini-yi ugar fell-as
+ugar
+d acu nniḍen
+llan wiyaḍ
+ini-yi-d ugar
+ini-yi-d yiwet n temsalt nniḍen
+yiwet n temsalt nniḍen
+ugar n tɣawsiwin
+yiwet n tidet nniḍen

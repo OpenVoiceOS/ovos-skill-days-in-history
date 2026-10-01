@@ -7,3 +7,6 @@
 {"skill_id": "ovos-skill-days-in-history.openvoiceos", "utterance": "ass-a deg umezruy", "intent_label": "today_in_history", "intent_type": "padatious", "needs_manual": true, "lang": "kab", "machine_generated": true}
 {"skill_id": "ovos-skill-days-in-history.openvoiceos", "utterance": "d acu i yeḍran ass-a deg umezruy", "intent_label": "today_in_history", "intent_type": "padatious", "needs_manual": true, "lang": "kab", "machine_generated": true}
 {"skill_id": "ovos-skill-days-in-history.openvoiceos", "utterance": "ḥku-yi-d ayen i yeḍran am wass-a deg umezruy", "intent_label": "today_in_history", "intent_type": "padatious", "needs_manual": true, "lang": "kab", "machine_generated": true}
+{"skill_id": "ovos-skill-days-in-history.openvoiceos", "utterance": "kemmel", "intent_label": "tell_me_more_intent", "intent_type": "padatious", "needs_manual": true, "lang": "kab", "machine_generated": false}
+{"skill_id": "ovos-skill-days-in-history.openvoiceos", "utterance": "ini-yi ugar", "intent_label": "tell_me_more_intent", "intent_type": "padatious", "needs_manual": true, "lang": "kab", "machine_generated": false}
+{"skill_id": "ovos-skill-days-in-history.openvoiceos", "utterance": "yiwet n temsalt nniḍen", "intent_label": "tell_me_more_intent", "intent_type": "padatious", "needs_manual": true, "lang": "kab", "machine_generated": true}

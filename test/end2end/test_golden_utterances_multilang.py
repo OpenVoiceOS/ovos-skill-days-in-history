@@ -49,6 +49,7 @@ TRIGGER_UTTERANCE = {
     "fr-FR": "aujourd'hui dans l'histoire",
     "gl-ES": "hoxe na historia",
     "it-IT": "oggi nella storia",
+    "kab": "ass-a deg umezruy",
     "nl-NL": "vandaag in de geschiedenis",
     "pt-BR": "hoje na história",
     "pt-PT": "hoje na história",
