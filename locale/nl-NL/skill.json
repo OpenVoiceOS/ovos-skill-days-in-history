@@ -1,0 +1,20 @@
+{
+    "skill_id": "ovos-skill-days-in-history.openvoiceos",
+    "source": "https://github.com/OpenVoiceOS/ovos-skill-days-in-history",
+    "author": "OpenVoiceOS",
+    "name": "Vandaag in de Geschiedenis",
+    "license": "apache-2.0",
+    "description": "Biedt historische gebeurtenissen van vandaag of van elke andere kalenderdag met informatie uit Wikipedia.",
+    "examples": [
+        "Wat gebeurde er op deze datum in de geschiedenis?",
+        "Wie is op deze datum geboren in de geschiedenis?",
+        "Wie is op deze datum overleden in de geschiedenis?",
+        "Wat gebeurde er op 16 juni in de geschiedenis?",
+        "Vertel me over belangrijke historische gebeurtenissen van 12 december"
+    ],
+    "tags": [
+        "Informatie",
+        "Geschiedenis",
+        "Weetjes"
+    ]
+}

@@ -1,0 +1,20 @@
+{
+    "skill_id": "ovos-skill-days-in-history.openvoiceos",
+    "source": "https://github.com/OpenVoiceOS/ovos-skill-days-in-history",
+    "author": "OpenVoiceOS",
+    "name": "Idag i Historien",
+    "license": "apache-2.0",
+    "description": "Ger historiska händelser för idag eller någon annan kalenderdag med information hämtad från Wikipedia.",
+    "examples": [
+        "Vad hände detta datum i historien?",
+        "Vem föddes detta datum i historien?",
+        "Vem dog detta datum i historien?",
+        "Vad hände den 16 juni i historien?",
+        "Berätta om viktiga historiska händelser den 12 december"
+    ],
+    "tags": [
+        "Information",
+        "Historia",
+        "Kuriosa"
+    ]
+}

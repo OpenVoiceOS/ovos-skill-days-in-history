@@ -1,0 +1,20 @@
+{
+    "skill_id": "ovos-skill-days-in-history.openvoiceos",
+    "source": "https://github.com/OpenVoiceOS/ovos-skill-days-in-history",
+    "author": "OpenVoiceOS",
+    "name": "Gaur Historian",
+    "license": "apache-2.0",
+    "description": "Wikipediatik ateratako informazioa erabiliz, gaurko edo beste egun bateko gertakari historikoak eskaintzen ditu.",
+    "examples": [
+        "Zer gertakari historiko gertatu zen gaurko egunez iraganean?",
+        "Nor jaio zen gaur bezalako egun batean iraganean?",
+        "Nor hil zen gaur bezalako egun batean iraganean?",
+        "Zer gertakari historiko gertatu zen ekainaren 16a egunean iraganean?",
+        "Nor jaio zen abenduaren 12a"
+    ],
+    "tags": [
+        "Informazioa",
+        "Historia",
+        "Jakin-mina"
+    ]
+}
