@@ -13,3 +13,7 @@ qui va néixer tal dia com hui en la història
 # unvouched: the dated line added by the localize lane, awaiting a speaker
 qui (nasqué|va néixer) el {date}
 qui (nasqué|va néixer) el {date} (a|en) la història
+# unvouched: machine-written lines, awaiting a speaker
+(digues-me|explica'm) quines persones conegudes van néixer (avui|aquest dia|el {date})
+qui (va nàixer|nasqué) (hui|el {date})
+quines personalitats famoses han nascut (avui|aquest dia|el dia {date})

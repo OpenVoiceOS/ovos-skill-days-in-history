@@ -10,3 +10,5 @@ wie werd geboren [op] {date} [in de geschiedenis]
 wie werd geboren (vandaag|op deze dag|op deze datum) [in de geschiedenis]
 (welke|wat voor) [beroemde|bekende|historische] (mensen|figuren) werden geboren (vandaag|op deze dag|op deze datum) [in de geschiedenis]
 (welke|wat voor) [beroemde|bekende|historische] (mensen|figuren) werden geboren [op] {date} [in de geschiedenis]
+# unvouched: machine-written lines, awaiting a speaker
+(noem|geef) (bekende|beroemde) mensen die (vandaag|op deze dag|op {date}) geboren zijn

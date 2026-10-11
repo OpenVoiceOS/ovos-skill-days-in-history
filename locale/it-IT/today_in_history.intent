@@ -9,3 +9,8 @@ parlami degli eventi storici [importanti|notevoli] (di oggi|di questo giorno|di 
 parlami degli eventi storici [importanti|notevoli] (del|di) {date}
 parlami di eventi storici [importanti|notevoli] (oggi|in questo giorno|in questa data)
 parlami di eventi storici [importanti|notevoli] (del|di) {date}
+# unvouched: machine-written lines, awaiting a speaker
+quali avvenimenti (accaddero|avvennero) (oggi|in questa data|il {date})
+dimmi che cosa è successo (oggi|in questa data|il giorno {date}) [in passato]
+(dimmi|elencami) [alcuni] (fatti|eventi) storici (di oggi|di questa data|del {date})
+parlami di qualche evento storico (di oggi|di questa data|del {date})
