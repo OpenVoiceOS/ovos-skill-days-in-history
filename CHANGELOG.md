@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.9.3a3](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.9.3a3) (2026-10-13)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.9.3a2...0.9.3a3)
+
+**Merged pull requests:**
+
+- test: natural golden rows and an m2v gate for every locale [\#152](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/152) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.9.3a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.9.3a2) (2026-10-01)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.9.3a1...0.9.3a2)
@@ -356,17 +364,9 @@
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.11a2...0.3.11)
 
-**Merged pull requests:**
-
-- Release 0.3.11a2 [\#42](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/42) ([github-actions[bot]](https://github.com/apps/github-actions))
-
 ## [0.3.11a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.11a2) (2025-06-08)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.10...0.3.11a2)
-
-**Merged pull requests:**
-
-- workshop 7.X:X [\#41](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/41) ([JarbasAl](https://github.com/JarbasAl))
 
 ## [0.3.10](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.10) (2025-06-08)
 
