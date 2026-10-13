@@ -1,0 +1,14 @@
+# unvouched: machine translation from en-US by the localize lane, awaiting a speaker
+chi è morto (oggi|in questo giorno|in questa data) [nella storia]
+chi è morto [il] {date} [nella storia]
+(quali|che) [famosi|famose|celebri|storici|storiche] (persone|personaggi) sono (morti|morte) (oggi|in questo giorno|in questa data) [nella storia]
+(quali|che) [famosi|famose|celebri|storici|storiche] (persone|personaggi) sono (morti|morte) [il] {date} [nella storia]
+morti [famose|celebri] (oggi|in questo giorno|in questa data) nella storia
+morti [famose|celebri] [il] {date} nella storia
+(quali|che) (persone|personaggi) [famosi|famose|celebri|storici|storiche] sono (morti|morte) (oggi|in questo giorno|in questa data) [nella storia]
+(quali|che) (persone|personaggi) [famosi|famose|celebri|storici|storiche] sono (morti|morte) [il] {date} [nella storia]
+# unvouched: machine-written lines, awaiting a speaker
+(dimmi|elencami) i personaggi famosi morti (oggi|in questa data|il {date})
+chi ci ha lasciato (oggi|in questa data|il {date})
+chi è scomparso (oggi|il {date})
+chi se n'è andato per sempre (oggi|il {date})

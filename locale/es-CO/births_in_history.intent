@@ -1,0 +1,8 @@
+Quién nació hoy [en la historia]
+Quién nació [el] {date} [en la historia]
+Qué personas (famosas|notables|históricas) nacieron hoy [en la historia]
+Qué personas (famosas|notables|históricas) nacieron [el] {date} [en la historia]
+nacimientos (famosos|notables) de hoy en la historia
+nacimientos (famosos|notables) [el] {date} en la historia
+# unvouched: machine-written lines, awaiting a speaker
+(dime|nómbrame) personajes famosos que nacieron (hoy|en esta fecha|el {date})

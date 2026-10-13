@@ -1,0 +1,7 @@
+# unvouched: machine translation from en-US by the localize lane, awaiting a speaker
+vem föddes (idag|denna dag|detta datum) [i historien]
+vem föddes (den|) {date} [i historien]
+(vilka|vilka sorts) [kända|berömda|historiska] (personer|figurer) föddes (idag|denna dag|detta datum) [i historien]
+(vilka|vilka sorts) [kända|berömda|historiska] (personer|figurer) föddes (den|) {date} [i historien]
+[kända|berömda] födslar (idag|denna dag|detta datum) i historien
+[kända|berömda] födslar (den|) {date} i historien

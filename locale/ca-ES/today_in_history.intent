@@ -1,0 +1,6 @@
+# unvouched: machine-written lines, awaiting a speaker
+(avui|hui|aquesta data|esta data) [(a|en) la història]
+tal dia com (avui|hui) [(a|en) la història]
+[explica'm] què (va passar|passà|va succeir|succeí) (avui|hui|aquest dia|este dia|en aquesta data|en esta data|el {date}|en {date}|en data {date}|amb data {date}) [(a|en) la història]
+[explica'm] quins (esdeveniments|fets) històrics (van passar|passaren|van succeir|succeiren) (avui|hui|aquest dia|este dia|en aquesta data|en esta data|a la data {date}|en la data {date}|en data {date}|amb data {date}) [(a|en) la història]
+explica'm (els esdeveniments|els fets) històrics que (van passar|passaren|van succeir|succeiren) (avui|hui|aquest dia|este dia|en aquesta data|en esta data|a la data {date}|en la data {date}|en data {date}|amb data {date}) [(a|en) la història]
