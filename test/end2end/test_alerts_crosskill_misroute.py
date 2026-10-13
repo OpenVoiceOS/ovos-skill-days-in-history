@@ -100,8 +100,10 @@ LANG = "en-US"
 #      ".intent" templates WOULD steal "tell me another joke" if that tier
 #      were ever enabled (worth knowing, not worth an xfail for a
 #      non-default tier).
+# The padacioso high stage stands in for padatious high, so the test runs
+# without the libfann native library.
 PIPELINE = [
-    "ovos-padatious-pipeline-plugin-high",
+    "ovos-padacioso-pipeline-plugin-high",
     "ovos-adapt-pipeline-plugin-high",
     "ovos-adapt-pipeline-plugin-medium",
 ]

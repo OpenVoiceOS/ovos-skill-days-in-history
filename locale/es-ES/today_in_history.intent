@@ -1,3 +1,12 @@
-(cuéntame sobre|qué) (acontecimientos históricos|) sucedieron (hoy|esta fecha|este día) (en la historia|)
-(cuéntame sobre|qué) (acontecimientos históricos|) ocurrieron el {date} (en la historia|)
+qué acontecimientos históricos sucedieron (hoy|en esta fecha|esta fecha|este día) [en la historia]
+qué sucedió (hoy|en esta fecha|esta fecha|este día) [en la historia]
+cuéntame sobre los acontecimientos históricos que sucedieron (hoy|en esta fecha|esta fecha|este día) [en la historia]
+cuéntame qué sucedió (hoy|en esta fecha|esta fecha|este día) [en la historia]
+qué acontecimientos históricos ocurrieron el {date} [en la historia]
+dime qué ocurrió el día {date} [en la historia]
+cuéntame sobre los acontecimientos históricos que ocurrieron el {date} [en la historia]
+cuéntame los hechos que ocurrieron el día {date} [en la historia]
 (hoy|esta fecha|este día) en la historia
+# unvouched: machine-written lines, awaiting a speaker
+qué cosas pasaron (hoy|en esta fecha|el {date}) en otros tiempos
+(dime|cuéntame) lo que pasó (hoy|en esta fecha|el {date}) hace muchos años

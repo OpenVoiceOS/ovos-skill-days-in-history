@@ -8,3 +8,6 @@ tell me about [notable|important|major] historical events (today|this day|this d
 tell me about [notable|important|major] historical events [on] {date}
 tell me about what happened (today|this day|this date|on today|on this day|on this date) [in history]
 tell me about what happened [on] {date} [in history]
+# unvouched: machine-written lines, awaiting a speaker
+(read me|share) [some] historical facts (for today|about this date)
+what is (today|this date) remembered for

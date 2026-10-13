@@ -7,3 +7,5 @@ nascite [famose|celebri] (oggi|in questo giorno|in questa data) nella storia
 nascite [famose|celebri] [il] {date} nella storia
 (quali|che) (persone|personaggi) [famosi|famose|celebri|storici|storiche] sono (nati|nate) (oggi|in questo giorno|in questa data) [nella storia]
 (quali|che) (persone|personaggi) [famosi|famose|celebri|storici|storiche] sono (nati|nate) [il] {date} [nella storia]
+# unvouched: machine-written lines, awaiting a speaker
+(dimmi|elencami) i personaggi famosi nati (oggi|in questa data|il {date})

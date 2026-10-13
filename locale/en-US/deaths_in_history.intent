@@ -4,3 +4,7 @@ who died [on] {date} [in history]
 (what|which) [famous|notable|historical] (people|figures) died [on] {date} [in history]
 [famous|notable] deaths (today|this day|this date|on this day|on this date) in history
 [famous|notable] deaths [on] {date} in history
+# unvouched: machine-written lines, awaiting a speaker
+(tell me|give me) the (famous|notable) deaths (for today|for this date|for {date})
+which famous celebrities left us (today|on this day)
+tell me the famous people who passed away (today|on this date|on {date})

@@ -9,3 +9,5 @@ wie stierf (vandaag|op deze dag|op deze datum) [in de geschiedenis]
 wie stierf [op] {date} [in de geschiedenis]
 (welke|wat voor) [beroemde|bekende|historische] (mensen|figuren) stierven (vandaag|op deze dag|op deze datum) [in de geschiedenis]
 (welke|wat voor) [beroemde|bekende|historische] (mensen|figuren) stierven [op] {date} [in de geschiedenis]
+# unvouched: machine-written lines, awaiting a speaker
+(noem|geef) (bekende|beroemde) mensen die (vandaag|op deze dag|op {date}) overleden zijn

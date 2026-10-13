@@ -3,3 +3,11 @@ quelles naissances ont eu lieu le {date} dans l'histoire
 qui est né aujourd'hui dans l'histoire
 qui est né le {date} dans l'histoire
 qui est né à cette date dans l'histoire
+# unvouched: machine-written lines, awaiting a speaker
+(donne-moi|cite-moi) (les|des) personnalités nées (aujourd'hui|ce jour-là|le {date})
+quelles stars ont vu le jour (aujourd'hui|le {date})
+qui (est venu|sont venus) au monde (aujourd'hui|le {date})
+(cite|nomme) (des|les) gens nés (aujourd'hui|ce jour|le {date})
+quelles personnes célèbres sont nées à pareille date
+dis-moi les personnes nées (aujourd'hui|le {date})
+parmi les personnalités célèbres, lesquelles sont nées (aujourd'hui|à cette date|le {date})

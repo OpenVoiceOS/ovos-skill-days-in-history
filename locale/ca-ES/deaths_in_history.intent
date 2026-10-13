@@ -1,9 +1,9 @@
-qui morir tal dia com avui
-qui morir tal dia com avui a la història
-qui morir tal dia com avui en la història
-qui morir tal dia com hui
-qui morir tal dia com hui a la història
-qui morir tal dia com hui en la història
+qui es va morir tal dia com avui
+qui es va morir tal dia com avui a la història
+qui es va morir tal dia com avui en la història
+qui es va morir tal dia com hui
+qui es va morir tal dia com hui a la història
+qui es va morir tal dia com hui en la història
 qui morí tal dia com avui
 qui morí tal dia com avui a la història
 qui morí tal dia com avui en la història
@@ -19,3 +19,7 @@ qui va morir tal dia com hui en la història
 # unvouched: the dated line added by the localize lane, awaiting a speaker
 qui (morí|va morir) el {date}
 qui (morí|va morir) el {date} (a|en) la història
+# unvouched: machine-written lines, awaiting a speaker
+(digues-me|explica'm) quines persones conegudes van morir (avui|aquest dia|el {date})
+qui ens va deixar (avui|aquest dia|el {date})
+quines personalitats famoses han mort (avui|aquest dia|el dia {date})

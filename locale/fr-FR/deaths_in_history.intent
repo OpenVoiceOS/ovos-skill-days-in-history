@@ -3,3 +3,13 @@ quels décès ont eu lieu le {date} dans l'histoire
 qui est mort aujourd'hui dans l'histoire
 qui est mort le {date} dans l'histoire
 qui est mort à cette date dans l'histoire
+# unvouched: machine-written lines, awaiting a speaker
+(donne-moi|cite-moi) (les|des) personnalités (mortes|décédées) (aujourd'hui|ce jour-là|le {date})
+qui est décédé (aujourd'hui|le {date})
+parmi les stars, lesquelles sont mortes (aujourd'hui|le {date})
+(qui a|quelles personnalités ont) disparu (aujourd'hui|ce jour-là|le {date})
+(cite|nomme) (des|les) gens morts (aujourd'hui|ce jour|le {date})
+quelles personnes célèbres sont mortes à pareille date
+(quelles célébrités|quels artistes) nous ont quittés (aujourd'hui|le {date})
+dis-moi les personnes mortes (aujourd'hui|le {date})
+parmi les personnalités célèbres, lesquelles sont décédées (aujourd'hui|à cette date|le {date})
