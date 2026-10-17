@@ -1,0 +1,6 @@
+[donne-moi] (un fait|une anecdote) sur l'année {number:year}
+que s'est-il passé en l'année {number:year}
+(raconte-moi|dis-moi) (une anecdote|un fait) sur l'année {number:year}
+quels (événements|faits) ont marqué l'année {number:year}
+qu'est-ce qui s'est passé (pendant|durant) l'année {number:year}
+qu'y a-t-il (de spécial|d'intéressant) dans l'année {number:year}

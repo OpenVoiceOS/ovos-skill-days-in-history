@@ -10,3 +10,18 @@ cuéntame los hechos que ocurrieron el día {date} [en la historia]
 # unvouched: machine-written lines, awaiting a speaker
 qué cosas pasaron (hoy|en esta fecha|el {date}) en otros tiempos
 (dime|cuéntame) lo que pasó (hoy|en esta fecha|el {date}) hace muchos años
+# unvouched: machine-written lines, awaiting a speaker
+qué (pasó|ocurrió|sucedió) (en un|un) día como hoy a lo largo de la historia
+qué (acontecimientos|sucesos) hubo (en un|un) día como hoy
+(cuéntame|dime) algo que (pasó|ocurrió) (un día como hoy|tal día como hoy) [en la historia]
+qué (pasó|ocurrió|sucedió) el {date} de (enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)
+qué (ocurrió|sucedió) (un día como hoy|en un día como hoy) [en la historia]
+(cuéntame|dime) algo que (pasó|ocurrió) (un día como hoy|tal día como hoy)
+[dime] (una curiosidad|un hecho) (de hoy|de mañana|de ayer|del fin de semana)
+(curiosidad|hecho) (de la fecha|del día) {date}
+(curiosidad|hecho) (de enero|de febrero|de marzo|de abril|de mayo|de junio|de julio|de agosto|de septiembre|de octubre|de noviembre|de diciembre) {date}
+(cuéntame|dime) (algo curioso|un dato curioso|una curiosidad) (sobre el|del) {date} de (enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)
+(algún|un) dato (curioso|interesante) (de|sobre) (hoy|mañana|ayer)
+(cuéntame|dime) (alguna curiosidad|algo interesante) (de hoy|de ayer|de mañana)
+qué tiene (hoy|mañana|este día) de especial
+qué (sabes|conoces) sobre el {date} de (enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)

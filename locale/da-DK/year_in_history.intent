@@ -1,0 +1,6 @@
+[fortæl mig] (et faktum|fakta|trivia) om året {number:year}
+år (faktum|fakta) {number:year}
+hvad skete der i (året|år) {number:year}
+fortæl mig noget (sjovt|interessant) om året {number:year}
+hvad kan man (lære|vide) om (året|år) {number:year}
+ved du (noget|hvad) (spændende|sjovt) om (året|år) {number:year}

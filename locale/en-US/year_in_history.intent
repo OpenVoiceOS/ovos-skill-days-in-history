@@ -1,0 +1,5 @@
+[give me] [a] (fact|trivia|curiosity) about [the] year {number:year}
+year (fact|trivia) {number:year}
+(tell me|say) something (interesting|fun) about the year {number:year}
+what happened in the year {number:year}
+what (interesting|notable|important) (things|events) happened in [the year] {number:year}

@@ -1,0 +1,5 @@
+[dimmi] (una curiosità|un fatto) sull'anno {number:year}
+curiosità sull'anno {number:year}
+(raccontami|dimmi) (una curiosità|qualcosa) sull'anno {number:year}
+cosa è successo nell'anno {number:year}
+cosa sai sull'anno {number:year}

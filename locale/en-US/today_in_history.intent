@@ -11,3 +11,13 @@ tell me about what happened [on] {date} [in history]
 # unvouched: machine-written lines, awaiting a speaker
 (read me|share) [some] historical facts (for today|about this date)
 what is (today|this date) remembered for
+# unvouched: machine-written lines, awaiting a speaker
+was there (anything|something) (big|important|notable|major) in history on (today|this day|this date)
+what happened on a day like (today|this) [in history]
+what happened on (january|february|march|april|may|june|july|august|september|october|november|december) {date}
+[give me] [a] (fact|trivia|curiosity) (about|for) (today|tomorrow|yesterday|this (day|date|week|weekend))
+[give me] [a] (fact|trivia|curiosity) (about|for) [the] (date|day) {date}
+(fact|trivia) (about|for) (january|february|march|april|may|june|july|august|september|october|november|december) {date}
+(tell me|say) something (interesting|fun) about (january|february|march|april|may|june|july|august|september|october|november|december) {date}
+what happened on this (day|date) in history
+what is special about (today|tomorrow|yesterday)

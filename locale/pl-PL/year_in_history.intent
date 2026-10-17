@@ -1,0 +1,7 @@
+fakt o roku {number:year}
+ciekawostka o roku {number:year}
+ciekawostka na rok {number:year}
+fakt w roku {number:year}
+co się działo w roku {number:year}
+(powiedz|opowiedz) mi (ciekawostkę|coś ciekawego|fakt) o roku {number:year}
+co (się wydarzyło|się stało|ciekawego wydarzyło się) w roku {number:year}

@@ -1,0 +1,7 @@
+[me diga] (uma curiosidade|um fato) (do ano|sobre o ano) {number:year}
+curiosidade (do ano|sobre o ano) {number:year}
+o que aconteceu no ano {number:year}
+(me conta|me fala) (uma curiosidade|um fato) sobre o ano {number:year}
+o que aconteceu de importante no ano {number:year}
+(que|quais) (acontecimentos|eventos) marcaram o ano {number:year}
+o que (de interessante|de importante) aconteceu em {number:year}

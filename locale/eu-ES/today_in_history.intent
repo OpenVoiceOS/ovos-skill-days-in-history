@@ -33,3 +33,15 @@ zer gertakari historiko gertatu zen gaurko egunez
 zer gertakari historiko gertatu zen gaurko egunez iraganean
 zer gertakari historiko gertatu zen {date} egunean
 zer gertakari historiko gertatu zen {date} egunean iraganean
+gaur bezalako egun batean (gertatutako|izandako) zerbait (esan|kontatu) iezadazu
+gaurko egunean zer (gauza|gertaera) (aipagarri|interesgarri) gertatu zen historian
+zer gertatu zen egun honetan historian
+zer gertatu zen gaurko egunean
+zer gertatu zen (egun honetan|gaurko egunean) [historian]
+[esan] (gaur|bihar|atzo|asteburu)ko (gertakari|jakin-min) bat
+(data|egun) {date} (gertakari|jakin-min) bat
+(gaurko|biharko|atzoko) egunari buruzko (gertakari|jakin-min|datu bitxi) bat
+zer dauka berezia (gaur|bihar)
+eman iezadazu (gaurko|biharko|atzoko) egunari lotutako jakingarri bat
+gaurko egunean zer (gertaera|gauza) (aipagarri|interesgarri) gertatu zen historian
+gaur bezalako egun batean (gertatutako|izandako) zerbait (kontatu|esan) iezadazu
