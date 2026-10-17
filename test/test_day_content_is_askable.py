@@ -7,7 +7,7 @@ none of that content can ever be spoken.
 
 Measured at `origin/dev` before this guard: it-IT, nl-NL, pt-BR and sv-SE each
 held 1098 day dialogs and zero intent files, which is 4392 unreachable files.
-`kab` is the deliberate exception -- it ships 3 intents and no day files at
+`kab`, `fa-IR`, `oc-FR`, `pl-PL` and `ru-RU` are the deliberate exceptions -- it ships 3 intents and no day files at
 all, a stub locale rather than a full one, and is named below rather than
 skipped by a count, so filling it in fails this test and someone removes it
 from the list.
@@ -29,7 +29,7 @@ INTENTS = ("births_in_history", "deaths_in_history", "today_in_history",
 #: Locales that ship a handful of day files rather than the full set, and are
 #: not expected to carry every intent yet. Named rather than inferred, so that
 #: a locale filling in trips this list instead of silently leaving it.
-STUB_LOCALES = ("kab",)
+STUB_LOCALES = ("fa-IR", "kab", "oc-FR", "pl-PL", "ru-RU")
 
 #: How many day files make a locale a real one rather than a stub.
 FULL_LOCALE_DAY_FILES = 100

@@ -8,3 +8,12 @@ o que aconteceu (em|no dia) {date} na história
 me conte sobre eventos históricos [importantes|notáveis] (de hoje|deste dia|desta data)
 me conte sobre eventos históricos [importantes|notáveis] (de|em) {date}
 me conte sobre eventos históricos [importantes|notáveis] (hoje|neste dia|nesta data)
+o que (houve|rolou) neste dia na história
+o que aconteceu no dia {date} de (janeiro|fevereiro|março|abril|maio|junho|julho|agosto|setembro|outubro|novembro|dezembro)
+o que (houve|rolou) (num dia como hoje|neste dia) na história
+[me diga] (uma curiosidade|um fato) (de hoje|de amanhã|de ontem|do fim de semana)
+(curiosidade|fato) (da data|do dia) {date}
+(curiosidade|fato) (de janeiro|de fevereiro|de março|de abril|de maio|de junho|de julho|de agosto|de setembro|de outubro|de novembro|de dezembro) {date}
+(me conta|me diga|me fala) (uma curiosidade|um fato) sobre [o dia] {date} de (janeiro|fevereiro|março|abril|maio|junho|julho|agosto|setembro|outubro|novembro|dezembro)
+o que (há|tem) de (especial|diferente) (no dia de hoje|amanhã)
+o que (você sabe|sabes) do dia {date} de (janeiro|fevereiro|março|abril|maio|junho|julho|agosto|setembro|outubro|novembro|dezembro)

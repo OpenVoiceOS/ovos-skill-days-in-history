@@ -4,3 +4,14 @@
 diz-me o que aconteceu (hoje|nesta data|em {date}) [na história]
 (conta-me|conte-me) [sobre] os eventos históricos (de hoje|desta data|de {date})
 diz-me (que|quais) eventos históricos aconteceram (hoje|nesta data|em {date})
+# unvouched: machine-written lines, awaiting a speaker
+o que (se passou|aconteceu) (neste dia|num dia como hoje) na história
+(conta-me|diz-me) que factos marcaram (neste dia|num dia como hoje) na história
+o que aconteceu no dia {date} de (janeiro|fevereiro|março|abril|maio|junho|julho|agosto|setembro|outubro|novembro|dezembro)
+[diz-me] (uma curiosidade|um facto) (de hoje|de amanhã|de ontem|do fim de semana)
+(curiosidade|facto) (da data|do dia) {date}
+(curiosidade|facto) (de janeiro|de fevereiro|de março|de abril|de maio|de junho|de julho|de agosto|de setembro|de outubro|de novembro|de dezembro) {date}
+(conta-me|diz-me) (uma curiosidade|um facto) sobre o dia {date} de (janeiro|fevereiro|março|abril|maio|junho|julho|agosto|setembro|outubro|novembro|dezembro)
+o que (se passou|aconteceu) neste dia na história
+o que há de especial (hoje|amanhã|neste dia)
+o que (você sabe|sabes) do dia {date} de (janeiro|fevereiro|março|abril|maio|junho|julho|agosto|setembro|outubro|novembro|dezembro)

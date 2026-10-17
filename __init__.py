@@ -1,10 +1,12 @@
 import datetime
 import os.path
 import random
+import re
 from typing import Callable, Optional
 
 from ovos_bus_client.session import SessionManager
-from ovos_date_parser import extract_datetime, nice_year
+from ovos_date_parser import extract_datetime, nice_date, nice_year
+from ovos_number_parser import extract_number_spans
 from ovos_spec_tools import MalformedTemplate
 from ovos_utils import classproperty
 from ovos_utils.log import LOG
@@ -15,6 +17,9 @@ from ovos_workshop.skills.ovos import OVOSSkill
 
 
 class TodayInHistory(OVOSSkill):
+    # {lang: {year: [(month, day, line)]}}, built from the day_*_events dialogs on first use
+    _year_index = {}
+
     @classproperty
     def runtime_requirements(self):
         return RuntimeRequirements(
@@ -86,12 +91,19 @@ class TodayInHistory(OVOSSkill):
                     LOG.warning(f"render_callback failed on raw fallback line: {cb_err}")
             self.speak(raw)
 
-    def _dialog_lines(self, dialog: str) -> list:
+    def _data_lang(self) -> str:
+        """Language of the event data: the user's language when it ships the
+        per-day dialogs, else en-US."""
+        if self.find_resource("day_1_month_1_events.dialog", "dialog"):
+            return self.lang
+        return "en-US"
+
+    def _dialog_lines(self, dialog: str, lang: Optional[str] = None) -> list:
         """Return the candidate lines of a `.dialog` resource, or `[]` if
         it can't be found -- used by the tell-me-more follow-up to pick an
         as-yet-unspoken line instead of the random-per-call choice
         `speak_dialog` makes internally."""
-        path = self.find_resource(f"{dialog}.dialog", "dialog")
+        path = self.find_resource(f"{dialog}.dialog", "dialog", lang)
         if not path or not os.path.isfile(path):
             return []
         with open(path, encoding="utf-8") as f:
@@ -136,6 +148,51 @@ class TodayInHistory(OVOSSkill):
             LOG.error(f"Failed to parse year from dialog: {dialog} - {str(e)}")
         return dialog
         
+    def _events_by_year(self) -> dict:
+        lang = self._data_lang()
+        if lang not in self._year_index:
+            index = {}
+            for month in range(1, 13):
+                for day in range(1, 32):
+                    for line in self._dialog_lines(f"day_{day}_month_{month}_events", lang):
+                        match = re.match(r"(\d{1,4}) - ", line)
+                        if match:
+                            index.setdefault(int(match.group(1)), []).append((month, day, line))
+            self._year_index[lang] = index
+        return self._year_index[lang]
+
+    def _get_year(self, message):
+        """The year asked for, or None when the utterance names no whole number."""
+        values = [entry["value"] for entry in message.data.get("typed_slots", {}).get("number", [])
+                  if entry.get("name") == "year"]
+        if not values:
+            text = message.data["utterance"]
+            spans = extract_number_spans(text, lang=self.lang)
+            values = [span.value for span in spans]
+            if len(spans) == 2:
+                between = text[spans[0].end:spans[1].start].strip()
+                if (not between and 0 < values[0] < 100 and 10 <= values[1] < 100) or \
+                        (10 <= values[0] < 100 and 1 <= values[1] < 10 and between
+                         and self.voc_match(between, "year_oh")):
+                    values = [values[0] * 100 + values[1]]  # "fourteen ninety two", "nineteen oh five"
+        if len(values) != 1 or not float(values[0]).is_integer():
+            return None
+        return int(values[0])
+
+    @intent_handler("year_in_history.intent")
+    def handle_year_in_history_intent(self, message):
+        year = self._get_year(message)
+        events = self._events_by_year().get(year)
+        if not events:
+            self.speak_dialog("no_events_for_year")
+            return
+        month, day, line = random.choice(events)
+        lang = self._data_lang()
+        date = nice_date(datetime.datetime(year, month, day), lang=lang,
+                         now=datetime.datetime(year, 1, 1), include_weekday=False)
+        spoken = self.pronounce_year(line, lang).replace(" - ", ": ", 1)
+        self.speak(f"{date}, {spoken}")
+
     @intent_handler("births_in_history.intent")
     def handle_births_intent(self, message):
         date = self.get_date(message)
@@ -149,7 +206,15 @@ class TodayInHistory(OVOSSkill):
     def handle_today_in_history_intent(self, message):
         date = self.get_date(message)
         dialog = f"day_{date.day}_month_{date.month}_events"
-        self._speak_dialog_safe(dialog, render_callback=self.pronounce_year)
+        lang = self._data_lang()
+        if lang != self.lang:
+            lines = self._dialog_lines(dialog, lang)
+            if not lines:
+                self.speak_dialog("unknown_date")
+                return
+            self.speak(self.pronounce_year(random.choice(lines), lang))
+        else:
+            self._speak_dialog_safe(dialog, render_callback=self.pronounce_year)
         SessionManager.get(message).set_intent_context(
             "prev_dialog", {"value": dialog, "seen": []},
             scope="shared", turns_remaining=3)
@@ -183,14 +248,15 @@ class TodayInHistory(OVOSSkill):
         state = entry["value"] if isinstance(entry, dict) else None
         dialog = state.get("value") if isinstance(state, dict) else None
         seen = state.get("seen", []) if isinstance(state, dict) else []
-        unspoken = [line for line in self._dialog_lines(dialog) if line not in seen] \
+        lang = self._data_lang()
+        unspoken = [line for line in self._dialog_lines(dialog, lang) if line not in seen] \
             if dialog else []
         if not unspoken:
             self.speak_dialog("thats_all")
             session.remove_intent_context("prev_dialog", scope="shared")
         else:
             line = random.choice(unspoken)
-            rendered = self.pronounce_year(line, self.lang)
+            rendered = self.pronounce_year(line, lang)
             self.speak(rendered)
             session.set_intent_context(
                 "prev_dialog", {"value": dialog, "seen": seen + [line]},

@@ -4,3 +4,15 @@
 # unvouched: machine-written lines, awaiting a speaker
 que (sucesos|feitos) importantes (houbo|ocorreron) (hoxe|nesta data|no día {date})
 que pasou (hoxe|o {date}) hai moitos anos
+# unvouched: machine-written lines, awaiting a speaker
+que (ocorreu|sucedeu|aconteceu) neste día [na historia]
+que (ocorreu|sucedeu|pasou) un día coma hoxe na historia
+que (ocorreu|sucedeu) un día coma hoxe
+que pasou o {date} de (xaneiro|febreiro|marzo|abril|maio|xuño|xullo|agosto|setembro|outubro|novembro|decembro)
+[dime] (unha curiosidade|un feito) (de hoxe|de mañá|de onte|da fin de semana)
+(curiosidade|feito) (da data|do día) {date}
+(curiosidade|feito) (de xaneiro|de febreiro|de marzo|de abril|de maio|de xuño|de xullo|de agosto|de setembro|de outubro|de novembro|de decembro) {date}
+(cóntame|dime) (unha curiosidade|algo curioso) (sobre o|do) {date} de (xaneiro|febreiro|marzo|abril|maio|xuño|xullo|agosto|setembro|outubro|novembro|decembro)
+que (ocorreu|sucedeu) un día coma hoxe [na historia]
+que ten (hoxe|mañá) de especial
+que sabes sobre o {date} de (xaneiro|febreiro|marzo|abril|maio|xuño|xullo|agosto|setembro|outubro|novembro|decembro)
