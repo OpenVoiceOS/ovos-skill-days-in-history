@@ -1,0 +1,10 @@
+[dime] (una curiosidad|un hecho) (del año|sobre el año) {number:year}
+qué (pasó|ocurrió|sucedió) en el año {number:year}
+(cuéntame|dime) (algo|un dato) (curioso|interesante) (del|sobre el) año {number:year}
+qué (acontecimientos|cosas importantes) (hubo|ocurrieron) en el año {number:year}
+(cuáles|qué) (hechos|sucesos) (destacados|relevantes) (pasaron|ocurrieron) durante el año {number:year}
+[dime] (una curiosidad|un hecho) (del año|sobre el año) {number:year} (a.C.|a. C.|antes de cristo)
+qué (pasó|ocurrió|sucedió) en el año {number:year} (a.C.|a. C.|antes de cristo)
+(cuéntame|dime) (algo|un dato) (curioso|interesante) (del|sobre el) año {number:year} (a.C.|a. C.|antes de cristo)
+qué (acontecimientos|cosas importantes) (hubo|ocurrieron) en el año {number:year} (a.C.|a. C.|antes de cristo)
+(cuáles|qué) (hechos|sucesos) (destacados|relevantes) (pasaron|ocurrieron) durante el año {number:year} (a.C.|a. C.|antes de cristo)

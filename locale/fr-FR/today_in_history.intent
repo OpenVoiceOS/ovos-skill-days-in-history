@@ -8,3 +8,15 @@ quels événements historiques ont eu lieu le {date}
 quels événements ont marqué cette date dans l'histoire
 raconte-moi ce qui s'est passé aujourd'hui dans l'histoire
 raconte-moi ce qui s'est passé le {date} dans l'histoire
+# unvouched: machine-written lines, awaiting a speaker
+(que s'est-il passé|qu'est-il arrivé) à pareille date [dans l'histoire]
+(que s'est-il passé|qu'est-il arrivé) un jour comme aujourd'hui dans l'histoire
+qu'est-il arrivé un jour comme aujourd'hui
+que s'est-il passé le {date} (janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre)
+[donne-moi] (un fait|une anecdote) (d'aujourd'hui|de demain|d'hier|du week-end)
+(fait|anecdote) (de la date|du jour) {date}
+(fait|anecdote) (de janvier|de février|de mars|d'avril|de mai|de juin|de juillet|d'août|de septembre|d'octobre|de novembre|de décembre) {date}
+(raconte-moi|donne-moi|dis-moi) (une anecdote|un fait) sur le {date} (janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre)
+qu'est-il arrivé (un jour comme aujourd'hui|à pareille date) [dans l'histoire]
+qu'a de (spécial|particulier) (aujourd'hui|demain|ce jour)
+que (sais-tu|connais-tu) sur le {date} (janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre)

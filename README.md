@@ -13,6 +13,7 @@ The skill does not query Wikipedia or the muffinlabs API at runtime. Dialog file
 * "Who died today in history?"
 * "Tell me about events in history on December 12th"
 * "What historical events happened on June 16th?"
+* "What happened in the year 1492?"
 * "Tell me more"
 * "What's another event?"
 

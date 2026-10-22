@@ -1,0 +1,8 @@
+[geef me] (een weetje|een feit) over het jaar {number:year}
+weetje over het jaar {number:year}
+wat (gebeurde er|is er gebeurd) in het jaar {number:year}
+(vertel me|zeg) iets over het jaar {number:year}
+[geef me] (een weetje|een feit) over het jaar {number:year} (v.Chr.|voor christus)
+weetje over het jaar {number:year} (v.Chr.|voor christus)
+wat (gebeurde er|is er gebeurd) in het jaar {number:year} (v.Chr.|voor christus)
+(vertel me|zeg) iets over het jaar {number:year} (v.Chr.|voor christus)
