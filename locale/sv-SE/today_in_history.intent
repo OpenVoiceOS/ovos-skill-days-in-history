@@ -7,3 +7,15 @@ vad hände (den|) {date} i historien
 (vilka|vilka sorts) [viktiga|stora] historiska händelser hände (den|) {date}
 berätta om [viktiga|stora] historiska händelser (idag|denna dag|detta datum)
 berätta om [viktiga|stora] historiska händelser (den|) {date}
+# unvouched: machine-written lines, awaiting a speaker
+vad hände (på den här dagen|på dagens datum) [genom historien]
+vad hände (en dag som idag|på en dag som idag) i historien
+vad hände på dagens datum i historien
+vad hände den {date} (januari|februari|mars|april|maj|juni|juli|augusti|september|oktober|november|december)
+vad hände (på den här dagen|på dagens datum) [i historien]
+[ge mig] (ett fakta|en kuriosa|trivia) (om idag|om imorgon|om igår|om helgen)
+(kuriosa|fakta) (om datumet|om dagen) {date}
+(kuriosa|fakta) (om januari|om februari|om mars|om april|om maj|om juni|om juli|om augusti|om september|om oktober|om november|om december) {date}
+berätta en kuriosa om den {date} (januari|februari|mars|april|maj|juni|juli|augusti|september|oktober|november|december)
+vad är det speciella med (idag|imorgon|den här dagen)
+vad kan du berätta om den {date} (januari|februari|mars|april|maj|juni|juli|augusti|september|oktober|november|december)

@@ -1,0 +1,23 @@
+[digas-me] (una curiositat|un fach|una anecdòta) (de l'an|sus l'an) {number:year}
+(curiositat|fach) de l'an {number:year}
+(conta-me|digas-me) (una curiositat|un fach|quicòm) sus l'annada {number:year}
+qué se passèt en l'an {number:year}
+un fach (sus l'an|de l'annada) {number:year}
+(curiositat|fach|anecdòta) (de l'an|sus l'an|de l'annada) {number:year}
+(conta-me|digas-me|dona-me) (una curiositat|un fach|una anecdòta|quicòm) (de l'an|sus l'an|de l'annada) {number:year}
+(un fach|una curiositat|una anecdòta) (de|sus) l'an {number:year}
+en l'an {number:year} qué se passèt
+qué (coneisses|sabes) sus l'an {number:year}
+qué (se passèt|arribèt) pendent l'annada {number:year}
+quins eveniments (marquèron|se passèron) en l'an {number:year}
+[digas-me] (una curiositat|un fach|una anecdòta) (de l'an|sus l'an) {number:year} (abans Jèsus-Crist|a.C.)
+(curiositat|fach) de l'an {number:year} (abans Jèsus-Crist|a.C.)
+(conta-me|digas-me) (una curiositat|un fach|quicòm) sus l'annada {number:year} (abans Jèsus-Crist|a.C.)
+qué se passèt en l'an {number:year} (abans Jèsus-Crist|a.C.)
+un fach (sus l'an|de l'annada) {number:year} (abans Jèsus-Crist|a.C.)
+(curiositat|fach|anecdòta) (de l'an|sus l'an|de l'annada) {number:year} (abans Jèsus-Crist|a.C.)
+(conta-me|digas-me|dona-me) (una curiositat|un fach|una anecdòta|quicòm) (de l'an|sus l'an|de l'annada) {number:year} (abans Jèsus-Crist|a.C.)
+(un fach|una curiositat|una anecdòta) (de|sus) l'an {number:year} (abans Jèsus-Crist|a.C.)
+qué (coneisses|sabes) sus l'an {number:year} (abans Jèsus-Crist|a.C.)
+qué (se passèt|arribèt) pendent l'annada {number:year} (abans Jèsus-Crist|a.C.)
+quins eveniments (marquèron|se passèron) en l'an {number:year} (abans Jèsus-Crist|a.C.)

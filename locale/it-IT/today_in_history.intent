@@ -14,3 +14,16 @@ quali avvenimenti (accaddero|avvennero) (oggi|in questa data|il {date})
 dimmi che cosa è successo (oggi|in questa data|il giorno {date}) [in passato]
 (dimmi|elencami) [alcuni] (fatti|eventi) storici (di oggi|di questa data|del {date})
 parlami di qualche evento storico (di oggi|di questa data|del {date})
+# unvouched: machine-written lines, awaiting a speaker
+(cosa|che cosa) è (successo|accaduto) in un giorno come oggi nella storia
+che cosa è accaduto in un giorno come oggi
+che cosa è accaduto oggi nella storia
+cosa (è successo|accadde) il {date} (gennaio|febbraio|marzo|aprile|maggio|giugno|luglio|agosto|settembre|ottobre|novembre|dicembre)
+che cosa è (successo|accaduto) (in un giorno come oggi|oggi nella storia)
+[dimmi] (una curiosità|un fatto) (di oggi|di domani|di ieri|del fine settimana)
+(curiosità|fatto) (sulla data|sul giorno) {date}
+(curiosità|fatto) (di gennaio|di febbraio|di marzo|di aprile|di maggio|di giugno|di luglio|di agosto|di settembre|di ottobre|di novembre|di dicembre) {date}
+(raccontami|dimmi) (una curiosità|qualcosa) sul {date} (gennaio|febbraio|marzo|aprile|maggio|giugno|luglio|agosto|settembre|ottobre|novembre|dicembre)
+raccontami qualcosa di curioso (su oggi|su domani|su ieri)
+che cosa ha di speciale (oggi|domani|questo giorno)
+cosa sai sul {date} (gennaio|febbraio|marzo|aprile|maggio|giugno|luglio|agosto|settembre|ottobre|novembre|dicembre)

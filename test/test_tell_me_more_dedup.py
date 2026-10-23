@@ -28,7 +28,8 @@ def _fake_skill(dialog_file):
     fake.speak_dialog = MagicMock()
     fake.find_resource = MagicMock(return_value=str(dialog_file))
     fake.pronounce_year = TodayInHistory.pronounce_year
-    fake._dialog_lines = lambda dialog: TodayInHistory._dialog_lines(fake, dialog)
+    fake._dialog_lines = lambda dialog, lang=None: TodayInHistory._dialog_lines(fake, dialog, lang)
+    fake._data_lang = lambda: fake.lang
     return fake
 
 
