@@ -63,16 +63,16 @@ KNOWN_GAPS = {
             "unprefixed": 182, "invisible": 0},
     "nl-NL": {"missing": 0, "empty": 0,
             "unprefixed": 210, "invisible": 0},
-    # pt-BR is the largest: 73063 of 76262 carry the year and lose the
-    # separator, 73050 of them to a bare space, "1486 Aniversário ...".
+    # pt-BR is the largest: 73062 of 76261 carry the year and lose the
+    # separator, 73049 of them to a bare space, "1486 Aniversário ...".
     "pt-BR": {"missing": 0, "empty": 0,
-            "unprefixed": 76262, "invisible": 0},
+            "unprefixed": 76261, "invisible": 0},
     "pt-PT": {"missing": 0, "empty": 0,
             "unprefixed": 407, "invisible": 594},
-    # sv-SE: 164 of 421 keep the year and lose the separator, 99 to a bare
+    # sv-SE: 163 of 420 keep the year and lose the separator, 99 to a bare
     # space and 43 to a colon, "1906: Ezra Butler Eddys död, ...".
     "sv-SE": {"missing": 0, "empty": 0,
-            "unprefixed": 421, "invisible": 0},
+            "unprefixed": 420, "invisible": 0},
 }
 
 #: A line that opens with a year and then anything but the dash the prefix
@@ -102,9 +102,9 @@ SEPARATOR_GAPS = {
     "gl-ES": 15,
     "it-IT": 19,      # 13 comma, 5 space, 1 slash
     "nl-NL": 18,      # 12 comma, 5 space, 1 slash
-    "pt-BR": 73063,   # 73050 space, 13 other
+    "pt-BR": 73062,   # 73049 space, 13 other
     "pt-PT": 235,
-    "sv-SE": 164,     # 99 space, 43 colon, 22 other
+    "sv-SE": 163,     # 99 space, 43 colon, 21 other
 }
 #: A locale with no row: the full set, nothing empty, nothing invisible,
 #: and no more unprefixed lines than the source. The source's 178 are
