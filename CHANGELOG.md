@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.10.0a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.10.0a1) (2026-10-23)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.9.3a3...0.10.0a1)
+
+**Merged pull requests:**
+
+- feat: answer year questions and own date questions in days-in-history [\#154](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/154) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.9.3a3](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.9.3a3) (2026-10-13)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.9.3a2...0.9.3a3)
@@ -350,11 +358,6 @@
 ## [0.3.12a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.12a1) (2026-03-24)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/V0.3.11...0.3.12a1)
-
-**Merged pull requests:**
-
-- fix: rename bare lang code locale directories [\#46](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/46) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
-- feat: add fr-fr locale [\#45](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/45) ([goldyfruit](https://github.com/goldyfruit))
 
 ## [V0.3.11](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/V0.3.11) (2025-06-08)
 
