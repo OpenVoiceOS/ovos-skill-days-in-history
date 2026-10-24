@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.10.1a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.10.1a1) (2026-10-24)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.10.0a1...0.10.1a1)
+
+**Merged pull requests:**
+
+- fix: index the pt-BR 1954 bus line as AD and the sv-SE year 65 line [\#156](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/156) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.10.0a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.10.0a1) (2026-10-23)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.9.3a3...0.10.0a1)
@@ -353,7 +361,6 @@
 **Merged pull requests:**
 
 - ci: modernize GitHub workflows [\#49](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/49) ([JarbasAl](https://github.com/JarbasAl))
-- fix\(i18n\): normalize locale folders to canonical BCP-47 [\#48](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/48) ([JarbasAl](https://github.com/JarbasAl))
 
 ## [0.3.12a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.12a1) (2026-03-24)
 
