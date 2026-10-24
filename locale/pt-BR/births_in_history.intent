@@ -1,0 +1,7 @@
+# unvouched: machine translation from en-US by the localize lane, awaiting a speaker
+quem nasceu (hoje|neste dia|nesta data) [na história]
+quem nasceu (em|no dia) {date} [na história]
+(quais|que) (pessoas|figuras) [famosas|notáveis|históricas] nasceram (hoje|neste dia|nesta data) [na história]
+(quais|que) (pessoas|figuras) [famosas|notáveis|históricas] nasceram (em|no dia) {date} [na história]
+nascimentos [famosos|notáveis] (hoje|neste dia|nesta data) na história
+nascimentos [famosos|notáveis] (em|no dia) {date} na história

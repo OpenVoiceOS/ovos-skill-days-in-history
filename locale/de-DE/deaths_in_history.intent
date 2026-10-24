@@ -1,0 +1,6 @@
+wer ist heute in der Geschichte gestorben
+# unvouched: the dated line added by the localize lane, awaiting a speaker
+wer ist am {date} gestorben
+wer ist am {date} in der Geschichte gestorben
+# unvouched: machine-written lines, awaiting a speaker
+sag mir welche berühmten Persönlichkeiten (heute|an diesem Tag|am {date}) gestorben sind

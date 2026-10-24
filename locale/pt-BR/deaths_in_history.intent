@@ -1,0 +1,7 @@
+# unvouched: machine translation from en-US by the localize lane, awaiting a speaker
+quem morreu (hoje|neste dia|nesta data) [na história]
+quem morreu (em|no dia) {date} [na história]
+(quais|que) (pessoas|figuras) [famosas|notáveis|históricas] morreram (hoje|neste dia|nesta data) [na história]
+(quais|que) (pessoas|figuras) [famosas|notáveis|históricas] morreram (em|no dia) {date} [na história]
+mortes [famosas|notáveis] (hoje|neste dia|nesta data) na história
+mortes [famosas|notáveis] (em|no dia) {date} na história

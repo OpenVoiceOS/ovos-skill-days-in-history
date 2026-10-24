@@ -1,0 +1,17 @@
+(denne dag|denne dato|i dag) i historien
+hvad skete (i dag|denne dag|denne dato|den {date}) [i historien]
+hvilke historiske begivenheder skete (i dag|denne dag|denne dato|den {date}) [i historien]
+fortæl mig om hvad der skete (i dag|denne dag|denne dato|den {date}) [i historien]
+fortæl mig om historiske begivenheder der skete (i dag|denne dag|denne dato|den {date}) [i historien]
+# unvouched: machine-written lines, awaiting a speaker
+giv mig et historisk tilbageblik på (i dag|denne dato|den {date})
+# unvouched: machine-written lines, awaiting a speaker
+hvad er der sket (på denne dato|på denne dag|på en dag som i dag) [i tidernes løb|i historien]
+hvad af betydning skete der (på denne dag|på denne dato|på en dag som denne)
+hvad skete der den {date} (januar|februar|marts|april|maj|juni|juli|august|september|oktober|november|december)
+hvad (skete der|er der sket) på denne dato [i historien]
+[fortæl mig] (fakta|et faktum|trivia) om (i dag|i morgen|i går|weekenden)
+(fakta|et faktum) om (datoen|dagen) {date}
+(fakta|et faktum) om (januar|februar|marts|april|maj|juni|juli|august|september|oktober|november|december) {date}
+fortæl mig noget om den {date} (januar|februar|marts|april|maj|juni|juli|august|september|oktober|november|december)
+hvad er der særligt ved (i dag|i morgen|denne dag)
