@@ -49,3 +49,15 @@ def test_an_indexed_line_reads_year_dash_text():
             for _, _, line in events:
                 assert re.match(rf"{abs(year)}( BC)? - \S", line), line
                 assert (" BC - " in line) == (year < 0), line
+
+
+def test_a_bus_maker_is_not_an_era():
+    # pt-BR "1954 - AEC Routemaster, ..." is the AD year 1954; AEC is the maker of the bus
+    index = _index("pt-BR")
+    assert -1954 not in index
+    assert any("AEC Routemaster" in line for _, _, line in index[1954])
+
+
+def test_a_year_followed_by_a_dot_is_indexed():
+    # sv-SE year 65: the conspiracy against Nero
+    assert any("Milichus" in line for _, _, line in _index("sv-SE")[65])
