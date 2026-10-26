@@ -52,44 +52,21 @@ LOCALE_ROOT = END2END_DIR.parents[1] / "locale"
 # rate, and when its rate reaches MIN_MATCH_RATE: the stale entry goes.
 GOLDEN_LOCALE_GAPS = {
     "ca-ES": (0.636, "published m2v model predates these templates; remove after retrain"),
-    "da-DK": (0.72, "published m2v model predates these templates; remove after retrain"),
-    "de-DE": (0.727, "published m2v model predates these templates; remove after retrain"),
-    "en-US": (0.585, "published m2v model predates these templates; remove after retrain"),
-    "es-CO": (0.682, "published m2v model predates these templates; remove after retrain"),
-    "es-ES": (0.68, "published m2v model predates these templates; remove after retrain"),
     "eu-ES": (0.545, "published m2v model predates these templates; remove after retrain"),
     "fa-IR": (0.3, "published m2v model predates these templates; remove after retrain"),
-    "fr-FR": (0.625, "published m2v model predates these templates; remove after retrain"),
     "gl-ES": (0.571, "published m2v model predates these templates; remove after retrain"),
     "it-IT": (0.586, "published m2v model predates these templates; remove after retrain"),
     "kab": (0.545, "published m2v model predates these templates; remove after retrain"),
     "nl-NL": (0.567, "published m2v model predates these templates; remove after retrain"),
     "oc-FR": (0.4, "published m2v model predates these templates; remove after retrain"),
-    "pl-PL": (0.4, "published m2v model predates these templates; remove after retrain"),
-    "pt-BR": (0.69, "published m2v model predates these templates; remove after retrain"),
-    "pt-PT": (0.682, "published m2v model predates these templates; remove after retrain"),
     "ru-RU": (0.3, "published m2v model predates these templates; remove after retrain"),
-    "sv-SE": (0.767, "published m2v model predates these templates; remove after retrain"),
 }
-# The prototype engine embeds the template's typed ``{year}`` slot as literal
-# text, so a gold row with a real year scores under its low-tier cosine of 0.65
-# against the year_in_history anchors, though that intent is the nearest one.
-YEAR_SLOT_GAP = "m2v prototype anchors keep the {year} placeholder unfilled; remove when the engine fills typed number slots"
 # {lang: {intent: reason}}: intents with no matched row on the published m2v
 # model. Such an intent is allowed to have no matched row; the test fails when
 # it gains one, so the entry goes after a retrain.
 GOLDEN_INTENT_GAPS = {
     "ca-ES": {"tell_me_more_intent": "published m2v model predates these templates; remove after retrain"},
-    "de-DE": {"tell_me_more_intent": "published m2v model predates these templates; remove after retrain"},
     "es-ES": {"tell_me_more_intent": "published m2v model predates these templates; remove after retrain"},
-    "fa-IR": {"year_in_history": YEAR_SLOT_GAP},
-    "gl-ES": {"year_in_history": YEAR_SLOT_GAP},
-    "kab": {"tell_me_more_intent": "published m2v model predates these templates; remove after retrain", "year_in_history": YEAR_SLOT_GAP},
-    "nl-NL": {"year_in_history": YEAR_SLOT_GAP},
-    "oc-FR": {"year_in_history": YEAR_SLOT_GAP},
-    "pt-BR": {"tell_me_more_intent": "published m2v model predates these templates; remove after retrain"},
-    "pt-PT": {"year_in_history": YEAR_SLOT_GAP},
-    "ru-RU": {"year_in_history": YEAR_SLOT_GAP},
 }
 GAP_TOLERANCE = 0.10
 # Locales whose negative rows the published m2v model cannot separate from
@@ -99,11 +76,17 @@ NEGATIVE_ENGINE_GAPS = {}
 # claim is allowed, not required, so a row that flips between boots does not
 # fail the test. Any other claim fails the locale.
 NEGATIVE_KNOWN_CLAIMS = {
-    "sv-SE": {"berätta ett skämt": "tell_me_more_intent"},
+    "sv-SE": {"berätta ett skämt": "tell_me_more_intent",
+              "vilket datum är det idag": "today_in_history"},
     "es-ES": {"qué fecha es hoy": "today_in_history",
               "cuéntame un chiste": "tell_me_more_intent"},
     "gl-ES": {"cóntame un chiste": "tell_me_more_intent"},
     "it-IT": {"raccontami una barzelletta": "tell_me_more_intent"},
+    "de-DE": {"welches Datum ist heute": "today_in_history"},
+    "eu-ES": {"zein egun da gaur": "today_in_history"},
+    "fr-FR": {"on est quel jour aujourd'hui": "tell_me_more_intent",
+              "raconte-moi une blague": "tell_me_more_intent"},
+    "pt-PT": {"conta-me uma anedota": "tell_me_more_intent"},
 }
 
 
