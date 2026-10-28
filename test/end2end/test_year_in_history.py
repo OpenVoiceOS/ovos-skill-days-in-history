@@ -1,20 +1,16 @@
 """A year question speaks an event of that year, taken from the day_*_events dialogs."""
 import re
-import time
 from pathlib import Path
 from unittest import TestCase
 
 from ovos_bus_client.message import Message
 from ovos_bus_client.session import Session
-from ovoscope import get_minicroft
+from ovoscope import CaptureSession
+from ovoscope.routing import PIPELINE, TALLY, get_prototype_minicroft
 
 SKILL_ID = "ovos-skill-days-in-history.openvoiceos"
+YEAR_IN_HISTORY = f"{SKILL_ID}:year_in_history"
 LOCALE = Path(__file__).resolve().parents[2] / "locale" / "en-US"
-PIPELINE = [
-    "ovos-padacioso-pipeline-plugin-high",
-    "ovos-padacioso-pipeline-plugin-medium",
-    "ovos-padacioso-pipeline-plugin-low",
-]
 
 
 def _events_of(year: int) -> list:
@@ -41,30 +37,27 @@ class TestYearInHistory(TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.minicroft = get_minicroft([SKILL_ID], lang="en-US", secondary_langs=["de-DE", "es-ES"])
+        cls.minicroft = get_prototype_minicroft([SKILL_ID], lang="en-US",
+                                                secondary_langs=["de-DE", "es-ES"])
 
     @classmethod
     def tearDownClass(cls):
         cls.minicroft.stop()
 
     def _ask(self, utterance: str, lang: str = "en-US") -> str:
-        spoken = []
-        handler = lambda msg: spoken.append(msg.data["utterance"])
-        self.minicroft.bus.on("speak", handler)
-        try:
-            session = Session(f"e2e-year-{hash(utterance)}")
-            session.lang = lang
-            session.pipeline = PIPELINE
-            self.minicroft.bus.emit(Message(
-                "recognizer_loop:utterance",
-                {"utterances": [utterance], "lang": lang},
-                {"session": session.serialize()},
-            ))
-            deadline = time.monotonic() + 20
-            while not spoken and time.monotonic() < deadline:
-                time.sleep(0.2)
-        finally:
-            self.minicroft.bus.remove("speak", handler)
+        """What the skill speaks for ``utterance``, after its route is recorded."""
+        session = Session(f"e2e-year-{hash(utterance)}")
+        session.lang = lang
+        session.pipeline = PIPELINE
+        capture = CaptureSession(self.minicroft, eof_msgs=["ovos.utterance.handled"])
+        capture.capture(Message("recognizer_loop:utterance",
+                                {"utterances": [utterance], "lang": lang},
+                                {"session": session.serialize(), "lang": lang}),
+                        timeout=20)
+        messages = capture.finish()
+        TALLY.assert_routed(utterance, YEAR_IN_HISTORY, [m.msg_type for m in messages])
+        spoken = [m.data.get("utterance", "") for m in messages
+                  if m.msg_type in ("speak", "ovos.utterance.speak")]
         self.assertTrue(spoken, f"{utterance!r} was not answered")
         return spoken[0]
 
