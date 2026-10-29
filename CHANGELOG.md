@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.10.1a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.10.1a2) (2026-10-29)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.10.1a1...0.10.1a2)
+
+**Merged pull requests:**
+
+- test: run the end2end suite on the m2v prototype pipeline [\#158](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/158) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.10.1a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.10.1a1) (2026-10-24)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.10.0a1...0.10.1a1)
@@ -350,17 +358,9 @@
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.12a2...0.3.12a3)
 
-**Merged pull requests:**
-
-- chore\(ovos-skill-days-in-history\): allow ovos-workshop\<9.0.0 [\#51](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/51) ([JarbasAl](https://github.com/JarbasAl))
-
 ## [0.3.12a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.12a2) (2026-04-04)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.12a1...0.3.12a2)
-
-**Merged pull requests:**
-
-- ci: modernize GitHub workflows [\#49](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/49) ([JarbasAl](https://github.com/JarbasAl))
 
 ## [0.3.12a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.12a1) (2026-03-24)
 
