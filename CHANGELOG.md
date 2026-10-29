@@ -1,12 +1,537 @@
 # Changelog
 
+## [0.10.2a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.10.2a2) (2026-10-29)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.10.2a1...0.10.2a2)
+
+**Merged pull requests:**
+
+- test: install ovos-skill-alerts in the test extra and assert alerts routing [\#165](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/165) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
+## [0.10.2a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.10.2a1) (2026-10-29)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.10.1a3...0.10.2a1)
+
+**Merged pull requests:**
+
+- fix: guard births against a missing day dialog and resolve the locale directory as the loader does [\#161](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/161) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
+## [0.10.1a3](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.10.1a3) (2026-10-29)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.10.1a2...0.10.1a3)
+
+**Merged pull requests:**
+
+- test: route the cross-skill turn 1 through the default medium tier [\#162](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/162) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
+## [0.10.1a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.10.1a2) (2026-10-29)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.10.1a1...0.10.1a2)
+
+**Merged pull requests:**
+
+- test: run the end2end suite on the m2v prototype pipeline [\#158](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/158) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
+## [0.10.1a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.10.1a1) (2026-10-24)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.10.0a1...0.10.1a1)
+
+**Merged pull requests:**
+
+- fix: index the pt-BR 1954 bus line as AD and the sv-SE year 65 line [\#156](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/156) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
+## [0.10.0a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.10.0a1) (2026-10-23)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.9.3a3...0.10.0a1)
+
+**Merged pull requests:**
+
+- feat: answer year questions and own date questions in days-in-history [\#154](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/154) ([JarbasAl](https://github.com/JarbasAl))
+
+## [0.9.3a3](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.9.3a3) (2026-10-13)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.9.3a2...0.9.3a3)
+
+**Merged pull requests:**
+
+- test: natural golden rows and an m2v gate for every locale [\#152](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/152) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
+## [0.9.3a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.9.3a2) (2026-10-01)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.9.3a1...0.9.3a2)
+
+**Merged pull requests:**
+
+- test: golden utterances for every intent in every shipped locale [\#150](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/150) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
+## [0.9.3a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.9.3a1) (2026-09-29)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.9.2a1...0.9.3a1)
+
+**Merged pull requests:**
+
+- fix\(locale\): es-CO ships the separator row the per-day dialogs need [\#148](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/148) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
+## [0.9.2a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.9.2a1) (2026-09-28)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.9.1a2...0.9.2a1)
+
+**Merged pull requests:**
+
+- fix\(locale\): nl-NL births misses a word order deaths has, and three rows say a date [\#144](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/144) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
+## [0.9.1a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.9.1a2) (2026-09-28)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.9.1a1...0.9.1a2)
+
+**Merged pull requests:**
+
+- locale: draft es-CO from es-ES [\#138](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/138) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
+## [0.9.1a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.9.1a1) (2026-09-28)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.9.0a1...0.9.1a1)
+
+**Merged pull requests:**
+
+- fix\(locale\): es-ES gains the two dialogs the skill speaks [\#135](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/135) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
+## [0.9.0a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.9.0a1) (2026-09-28)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.8.5a1...0.9.0a1)
+
+**Merged pull requests:**
+
+- feat\(locale\): every locale answers the error paths, and nine locales become askable [\#134](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/134) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
+## [0.8.5a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.8.5a1) (2026-09-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.8.4a3...0.8.5a1)
+
+**Merged pull requests:**
+
+- fix\(locale\): one en-US store example the skill cannot hear [\#125](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/125) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
+## [0.8.4a3](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.8.4a3) (2026-09-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.8.4a2...0.8.4a3)
+
+**Merged pull requests:**
+
+- locale\(pt-PT\): the store name and description, examples taken from the templates [\#128](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/128) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
+## [0.8.4a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.8.4a2) (2026-09-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.8.4a1...0.8.4a2)
+
+**Merged pull requests:**
+
+- locale: machine-translated per-day dialogs for ca-ES, it-IT, nl-NL, pt-BR and sv-SE [\#130](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/130) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
+## [0.8.4a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.8.4a1) (2026-09-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.8.3a1...0.8.4a1)
+
+**Merged pull requests:**
+
+- fix\(ca-ES\): Aniversari, one n, at the head of a birth entry [\#120](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/120) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
+## [0.8.3a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.8.3a1) (2026-09-25)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.8.2a1...0.8.3a1)
+
+**Merged pull requests:**
+
+- fix\(ca-ES\): Mort, not Morte, at the head of a death entry [\#108](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/108) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
+## [0.8.2a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.8.2a1) (2026-09-24)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.8.1a1...0.8.2a1)
+
+**Merged pull requests:**
+
+- fix: deaths handler pronounces the year like births [\#117](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/117) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
+## [0.8.1a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.8.1a1) (2026-09-24)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.8.0a7...0.8.1a1)
+
+**Merged pull requests:**
+
+- fix\(locale\): spec-lint findings on dev [\#115](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/115) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
+## [0.8.0a7](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.8.0a7) (2026-09-23)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.8.0a6...0.8.0a7)
+
+## [0.8.0a6](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.8.0a6) (2026-09-23)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.8.0a5...0.8.0a6)
+
+## [0.8.0a5](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.8.0a5) (2026-09-23)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.8.0a4...0.8.0a5)
+
+## [0.8.0a4](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.8.0a4) (2026-09-23)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.8.0a3...0.8.0a4)
+
+## [0.8.0a3](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.8.0a3) (2026-09-23)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.8.0a2...0.8.0a3)
+
+## [0.8.0a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.8.0a2) (2026-09-23)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.8.0a1...0.8.0a2)
+
+**Merged pull requests:**
+
+- translate\(kab\): update births\_in\_history.intent [\#101](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/101) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+- translate\(kab\): update deaths\_in\_history.intent [\#100](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/100) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+- translate\(kab\): update notfound.dialog [\#99](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/99) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+- translate\(kab\): update searching.dialog [\#98](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/98) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+- translate\(kab\): update today\_in\_history.intent [\#97](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/97) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+- translate\(kab\): update unknown\_date.dialog [\#96](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/96) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+
+## [0.8.0a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.8.0a1) (2026-09-23)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.7.0a1...0.8.0a1)
+
+**Merged pull requests:**
+
+- feat\(i18n\): fill 295 empty days-in-history dialogs in ca-ES [\#102](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/102) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
+## [0.7.0a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.7.0a1) (2026-09-23)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.6.0a1...0.7.0a1)
+
+**Merged pull requests:**
+
+- feat\(i18n\): machine-translate days-in-history to gl-ES [\#95](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/95) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
+## [0.6.0a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.6.0a1) (2026-09-23)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.5.0a1...0.6.0a1)
+
+**Merged pull requests:**
+
+- feat\(i18n\): machine-translate days-in-history to eu-ES [\#94](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/94) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
+## [0.5.0a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.5.0a1) (2026-09-23)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.4.0a1...0.5.0a1)
+
+**Merged pull requests:**
+
+- feat\(i18n\): machine-translate days-in-history to es-ES [\#92](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/92) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
+## [0.4.0a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.4.0a1) (2026-09-23)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.19a1...0.4.0a1)
+
+**Merged pull requests:**
+
+- feat\(i18n\): machine-translate days-in-history to de-DE [\#93](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/93) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
+## [0.3.19a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.19a1) (2026-09-18)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.18a2...0.3.19a1)
+
+**Merged pull requests:**
+
+- fix\(en-US\): clean the per-day dialogs before the bulk translation [\#90](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/90) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
+## [0.3.18a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.18a2) (2026-09-18)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.18a1...0.3.18a2)
+
+**Merged pull requests:**
+
+- test: golden utterances for every locale [\#88](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/88) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
+## [0.3.18a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.18a1) (2026-09-13)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.17a2...0.3.18a1)
+
+**Merged pull requests:**
+
+- fix: rename TellMeMoreIntent.intent to an OVOS-INTENT-2 base name [\#86](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/86) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
+## [0.3.17a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.17a2) (2026-09-11)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.17a1...0.3.17a2)
+
+**Merged pull requests:**
+
+- translate\(es-ES\): restore forgotten days-in-history locale [\#80](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/80) ([JarbasAl](https://github.com/JarbasAl))
+
+## [0.3.17a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.17a1) (2026-09-11)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.16a5...0.3.17a1)
+
+**Merged pull requests:**
+
+- fix\(da-DK\): restore {day} placeholder, add missing date-specific intent templates [\#81](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/81) ([JarbasAl](https://github.com/JarbasAl))
+
+## [0.3.16a5](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.16a5) (2026-09-08)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.16a4...0.3.16a5)
+
+**Merged pull requests:**
+
+- test: carry the session forward between turns from the reply context [\#82](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/82) ([JarbasAl](https://github.com/JarbasAl))
+
+## [0.3.16a4](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.16a4) (2026-09-03)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.16a3...0.3.16a4)
+
+**Merged pull requests:**
+
+- Add missing tell-me-more phrasings and dedupe repeated dialogs [\#78](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/78) ([JarbasAl](https://github.com/JarbasAl))
+
+## [0.3.16a3](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.16a3) (2026-09-02)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.16a2...0.3.16a3)
+
+**Merged pull requests:**
+
+- refactor: migrate context-gated adapt intent to intent file [\#75](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/75) ([JarbasAl](https://github.com/JarbasAl))
+
+## [0.3.16a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.16a2) (2026-08-13)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.16a1...0.3.16a2)
+
+**Merged pull requests:**
+
+- test: drop parked xfails now that adapt\#66/core\#857 landed [\#73](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/73) ([JarbasAl](https://github.com/JarbasAl))
+
+## [0.3.16a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.16a1) (2026-08-13)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.15a2...0.3.16a1)
+
+**Merged pull requests:**
+
+- fix: strip residual CSS selector debris from dialog lines \(follow-up to \#67\) [\#69](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/69) ([JarbasAl](https://github.com/JarbasAl))
+
+## [0.3.15a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.15a2) (2026-08-13)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.15a1...0.3.15a2)
+
+**Merged pull requests:**
+
+- test: xfail context-gated follow-up pending adapt\#66 [\#70](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/70) ([JarbasAl](https://github.com/JarbasAl))
+
+## [0.3.15a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.15a1) (2026-08-13)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.14a1...0.3.15a1)
+
+**Merged pull requests:**
+
+- fix: tolerate and repair malformed OVOS-INTENT-1 dialog templates [\#67](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/67) ([JarbasAl](https://github.com/JarbasAl))
+
+## [0.3.14a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.14a1) (2026-08-12)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.13a1...0.3.14a1)
+
+**Merged pull requests:**
+
+- fix: TellMeMoreIntent loses cross-skill follow-up to ovos-skill-alerts [\#65](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/65) ([JarbasAl](https://github.com/JarbasAl))
+
+## [0.3.13a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.13a1) (2026-08-12)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.12a7...0.3.13a1)
+
+**Merged pull requests:**
+
+- fix: TellMeMoreIntent KeyError\('prev\_dialog'\) crash [\#63](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/63) ([JarbasAl](https://github.com/JarbasAl))
+
+## [0.3.12a7](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.12a7) (2026-08-12)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.12a6...0.3.12a7)
+
+**Merged pull requests:**
+
+- test: add golden-utterance e2e suite \(en-US\); fix stale .intent assertion [\#61](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/61) ([JarbasAl](https://github.com/JarbasAl))
+
+## [0.3.12a6](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.12a6) (2026-08-01)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.12a5...0.3.12a6)
+
+## [0.3.12a5](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.12a5) (2026-07-12)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.12a4...0.3.12a5)
+
+## [0.3.12a4](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.12a4) (2026-07-03)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.12a3...0.3.12a4)
+
+## [0.3.12a3](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.12a3) (2026-04-09)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.12a2...0.3.12a3)
+
+## [0.3.12a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.12a2) (2026-04-04)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.12a1...0.3.12a2)
+
+## [0.3.12a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.12a1) (2026-03-24)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/V0.3.11...0.3.12a1)
+
+## [V0.3.11](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/V0.3.11) (2025-06-08)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.11...V0.3.11)
+
+## [0.3.11](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.11) (2025-06-08)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.11a2...0.3.11)
+
 ## [0.3.11a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.11a2) (2025-06-08)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.10...0.3.11a2)
 
-**Merged pull requests:**
+## [0.3.10](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.10) (2025-06-08)
 
-- workshop 7.X:X [\#41](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/41) ([JarbasAl](https://github.com/JarbasAl))
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.10a5...0.3.10)
+
+## [0.3.10a5](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.10a5) (2025-03-20)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.10a4...0.3.10a5)
+
+## [0.3.10a4](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.10a4) (2025-03-13)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.10a3...0.3.10a4)
+
+## [0.3.10a3](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.10a3) (2025-03-06)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.10a2...0.3.10a3)
+
+## [0.3.10a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.10a2) (2025-03-06)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.10a1...0.3.10a2)
+
+## [0.3.10a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.10a1) (2025-01-25)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.9...0.3.10a1)
+
+## [0.3.9](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.9) (2024-12-09)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/V0.3.9...0.3.9)
+
+## [V0.3.9](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/V0.3.9) (2024-12-09)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.9a2...V0.3.9)
+
+## [0.3.9a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.9a2) (2024-12-02)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.9a1...0.3.9a2)
+
+## [0.3.9a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.9a1) (2024-11-25)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.8...0.3.9a1)
+
+## [0.3.8](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.8) (2024-11-20)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/V0.3.8...0.3.8)
+
+## [V0.3.8](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/V0.3.8) (2024-11-20)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.8a1...V0.3.8)
+
+## [0.3.8a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.8a1) (2024-11-20)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/V0.3.7...0.3.8a1)
+
+## [V0.3.7](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/V0.3.7) (2024-11-19)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.7...V0.3.7)
+
+## [0.3.7](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.7) (2024-11-19)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.7a2...0.3.7)
+
+## [0.3.7a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.7a2) (2024-11-19)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.7a1...0.3.7a2)
+
+## [0.3.7a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.7a1) (2024-11-17)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.6...0.3.7a1)
+
+## [0.3.6](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.6) (2024-11-15)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/V0.3.6...0.3.6)
+
+## [V0.3.6](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/V0.3.6) (2024-11-15)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.6a1...V0.3.6)
+
+## [0.3.6a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.6a1) (2024-11-15)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.5...0.3.6a1)
+
+## [0.3.5](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.5) (2024-11-15)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/V0.3.5...0.3.5)
+
+## [V0.3.5](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/V0.3.5) (2024-11-15)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.5a1...V0.3.5)
+
+## [0.3.5a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.5a1) (2024-11-04)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/V0.3.4...0.3.5a1)
+
+## [V0.3.4](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/V0.3.4) (2024-11-04)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.4...V0.3.4)
+
+## [0.3.4](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.4) (2024-11-04)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.3a3...0.3.4)
+
+## [0.3.3a3](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.3a3) (2024-11-04)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.3a2...0.3.3a3)
+
+## [0.3.3a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.3a2) (2024-11-02)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/V0.3.3a2...0.3.3a2)
+
+## [V0.3.3a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/V0.3.3a2) (2024-11-02)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.3...V0.3.3a2)
+
+## [0.3.3](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.3) (2024-11-02)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.3a1...0.3.3)
+
+## [0.3.3a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.3a1) (2024-10-31)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.2a1...0.3.3a1)
+
+## [0.3.2a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.2a1) (2024-10-23)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/V0.3.1...0.3.2a1)
+
+## [V0.3.1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/V0.3.1) (2024-10-15)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.1...V0.3.1)
+
+## [0.3.1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.1) (2024-10-15)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.1a1...0.3.1)
+
+## [0.3.1a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.1a1) (2024-10-15)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/V0.2.0...0.3.1a1)
+
+## [V0.2.0](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/V0.2.0) (2024-09-02)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/V0.2.0a2...V0.2.0)
+
+## [V0.2.0a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/V0.2.0a2) (2024-09-02)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/1660d15082ff2ea930229019f228a3e994553317...V0.2.0a2)
 
 
 

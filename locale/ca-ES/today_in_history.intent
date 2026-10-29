@@ -1,0 +1,14 @@
+# unvouched: machine-written lines, awaiting a speaker
+(avui|hui|aquesta data|esta data) [(a|en) la història]
+tal dia com (avui|hui) [(a|en) la història]
+[explica'm] què (va passar|passà|va succeir|succeí) (avui|hui|aquest dia|este dia|en aquesta data|en esta data|el {date}|en {date}|en data {date}|amb data {date}) [(a|en) la història]
+[explica'm] quins (esdeveniments|fets) històrics (van passar|passaren|van succeir|succeiren) (avui|hui|aquest dia|este dia|en aquesta data|en esta data|a la data {date}|en la data {date}|en data {date}|amb data {date}) [(a|en) la història]
+explica'm (els esdeveniments|els fets) històrics que (van passar|passaren|van succeir|succeiren) (avui|hui|aquest dia|este dia|en aquesta data|en esta data|a la data {date}|en la data {date}|en data {date}|amb data {date}) [(a|en) la història]
+# unvouched: machine-written lines, awaiting a speaker
+quins (fets|esdeveniments) importants es van produir (tal dia com|en un dia com) (avui|hui)
+què (va passar|ha passat) tal dia com avui [a la història]
+[digues-me] (una curiositat|un fet) (d'avui|de demà|d'ahir|del cap de setmana)
+(curiositat|fet) (de la data|del dia) {date}
+(curiositat|fet) (de gener|de febrer|de març|d'abril|de maig|de juny|de juliol|d'agost|de setembre|d'octubre|de novembre|de desembre) {date}
+(explica'm|digues-me) (una curiositat|alguna cosa curiosa) (sobre el|del) {date} (de gener|de febrer|de març|d'abril|de maig|de juny|de juliol|d'agost|de setembre|d'octubre|de novembre|de desembre)
+què té d'especial (avui|demà|aquest dia)

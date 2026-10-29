@@ -1,0 +1,7 @@
+quen morreu hoxe na historia
+# unvouched: the dated line added by the localize lane, awaiting a speaker
+quen morreu (o|en) {date}
+quen morreu (o|en) {date} na historia
+# unvouched: machine-written lines, awaiting a speaker
+quen faleceu (hoxe|nesta data)
+cales personaxes históricos morreron (hoxe|nesta data|o {date})

@@ -1,0 +1,10 @@
+who was born (today|this day|this date|on this day|on this date) [in history]
+who was born [on] {date} [in history]
+(what|which) [famous|notable|historical] (people|figures) were born (today|this day|this date|on this day|on this date) [in history]
+(what|which) [famous|notable|historical] (people|figures) were born [on] {date} [in history]
+[famous|notable] births (today|this day|this date|on this day|on this date) in history
+[famous|notable] births [on] {date} in history
+# unvouched: machine-written lines, awaiting a speaker
+(tell me|give me) the (famous|notable) birthdays (for today|for this date|for {date})
+which celebrities came into the world (today|on this day)
+tell me the famous people whose birthday is (today|on this date|on {date})
