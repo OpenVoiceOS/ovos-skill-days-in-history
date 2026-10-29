@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.10.1a3](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.10.1a3) (2026-10-29)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.10.1a2...0.10.1a3)
+
+**Merged pull requests:**
+
+- test: route the cross-skill turn 1 through the default medium tier [\#162](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/162) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.10.1a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.10.1a2) (2026-10-29)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.10.1a1...0.10.1a2)
@@ -342,17 +350,9 @@
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.12a4...0.3.12a5)
 
-**Merged pull requests:**
-
-- fix: allow ovos-workshop 9.x [\#56](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/56) ([JarbasAl](https://github.com/JarbasAl))
-
 ## [0.3.12a4](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.12a4) (2026-07-03)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.12a3...0.3.12a4)
-
-**Merged pull requests:**
-
-- Improve en-US intent definitions \(coverage + INTENT-1/2 conformance\) [\#54](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/54) ([JarbasAl](https://github.com/JarbasAl))
 
 ## [0.3.12a3](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.12a3) (2026-04-09)
 
