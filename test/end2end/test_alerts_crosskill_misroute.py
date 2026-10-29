@@ -75,36 +75,26 @@ DIH_SKILL_ID = "ovos-skill-days-in-history.openvoiceos"
 ALERTS_SKILL_ID = "ovos-skill-alerts.openvoiceos"
 LANG = "en-US"
 
-# Mirrors ovos-core's actual default "pipeline" list (read from
-# ovos-config's mycroft.conf, not memory), restricted to the intent-routing
-# stages relevant here (stop/converse/ocp/m2v/fallback are omitted -- they
-# don't participate in the routes under test). The real default is:
+# The intent-routing stages of ovos-config's default "pipeline" list, in its
+# order (stop, converse, ocp, m2v and fallback do not take part in these
+# routes):
 #
-#   stop-high, converse, ocp-high, padatious-high, adapt-high, m2v-high,
-#   ocp-medium, fallback-high, stop-medium, adapt-medium, fallback-medium,
-#   fallback-low
+#   padatious-high, adapt-high, padatious-medium, adapt-medium
 #
-# Two things about that list matter for these tests:
-#   1. adapt-high runs before adapt-medium -- this is what lets
-#      tell_me_more_intent's narrowed vocab win outright over alerts'
-#      ListAlerts before alerts is even tried (the fix this PR verifies).
-#   2. there is NO padatious-medium, NO padatious-low, NO adapt-low, and NO
-#      padacioso tier at all in the real default. Earlier revisions of this
-#      test pipeline included all of those (a synthetic worst case), which
-#      is why CI caught "tell me another joke" being claimed by
-#      today_in_history's padatious .intent templates via fuzzy matching at
-#      the padatious-LOW tier -- a tier that plain does not exist in
-#      production. On ser9 (a real, default-shaped pipeline) the same
-#      utterance correctly falls through to ddg fallback, confirming this.
-#      padatious-low fuzzy matching against today_in_history's own
-#      ".intent" templates WOULD steal "tell me another joke" if that tier
-#      were ever enabled (worth knowing, not worth an xfail for a
-#      non-default tier).
-# The padacioso high stage stands in for padatious high, so the test runs
-# without the libfann native library.
+# The padacioso stages stand in for the padatious stages, so the test runs
+# without training a padatious model. Both tiers are needed:
+#   1. adapt-high runs before adapt-medium. That lets tell_me_more_intent's
+#      vocab win before alerts' ListAlerts, which reaches only adapt-medium
+#      for "tell me another event".
+#   2. "february 10th" is not in date.entity. OVOS-INTENT-1 §5.4 lets an
+#      engine penalize a value outside the value set, and such a candidate
+#      "MUST remain matchable". Padacioso scores it 0.90, under the 0.95 high
+#      threshold and over the 0.8 medium one, so turn 1 routes at medium.
+# The default has no low stage for padatious or adapt, so none is listed.
 PIPELINE = [
     "ovos-padacioso-pipeline-plugin-high",
     "ovos-adapt-pipeline-plugin-high",
+    "ovos-padacioso-pipeline-plugin-medium",
     "ovos-adapt-pipeline-plugin-medium",
 ]
 
