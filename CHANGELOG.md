@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.10.2a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.10.2a1) (2026-10-29)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.10.1a3...0.10.2a1)
+
+**Merged pull requests:**
+
+- fix: guard births against a missing day dialog and resolve the locale directory as the loader does [\#161](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/161) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.10.1a3](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.10.1a3) (2026-10-29)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.10.1a2...0.10.1a3)
@@ -256,7 +264,6 @@
 **Merged pull requests:**
 
 - fix\(da-DK\): restore {day} placeholder, add missing date-specific intent templates [\#81](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/81) ([JarbasAl](https://github.com/JarbasAl))
-- fix\(da-DK\): restore {day} placeholder, add missing date-specific intent templates [\#58](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/58) ([andlo](https://github.com/andlo))
 
 ## [0.3.16a5](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.16a5) (2026-09-08)
 
