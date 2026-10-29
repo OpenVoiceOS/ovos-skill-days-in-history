@@ -1,37 +1,29 @@
 """End-to-end intent-routing tests for ovos-skill-days-in-history (en-US).
 
 Each case feeds an utterance through a MiniCroft stack and asserts it routes
-to the expected ``.intent`` handler via the padacioso pipeline. Coverage spans
+to the expected ``.intent`` handler. Coverage spans
 the deictic phrasings (``today``/``this day``/``on this date``), the explicit
 ``{date}`` slot, and the history-anchored event/birth/death variants.
 
 Run: pytest test/end2end/ -v
 """
-import time
 from unittest import TestCase
 
 from ovos_bus_client.message import Message
 from ovos_bus_client.session import Session
-from ovoscope import get_minicroft
+from ovoscope import CaptureSession
+from ovoscope.routing import PIPELINE, TALLY, get_prototype_minicroft
 
 SKILL_ID = "ovos-skill-days-in-history.openvoiceos"
 LANG = "en-US"
 
-# Exact phrasings score in the -high band; the {date} slot variants land
-# lower, so drive all three padacioso confidence bands.
-PIPELINE = [
-    "ovos-padacioso-pipeline-plugin-high",
-    "ovos-padacioso-pipeline-plugin-medium",
-    "ovos-padacioso-pipeline-plugin-low",
-]
-
 
 class _IntentRoutingMixin:
-    """Shared MiniCroft setup for padacioso intent routing."""
+    """Shared MiniCroft setup for intent routing."""
 
     @classmethod
     def setUpClass(cls):
-        cls.minicroft = get_minicroft([SKILL_ID])
+        cls.minicroft = get_prototype_minicroft([SKILL_ID], lang=LANG)
 
     @classmethod
     def tearDownClass(cls):
@@ -39,32 +31,20 @@ class _IntentRoutingMixin:
             cls.minicroft.stop()
 
     def _assert_intent(self, utterance: str, intent_file: str):
-        # dispatched ovos.intent.matched intent names carry no ".intent"
-        # suffix (OVOS-INTENT-2 naming) -- strip it so this assertion tracks
-        # the real bus event instead of the on-disk container filename.
-        intent_name = intent_file[:-len(".intent")] if intent_file.endswith(".intent") else intent_file
-        intent_msg_type = f"{SKILL_ID}:{intent_name}"
-        matched = []
-        handler = lambda msg: matched.append(msg)
-        self.minicroft.bus.on(intent_msg_type, handler)
-        try:
-            session = Session(f"e2e-en_us-{intent_file}-{hash(utterance)}")
-            session.lang = LANG
-            session.pipeline = PIPELINE
-            self.minicroft.bus.emit(Message(
-                "recognizer_loop:utterance",
-                {"utterances": [utterance], "lang": LANG},
-                {"session": session.serialize()},
-            ))
-            deadline = time.monotonic() + 15
-            while not matched and time.monotonic() < deadline:
-                time.sleep(0.2)
-        finally:
-            self.minicroft.bus.remove(intent_msg_type, handler)
-        self.assertTrue(
-            matched,
-            f"{utterance!r} did not route to {intent_file}",
+        session = Session(f"e2e-en_us-{intent_file}-{hash(utterance)}")
+        session.lang = LANG
+        session.pipeline = PIPELINE
+        message = Message(
+            "recognizer_loop:utterance",
+            {"utterances": [utterance], "lang": LANG},
+            {"session": session.serialize()},
         )
+        capture = CaptureSession(
+            self.minicroft,
+            eof_msgs=["mycroft.skill.handler.start", "ovos.intent.unmatched"])
+        capture.capture(message, timeout=30)
+        TALLY.assert_routed(utterance, f"{SKILL_ID}:{intent_file}",
+                            [m.msg_type for m in capture.finish()])
 
 
 class TestTodayInHistory(_IntentRoutingMixin, TestCase):
