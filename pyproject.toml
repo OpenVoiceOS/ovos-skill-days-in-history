@@ -29,7 +29,8 @@ test = [
     "ovos-m2v-pipeline>=0.37.3a1",
     "ovos-adapt-parser>=1.6.3a1",
     "ovos-core>=2.6.4a1",
-    "ovos-workshop>=9.6.0a1"
+    "ovos-workshop>=9.6.0a1",
+    "ovos-skill-alerts>=0.12.58a1"
 ]
 
 [project.urls]

@@ -238,6 +238,43 @@ class TestAlertsCrossSkillMisroute(TestCase):
                     f"never even talked to days-in-history",
                 )
 
+    def test_alerts_utterances_routed_to_alerts_not_days_in_history(self):
+        """Each utterance is an ovos-skill-alerts list_alerts template. The
+        alerts skill must claim it, with and without an active
+        days-in-history context, and days-in-history must claim none of them.
+        The first three carry a timeframe that alerts matches below the high
+        tier, so a days-in-history template that matches them literally would
+        win. An unloaded alerts skill fails this test: nothing would match.
+        """
+        turn1_messages = _run_turn(
+            self.minicroft, "what happened on february 10th in history",
+            "e2e-crosskill-alerts-utterances-prime",
+        )
+        primed_session = _latest_session(turn1_messages)
+        self.assertTrue(
+            primed_session and primed_session.get("intent_context", {}).get("prev_dialog"),
+            "setup failed: turn 1 never set the prev_dialog OVOS-CONTEXT-1 entry",
+        )
+
+        for utterance in ("list my events for february 10th",
+                          "show me my alarms for tomorrow",
+                          "what alarms do i have on february 10th",
+                          "list all my alerts"):
+            for label, session in (("fresh", f"e2e-crosskill-alerts-{utterance}"),
+                                   ("primed", primed_session)):
+                with self.subTest(utterance=utterance, session=label):
+                    matched, _ = _matched_and_errored(
+                        _run_turn(self.minicroft, utterance, session))
+                    self.assertEqual(
+                        [m.data.get("skill_id") for m in matched], [ALERTS_SKILL_ID],
+                        f"{utterance!r} was not claimed by alerts alone: "
+                        f"{[(m.data.get('skill_id'), m.data.get('intent_name')) for m in matched]}",
+                    )
+                    self.assertEqual(
+                        matched[0].data.get("intent_name"),
+                        f"{ALERTS_SKILL_ID}:list_alerts",
+                    )
+
 
 class TestPrevDialogContextGate(TestCase):
     """UPSTREAM BUG, documented here, NOT fixable in this skill repo.
