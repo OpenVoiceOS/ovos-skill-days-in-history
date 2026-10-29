@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.10.2a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.10.2a2) (2026-10-29)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.10.2a1...0.10.2a2)
+
+**Merged pull requests:**
+
+- test: install ovos-skill-alerts in the test extra and assert alerts routing [\#165](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/165) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.10.2a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.10.2a1) (2026-10-29)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.10.1a3...0.10.2a1)
@@ -348,10 +356,6 @@
 ## [0.3.12a6](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.12a6) (2026-08-01)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.12a5...0.3.12a6)
-
-**Merged pull requests:**
-
-- docs: rewrite README in Simplified Technical English [\#59](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/59) ([JarbasAl](https://github.com/JarbasAl))
 
 ## [0.3.12a5](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.12a5) (2026-07-12)
 
