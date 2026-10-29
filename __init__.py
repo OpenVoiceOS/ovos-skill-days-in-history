@@ -14,6 +14,7 @@ from ovos_utils.log import LOG
 from ovos_utils.process_utils import RuntimeRequirements
 from ovos_utils.time import now_local
 from ovos_workshop.decorators import intent_handler
+from ovos_workshop.resource_files import locate_lang_directories
 from ovos_workshop.skills.ovos import OVOSSkill
 
 
@@ -93,6 +94,20 @@ class TodayInHistory(OVOSSkill):
                     LOG.warning(f"render_callback failed on raw fallback line: {cb_err}")
             self.speak(raw)
 
+    def _day_dialog_exists(self, dialog: str) -> bool:
+        """Whether the locale directory the loader binds ships this per-day dialog.
+
+        For a missing resource the renderer returns the key, so `speak_dialog`
+        would read "day_25_month_9_births" aloud. `kab` ships the births and
+        deaths intents and no per-day files. The directory is resolved with
+        `locate_lang_directories`, because `self.lang` may be a bare subtag such
+        as `en` or `pt` that is no directory name, and only the first match
+        counts, because that is the one the loader reads from.
+        """
+        directories = locate_lang_directories(self.lang, os.path.dirname(__file__))
+        return bool(directories) and os.path.isfile(
+            os.path.join(directories[0], f"{dialog}.dialog"))
+
     def _data_lang(self) -> str:
         """Language of the event data: the user's language when it ships the
         per-day dialogs, else en-US."""
@@ -116,8 +131,7 @@ class TodayInHistory(OVOSSkill):
     def handle_deaths_intent(self, message):
         date = self.get_date(message)
         dialog = f"day_{date.day}_month_{date.month}_deaths"
-        event = f"{os.path.dirname(__file__)}/locale/{self.lang}/{dialog}.dialog"
-        if not os.path.isfile(event):
+        if not self._day_dialog_exists(dialog):
             self.speak_dialog("unknown_date")
             SessionManager.get(message).remove_intent_context("prev_dialog", scope="shared")
         else:
@@ -237,6 +251,10 @@ class TodayInHistory(OVOSSkill):
     def handle_births_intent(self, message):
         date = self.get_date(message)
         dialog = f"day_{date.day}_month_{date.month}_births"
+        if not self._day_dialog_exists(dialog):
+            self.speak_dialog("unknown_date")
+            SessionManager.get(message).remove_intent_context("prev_dialog", scope="shared")
+            return
         self._speak_dialog_safe(dialog, render_callback=self.pronounce_year)
         SessionManager.get(message).set_intent_context(
             "prev_dialog", {"value": dialog, "seen": []},

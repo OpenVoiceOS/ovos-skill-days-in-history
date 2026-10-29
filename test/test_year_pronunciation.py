@@ -28,6 +28,7 @@ def _make_fake(monkeypatch, dialog_line, isfile=True):
     fake.get_date = MagicMock(return_value=datetime.date(2020, 2, 3))
     fake.speak_dialog = MagicMock()
     fake.pronounce_year = TodayInHistory.pronounce_year
+    fake._day_dialog_exists = lambda dialog: TodayInHistory._day_dialog_exists(fake, dialog)
 
     captured = {}
 
