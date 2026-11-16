@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.10.3a1](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.10.3a1) (2026-11-16)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.10.2a2...0.10.3a1)
+
+**Merged pull requests:**
+
+- fix: pt-PT date tests follow the lower-case month and ordinal first day [\#168](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/168) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.10.2a2](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.10.2a2) (2026-10-29)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.10.2a1...0.10.2a2)
@@ -348,10 +356,6 @@
 ## [0.3.12a7](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.12a7) (2026-08-12)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/compare/0.3.12a6...0.3.12a7)
-
-**Merged pull requests:**
-
-- test: add golden-utterance e2e suite \(en-US\); fix stale .intent assertion [\#61](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/pull/61) ([JarbasAl](https://github.com/JarbasAl))
 
 ## [0.3.12a6](https://github.com/OpenVoiceOS/ovos-skill-days-in-history/tree/0.3.12a6) (2026-08-01)
 
