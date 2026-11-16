@@ -30,3 +30,24 @@ def test_year_read_from_the_utterance(lang, utterance, slot, expected):
 def test_fractional_typed_slot_is_not_truncated():
     message = Message("x", {"utterance": "year 3.5", "typed_slots": {"number": [{"name": "year", "value": 3.5}]}})
     assert TodayInHistory._get_year(SimpleNamespace(lang="en-US", voc_match=lambda *_: False), message) is None
+
+
+@pytest.mark.parametrize("lang, utterance", [
+    ("pt-PT", "conta-me uma curiosidade sobre o ano mil novecentos e oitenta e quatro"),
+    ("pt-PT", "diz-me uma curiosidade do ano mil novecentos e oitenta e quatro a.C."),
+    ("pt-BR", "me diga uma curiosidade do ano mil novecentos e oitenta e quatro"),
+    ("es-ES", "dime una curiosidad del año mil novecientos ochenta y cuatro"),
+    ("es-CO", "dime una curiosidad del año mil novecientos ochenta y cuatro"),
+    ("ca-ES", "digues-me una curiositat de l'any mil nou-cents vuitanta-quatre"),
+    ("gl-ES", "dime unha curiosidade do ano mil novecentos oitenta e catro"),
+    ("fr-FR", "donne-moi un fait sur l'année mille neuf cent quatre-vingt-quatre"),
+    ("it-IT", "dimmi una curiosità sull'anno millenovecentottantaquattro"),
+    ("de-DE", "nenne mir eine Tatsache über das Jahr neunzehnhundertvierundachtzig"),
+    ("nl-NL", "geef me een weetje over het jaar negentienhonderdvierentachtig"),
+    ("da-DK", "fortæl mig et faktum om året nittenhundrede og fireogfirs"),
+    ("sv-SE", "ge mig en kuriosa om året nittonhundraåttiofyra"),
+    ("eu-ES", "kontatu mila bederatziehun eta laurogeita lau urteari buruzko gertakari bat"),
+])
+def test_an_article_before_the_year_is_no_number(lang, utterance):
+    fake = SimpleNamespace(lang=lang, voc_match=lambda *_: False)
+    assert TodayInHistory._get_year(fake, Message("x", {"utterance": utterance})) == 1984
