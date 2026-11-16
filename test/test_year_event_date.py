@@ -36,9 +36,11 @@ def _speak_event(lang, month, day, year=1492):
     ("de-DE", 1, 1, "erster Januar"),
     ("de-DE", 1, 2, "zweiter Januar"),
     ("de-DE", 1, 15, "fünfzehnter Januar"),
-    ("pt-PT", 1, 1, "um de Janeiro"),
-    ("pt-PT", 1, 2, "dois de Janeiro"),
-    ("pt-PT", 1, 15, "quinze de Janeiro"),
+    # Lower-case months: Acordo Ortográfico de 1990, Base XIX 1.º b).
+    # Ordinal for the first day: Cunha & Cintra, Nova Gramática do Português Contemporâneo, p. 374.
+    ("pt-PT", 1, 1, "primeiro de janeiro"),
+    ("pt-PT", 1, 2, "dois de janeiro"),
+    ("pt-PT", 1, 15, "quinze de janeiro"),
 ])
 def test_event_date_names_the_day_and_month(lang, month, day, spoken_date):
     assert _speak_event(lang, month, day).startswith(f"{spoken_date}, ")
