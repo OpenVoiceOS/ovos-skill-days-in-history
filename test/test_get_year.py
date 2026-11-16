@@ -35,6 +35,7 @@ def test_fractional_typed_slot_is_not_truncated():
 @pytest.mark.parametrize("lang, utterance", [
     ("pt-PT", "conta-me uma curiosidade sobre o ano mil novecentos e oitenta e quatro"),
     ("pt-PT", "diz-me uma curiosidade do ano mil novecentos e oitenta e quatro a.C."),
+    ("pt-PT", "dá-me um facto sobre o ano 1984"),
     ("pt-BR", "me diga uma curiosidade do ano mil novecentos e oitenta e quatro"),
     ("es-ES", "dime una curiosidad del año mil novecientos ochenta y cuatro"),
     ("es-CO", "dime una curiosidad del año mil novecientos ochenta y cuatro"),

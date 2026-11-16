@@ -6,8 +6,7 @@ import re
 from fractions import Fraction
 from typing import Callable, Optional
 
-from numtag import tag_numbers
-from numtag.tagger import ARTICLE_CONFIDENCE
+from numtag import Reason, tag_numbers
 from ovos_bus_client.session import SessionManager
 from ovos_date_parser import extract_datetime, nice_date, nice_year
 from ovos_spec_tools import MalformedTemplate
@@ -214,7 +213,7 @@ class TodayInHistory(OVOSSkill):
             text = message.data["utterance"]
             # a lone article ("uma curiosidade") is no number
             mentions = [m for m in tag_numbers(text, self.lang)
-                        if m.confidence > ARTICLE_CONFIDENCE]
+                        if Reason.ARTICLE not in m.reasons]
             values = [Fraction(m.value) for m in mentions]
             if len(mentions) == 2:
                 between = text[mentions[0].char_span[1]:mentions[1].char_span[0]].strip()
