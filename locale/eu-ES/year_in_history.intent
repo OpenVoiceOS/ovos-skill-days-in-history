@@ -1,0 +1,12 @@
+[esan] {number:year} urteko (gertakari|jakin-min) bat
+zer gertatu zen {number:year} urtean
+(kontatu|esan) {number:year} urteari buruzko (gertakari|jakin-min|gauza interesgarri) bat
+{number:year} urteari buruz zer dakizu
+(eman|ekarri) iezadazu {number:year} urtearekin lotutako jakingarri bat
+zein gertaera (aipagarri|garrantzitsu) izan ziren {number:year} urtean
+{number:year} urtean munduan gertatutakoak azaldu (iezadazu|nahi dizkidazu)
+{number:year} urtean zer (gertaera|gauza) (nabarmen|aipagarri) gertatu ziren
+{number:year} urteko historiaz zerbait (kontatu|esan) iezadazu
+(kontatuko|esango) didazu {number:year} urteari buruzko (zerbait|gertaeraren bat)
+{number:year} urteko (jakingarriak|gertaerak) (jakin|ezagutu) nahi (ditut|nituzke)
+{number:year} urteaz ezer (badakizu|ezagutzen duzu)

@@ -1,0 +1,14 @@
+fakt o roku {number:year}
+ciekawostka o roku {number:year}
+ciekawostka na rok {number:year}
+fakt w roku {number:year}
+co się działo w roku {number:year}
+(powiedz|opowiedz) mi (ciekawostkę|coś ciekawego|fakt) o roku {number:year}
+co (się wydarzyło|się stało|ciekawego wydarzyło się) w roku {number:year}
+fakt o roku {number:year} (p.n.e.|przed chrystusem|przed naszą erą)
+ciekawostka o roku {number:year} (p.n.e.|przed chrystusem|przed naszą erą)
+ciekawostka na rok {number:year} (p.n.e.|przed chrystusem|przed naszą erą)
+fakt w roku {number:year} (p.n.e.|przed chrystusem|przed naszą erą)
+co się działo w roku {number:year} (p.n.e.|przed chrystusem|przed naszą erą)
+(powiedz|opowiedz) mi (ciekawostkę|coś ciekawego|fakt) o roku {number:year} (p.n.e.|przed chrystusem|przed naszą erą)
+co (się wydarzyło|się stało|ciekawego wydarzyło się) w roku {number:year} (p.n.e.|przed chrystusem|przed naszą erą)

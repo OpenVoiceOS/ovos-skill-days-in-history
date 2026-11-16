@@ -1,0 +1,22 @@
+# unvouched: machine translation from en-US by the localize lane, awaiting a speaker
+(vandaag|deze dag|deze datum) in de geschiedenis
+op deze (dag|datum) in de geschiedenis
+wat gebeurde er (vandaag|op deze dag|op deze datum) in de geschiedenis
+wat gebeurde er [op] {date} in de geschiedenis
+(welke|wat voor) [belangrijke|grote] historische gebeurtenissen waren er (vandaag|op deze dag|op deze datum)
+(welke|wat voor) [belangrijke|grote] historische gebeurtenissen waren er [op] {date}
+vertel me over [belangrijke|grote] historische gebeurtenissen (van vandaag|van deze dag|van deze datum)
+vertel me over [belangrijke|grote] historische gebeurtenissen (van|op) {date}
+(welke|wat voor) [belangrijke|grote] historische gebeurtenissen gebeurden er (vandaag|op deze dag|op deze datum)
+(welke|wat voor) [belangrijke|grote] historische gebeurtenissen gebeurden er [op] {date}
+vertel me over [belangrijke|grote] historische gebeurtenissen (vandaag|op deze dag|op deze datum)
+# unvouched: machine-written lines, awaiting a speaker
+wat is er (op deze dag|vandaag|op een dag als vandaag) in de geschiedenis gebeurd
+wat gebeurde er op een dag als vandaag
+wat (is er gebeurd|gebeurde er) op {date} (januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|november|december)
+[geef me] (een feit|een weetje|trivia) (over vandaag|over morgen|over gisteren|over dit weekend)
+(weetje|feit) (over de datum|over de dag) {date}
+(weetje|feit) (over januari|over februari|over maart|over april|over mei|over juni|over juli|over augustus|over september|over oktober|over november|over december) {date}
+(vertel me|geef me) een (weetje|feitje) over {date} (januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|november|december)
+wat is er (op deze dag|vandaag) in de geschiedenis gebeurd
+wat is er speciaal aan (vandaag|morgen|deze dag)

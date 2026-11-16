@@ -1,0 +1,12 @@
+[diz-me] (uma curiosidade|um facto) (do ano|sobre o ano) {number:year}
+o que aconteceu no ano {number:year}
+(conta-me|diz-me) (uma curiosidade|um facto) sobre o ano {number:year}
+o que aconteceu de importante no ano {number:year}
+(que|quais) (acontecimentos|eventos) marcaram o ano {number:year}
+o que (de interessante|de importante) aconteceu em {number:year}
+[diz-me] (uma curiosidade|um facto) (do ano|sobre o ano) {number:year} (a.C.|antes de cristo)
+o que aconteceu no ano {number:year} (a.C.|antes de cristo)
+(conta-me|diz-me) (uma curiosidade|um facto) sobre o ano {number:year} (a.C.|antes de cristo)
+o que aconteceu de importante no ano {number:year} (a.C.|antes de cristo)
+(que|quais) (acontecimentos|eventos) marcaram o ano {number:year} (a.C.|antes de cristo)
+o que (de interessante|de importante) aconteceu em {number:year} (a.C.|antes de cristo)

@@ -1,0 +1,19 @@
+(dieser Tag|dieses Datum|heute) in der Geschichte
+welche historischen Ereignisse sind (heute|an diesem Tag|an diesem Datum|am {date}) [in der Geschichte] passiert
+nenne mir die historischen Ereignisse die (heute|an diesem Tag|an diesem Datum|am {date}) [in der Geschichte] passiert sind
+# unvouched: machine-written lines, awaiting a speaker
+gib mir einen Rückblick auf (heute|diesen Tag|den {date})
+welche (Ereignisse|Begebenheiten) fanden (heute|an diesem Tag|am {date}) statt
+welche Dinge geschahen (heute|an diesem Tag|am {date}) in früheren Jahren
+# unvouched: machine-written lines, awaiting a speaker
+was (geschah|passierte) (an einem Tag wie heute|an diesem Tag|am heutigen Tag) in der Geschichte
+welche Ereignisse haben sich (heute|an diesem Tag|an diesem Datum) zugetragen
+was (geschah|passierte) am {date} (Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)
+[nenne mir] (eine Tatsache|Wissenswertes) über (heute|morgen|gestern|das Wochenende)
+(Tatsache|Wissenswertes) über (das Datum|den Tag) {date}
+(Tatsache|Wissenswertes) über den (Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember) {date}
+was gibt es (Interessantes|Spannendes) über (heute|morgen|gestern) zu wissen
+was (geschah|passierte) (an diesem Tag|am heutigen Tag) in der Geschichte
+erzähl mir etwas über den (heutigen|morgigen|gestrigen) Tag
+erzähl mir etwas (Interessantes|Spannendes) über den {date} (Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)
+was weißt du vom {date} (Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)

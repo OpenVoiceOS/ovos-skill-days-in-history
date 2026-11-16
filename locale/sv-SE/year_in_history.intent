@@ -1,0 +1,12 @@
+[ge mig] (en kuriosa|ett fakta) om året {number:year}
+fakta om året {number:year}
+vad hände (år|året) {number:year}
+berätta något (intressant|kul) om året {number:year}
+vad kan du (säga|berätta) om (året|år) {number:year}
+vilka händelser inträffade (under|i) (året|år) {number:year}
+[ge mig] (en kuriosa|ett fakta) om året {number:year} (f.Kr.|före kristus)
+fakta om året {number:year} (f.Kr.|före kristus)
+vad hände (år|året) {number:year} (f.Kr.|före kristus)
+berätta något (intressant|kul) om året {number:year} (f.Kr.|före kristus)
+vad kan du (säga|berätta) om (året|år) {number:year} (f.Kr.|före kristus)
+vilka händelser inträffade (under|i) (året|år) {number:year} (f.Kr.|före kristus)

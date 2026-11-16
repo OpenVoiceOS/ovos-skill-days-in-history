@@ -1,0 +1,14 @@
+fakt o dzisiejszym dniu
+Trivia o dzisiejszym dniu
+ciekawostka na dziś
+fakt na dziś
+fakt o dacie {date}
+ciekawostka w sprawie daty {date}
+ciekawostka na temat daty {date}
+fakt na datę {date}
+ciekawostka o styczniu {date}
+fakt o styczniu {date}
+(powiedz|opowiedz) mi (ciekawostkę|coś ciekawego) o {date} (stycznia|lutego|marca|kwietnia|maja|czerwca|lipca|sierpnia|września|października|listopada|grudnia)
+co (się wydarzyło|się stało) {date} (stycznia|lutego|marca|kwietnia|maja|czerwca|lipca|sierpnia|września|października|listopada|grudnia)
+co się (stało|działo) (tego dnia|w dniu dzisiejszym) w historii
+ciekawostka o (dzisiejszym|jutrzejszym|wczorajszym) dniu
