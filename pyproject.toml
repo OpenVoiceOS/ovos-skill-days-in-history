@@ -16,7 +16,7 @@ requires-python = ">=3.11"
 dependencies = [
     "wikipedia>=1.4.0",
     "ovos-workshop>=9.6.0a1,<10.0.0",
-    "ovos-date-parser>=0.0.3",
+    "ovos-date-parser>=0.36.0a1",
     "numtag>=0.9.0a1",
     "ovos-spec-tools>=1.6.0"
 ]
